@@ -53,3 +53,9 @@ No original certificates or completion letters are automatically published. The 
 ## Portfolio dashboard
 
 Use [the dashboard guide](docs/DASHBOARD.md) for normal content forms, profile/CV uploads, ordering, hiding and removing entries. The current static preview displays these forms but cannot save; the configured Cloudflare Worker persists changes and renders them immediately on subsequent page loads. GPA has been removed from the website and both CVs.
+
+### Certificate gallery
+
+The Certifications & Distinctions section follows Research & Background. In the manager's credentials tab, select Certification / training or Distinction, enter both translations, and optionally upload a PDF and a PNG/JPEG/WebP preview of that document. Preview images are optional; a card remains readable without one. Review personal details before saving. Use the existing ordering controls to arrange entries or hide/remove them. Uploaded media requires the configured Cloudflare R2 bucket and D1 database; the hosted preview does not provide those production credentials. The gallery supports touch scrolling, keyboard scrolling and Previous/Next buttons, without automatic rotation.
+
+Original personal certificate PDFs and their previews are intentionally omitted from this public repository. Add reviewed documents and previews through the private manager after configuring storage. The hosted portfolio keeps the approved gallery content separately.

@@ -14,3 +14,6 @@ function bindFilters(){
  document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{selected=b.dataset.filter;limit=4;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));filter()}));more?.addEventListener('click',()=>{const before=limit;limit+=4;filter();const shown=Array.from(document.querySelectorAll('[data-project]')).filter(p=>!p.hidden);shown[before]?.querySelector('a')?.focus()});filter();
 }
 bindFilters();document.addEventListener('portfolio-content-updated',bindFilters);loadContent();
+
+function bindCredentialRails(){document.querySelectorAll('[data-slide]').forEach(button=>{button.onclick=()=>{const track=document.getElementById(button.getAttribute('aria-controls'));if(track)track.scrollBy({left:Number(button.dataset.slide)*(track.querySelector('.cert')?.getBoundingClientRect().width+24||320),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})}})}
+bindCredentialRails();document.addEventListener('portfolio-content-updated',bindCredentialRails);

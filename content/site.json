@@ -59,7 +59,7 @@
       "community": "Alongside my studies, I tutor peers in Python and take part in Youths4Change activities at Ashesi. I speak French and English, with roots in Burkina Faso and a growing perspective shaped by studying in Ghana.",
       "certTitle": "Certifications & distinctions",
       "certText": "Training and academic recognition that broaden my skills in data analysis, AI and problem-solving. Verification links are included when available.",
-      "contactLabel": "04 / GET IN TOUCH",
+      "contactLabel": "05 / GET IN TOUCH",
       "contactTitle": "Good work starts<br>with a conversation.",
       "contactText": "Interested in software, data, applied AI, or a research collaboration? I’d be happy to hear from you.",
       "contactNote": "Preparing for graduate study and the next step after graduation in June 2027.",
@@ -129,7 +129,7 @@
       "community": "En parallèle de mes études, j’accompagne mes pairs en Python et participe aux activités de Youths4Change à Ashesi. Je parle français et anglais, avec des racines au Burkina Faso et un regard enrichi par mes études au Ghana.",
       "certTitle": "Certifications et distinctions",
       "certText": "Des formations et des distinctions académiques qui enrichissent mes compétences en analyse de données, en IA et en résolution de problèmes. Des liens de vérification sont proposés lorsqu’ils sont disponibles.",
-      "contactLabel": "04 / PRENDRE CONTACT",
+      "contactLabel": "05 / PRENDRE CONTACT",
       "contactTitle": "Tout commence<br>par une conversation.",
       "contactText": "Un projet logiciel, des données à explorer, de l’IA appliquée ou une collaboration scientifique ? Échangeons.",
       "contactNote": "Je prépare la poursuite de mes études et la prochaine étape après mon diplôme en juin 2027.",
@@ -263,7 +263,8 @@
         "period": "DÉCEMBRE 2024",
         "title": "Google Data Analytics",
         "description": "Certificat professionnel · Huit cours sur la préparation, l’analyse et la visualisation des données, SQL et R."
-      }
+      },
+      "kind": "certificate"
     },
     {
       "id": "credential-2",
@@ -279,7 +280,8 @@
         "period": "JANVIER 2025",
         "title": "Prompt Engineering for ChatGPT",
         "description": "Université Vanderbilt · Cours en ligne terminé le 24 janvier 2025."
-      }
+      },
+      "kind": "certificate"
     },
     {
       "id": "credential-3",
@@ -295,6 +297,25 @@
         "period": "2023–2027",
         "title": "Boursier de la Mastercard Foundation",
         "description": "Bourse d’études à l’Université Ashesi. Également inscrit à la Dean’s List pendant plusieurs semestres."
+      },
+      "kind": "distinction"
+    },
+    {
+      "id": "neurips-2026",
+      "visible": true,
+      "order": 0,
+      "kind": "distinction",
+      "preview": "/assets/global-piqa-paper.png",
+      "url": "https://arxiv.org/abs/2510.24081",
+      "en": {
+        "period": "SEPTEMBER 2026",
+        "title": "Global PIQA · NeurIPS 2026",
+        "description": "Contributing author on Global PIQA, accepted as a poster in the NeurIPS 2026 Evaluations & Datasets Track. My contribution focused on the Zarma dataset."
+      },
+      "fr": {
+        "period": "SEPTEMBRE 2026",
+        "title": "Global PIQA · NeurIPS 2026",
+        "description": "Auteur contributeur de Global PIQA, accepté en poster dans la catégorie Evaluations & Datasets de NeurIPS 2026. Ma contribution portait sur le jeu de données en zarma."
       }
     }
   ],

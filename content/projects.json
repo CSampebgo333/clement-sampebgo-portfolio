@@ -56,7 +56,9 @@
         }
       }
     ],
-    "imageEnabled": true
+    "imageEnabled": true,
+    "coverLogo": "/assets/brands/pfizer.png",
+    "coverLogoLabel": "Pfizer"
   },
   {
     "id": "consumer-insights",
@@ -140,7 +142,9 @@
     "visible": true,
     "metrics": [],
     "evidence": [],
-    "imageEnabled": true
+    "imageEnabled": true,
+    "coverLogo": "/assets/brands/breaking-games.png",
+    "coverLogoLabel": "Breaking Games"
   },
   {
     "id": "global-piqa",
@@ -149,7 +153,7 @@
     "source": "English CV; public Global PIQA author list",
     "url": "https://arxiv.org/abs/2510.24081",
     "repo": null,
-    "image": null,
+    "image": "/assets/global-piqa-paper.png",
     "tags": [
       "Multilingual NLP",
       "Evaluation",
@@ -163,7 +167,9 @@
       "problem": "Commonsense evaluation needs to reflect languages and cultural contexts beyond high-resource benchmarks.",
       "approach": "Working with M. K. Keita, I helped prepare prompts, filter and format generated examples, and review French seed examples for cultural relevance.",
       "result": "I contributed to the Zarma dataset within a large international collaboration. My name appears in the public author list; the paper and benchmark provide the wider research context.",
-      "limitation": "My contribution concerns the Zarma dataset, not ownership of the whole benchmark. NeurIPS 2026 acceptance is reported in my CV; the linked preprint is the public evidence supplied here."
+      "limitation": "My contribution concerns the Zarma dataset, not ownership of the whole benchmark. NeurIPS 2026 acceptance is reported in my CV; the linked preprint is the public evidence supplied here.",
+      "imageAlt": "First page of Global PIQA: Evaluating Commonsense Reasoning Across 100+ Languages and Cultures.",
+      "imageCredit": "First-page preview of the Global PIQA preprint, arXiv:2510.24081. Full authorship is listed in the paper."
     },
     "fr": {
       "title": "Global PIQA",
@@ -173,12 +179,14 @@
       "problem": "L’évaluation du bon sens doit refléter des langues et des contextes culturels au-delà des benchmarks à fortes ressources.",
       "approach": "Avec M. K. Keita, j’ai contribué à préparer les prompts, filtrer et formater les exemples générés, et examiner la pertinence culturelle des exemples sources en français.",
       "result": "J’ai participé au jeu de données zarma dans une vaste collaboration internationale. Mon nom figure dans la liste publique des auteurs ; l’article présente le contexte scientifique global.",
-      "limitation": "Ma contribution porte sur le jeu zarma, et non sur l’ensemble du benchmark. L’acceptation à NeurIPS 2026 est indiquée dans mon CV ; le préprint lié constitue ici la preuve publique."
+      "limitation": "Ma contribution porte sur le jeu zarma, et non sur l’ensemble du benchmark. L’acceptation à NeurIPS 2026 est indiquée dans mon CV ; le préprint lié constitue ici la preuve publique.",
+      "imageAlt": "Première page de l’article Global PIQA: Evaluating Commonsense Reasoning Across 100+ Languages and Cultures.",
+      "imageCredit": "Aperçu de la première page du préprint Global PIQA, arXiv:2510.24081. La liste complète des auteurs figure dans l’article."
     },
     "order": 4,
     "visible": true,
     "paperUrl": "https://arxiv.org/pdf/2510.24081",
-    "imageEnabled": false
+    "imageEnabled": true
   },
   {
     "id": "driving-theory",

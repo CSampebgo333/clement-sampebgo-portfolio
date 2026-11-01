@@ -284,23 +284,6 @@
       "kind": "certificate"
     },
     {
-      "id": "credential-3",
-      "visible": true,
-      "order": 2,
-      "url": "",
-      "en": {
-        "period": "2023–2027",
-        "title": "Mastercard Foundation Scholar",
-        "description": "Scholarship recipient at Ashesi University through the Mastercard Foundation Scholars Program."
-      },
-      "fr": {
-        "period": "2023–2027",
-        "title": "Boursier de la Mastercard Foundation",
-        "description": "Boursier à l’Université Ashesi dans le cadre du Mastercard Foundation Scholars Program."
-      },
-      "kind": "distinction"
-    },
-    {
       "id": "neurips-2026",
       "visible": true,
       "order": 0,
@@ -319,54 +302,37 @@
       }
     },
     {
-      "id": "french-government-scholarship",
+      "id": "scholarships",
       "kind": "distinction",
       "visible": true,
       "order": 1,
       "url": "",
       "en": {
-        "period": "2025–2026",
-        "title": "French Government Scholarship",
-        "description": "Recipient of a French Government Scholarship for CESI Graduate School of Engineering, France."
+        "period": "2023–2027 · 2025–2026",
+        "title": "Scholarships",
+        "description": "Mastercard Foundation Scholars Program · Ashesi University (2023–2027).\nFrench Government Scholarship · CESI, France (2025–2026)."
       },
       "fr": {
-        "period": "2025–2026",
-        "title": "Bourse du gouvernement français",
-        "description": "Lauréat d’une bourse du gouvernement français pour CESI École d’ingénieurs, France."
+        "period": "2023–2027 · 2025–2026",
+        "title": "Bourses d’études",
+        "description": "Mastercard Foundation Scholars Program · Université Ashesi (2023–2027).\nBourse du gouvernement français · CESI, France (2025–2026)."
       }
     },
     {
-      "id": "cesi-exchange-nomination",
+      "id": "academic-recognition",
       "kind": "distinction",
       "visible": true,
-      "order": 3,
-      "url": "",
-      "en": {
-        "period": "2024–2025",
-        "title": "CESI exchange nomination",
-        "description": "Nominated for an exchange program at CESI’s Aix-en-Provence campus, France."
-      },
-      "fr": {
-        "period": "2024–2025",
-        "title": "Nomination pour un échange à CESI",
-        "description": "Nommé pour un programme d’échange au campus CESI d’Aix-en-Provence, France."
-      }
-    },
-    {
-      "id": "deans-list",
-      "kind": "distinction",
-      "visible": true,
-      "order": 4,
+      "order": 2,
       "url": "",
       "en": {
         "period": "2023–2025",
-        "title": "Dean’s List · Ashesi University",
-        "description": "Recognized on the Dean’s List for several semesters."
+        "title": "Academic recognition",
+        "description": "Dean’s List at Ashesi University for several semesters (2023–2025).\nNominated for an exchange at CESI’s Aix-en-Provence campus, France (2024–2025)."
       },
       "fr": {
         "period": "2023–2025",
-        "title": "Dean’s List · Université Ashesi",
-        "description": "Inscrit à la Dean’s List pendant plusieurs semestres."
+        "title": "Reconnaissance académique",
+        "description": "Dean’s List à l’Université Ashesi pendant plusieurs semestres (2023–2025).\nNomination pour un échange au campus CESI d’Aix-en-Provence, France (2024–2025)."
       }
     }
   ],

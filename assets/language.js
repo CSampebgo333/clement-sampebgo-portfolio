@@ -1,0 +1,1 @@
+(()=>{let saved;try{saved=localStorage.getItem('portfolio-language')}catch{}const l=['en','fr'].includes(saved)?saved:(navigator.language.toLowerCase().startsWith('fr')?'fr':'en');location.replace('/'+l+'/'+location.hash)})();

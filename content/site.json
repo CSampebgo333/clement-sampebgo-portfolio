@@ -1,0 +1,620 @@
+{
+  "version": 1,
+  "profile": {
+    "name": "Clément Sampebgo",
+    "email": "cl.sampebgo@gmail.com",
+    "portrait": "/assets/portrait.webp",
+    "cv": {
+      "en": "/documents/clement-sampebgo-cv-en.pdf",
+      "fr": "/documents/clement-sampebgo-cv-fr.pdf"
+    }
+  },
+  "text": {
+    "en": {
+      "nav": [
+        "Work",
+        "Experience",
+        "About",
+        "Contact"
+      ],
+      "skip": "Skip to content",
+      "menu": "Menu",
+      "heroLabel": "COMPUTER SCIENCE · ASHESI UNIVERSITY",
+      "hero": "Curious by nature.<br>Building <span>with purpose.</span>",
+      "intro": "I’m Clément Sampebgo, a final-year Computer Science student from Burkina Faso. I build software, explore data, and work on AI that is useful across languages and contexts.",
+      "work": "Explore my work",
+      "cv": "Download CV",
+      "caption": "Clément Sampebgo",
+      "caption2": "Berekuso, Ghana · Class of 2027",
+      "bottom": "Software development / Data science / Applied AI",
+      "scroll": "A closer look ↓",
+      "selected": "01 / SELECTED WORK",
+      "workTitle": "Ideas, built and examined.",
+      "workText": "A selection of projects and research contributions. The approach, the evidence, and what I learned along the way.",
+      "filters": [
+        "Featured",
+        "All projects",
+        "Software",
+        "Data science",
+        "AI",
+        "Research"
+      ],
+      "case": "Explore the project ↗",
+      "journey": "02 / EXPERIENCE",
+      "journeyTitle": "Learning through<br>real problems.",
+      "journeyText": "From understanding customer feedback to making complex documents searchable, I enjoy work that connects careful analysis with something people can use.",
+      "education": "EDUCATION",
+      "skills": "Tools I work with",
+      "skillList": [
+        "Python, Pandas and SQL for analysis",
+        "OCR, LlamaIndex and Gradio for document AI",
+        "SQLite and relational data modeling",
+        "HTML, CSS, JavaScript and React for the web"
+      ],
+      "about": "03 / RESEARCH & BACKGROUND",
+      "aboutTitle": "A local perspective.<br>A wider curiosity.",
+      "aboutText": "I’m interested in the intersection of software, data and language. My contribution to Global PIQA focuses on Zarma, a low-resource West African language, and reflects my interest in AI that works beyond the most represented contexts.",
+      "researchLink": "Read about my contribution ↗",
+      "communityTitle": "Learning, then sharing it.",
+      "community": "Alongside my studies, I tutor peers in Python and take part in Youths4Change activities at Ashesi. I speak French and English, with roots in Burkina Faso and a growing perspective shaped by studying in Ghana.",
+      "certTitle": "Selected credentials",
+      "certText": "Professional training that supports the work above. Verification links are provided where available.",
+      "contactLabel": "04 / GET IN TOUCH",
+      "contactTitle": "Good work starts<br>with a conversation.",
+      "contactText": "Interested in software, data, applied AI, or a research collaboration? I’d be happy to hear from you.",
+      "contactNote": "Preparing for graduate study and the next step after graduation in June 2027.",
+      "cvNote": "A concise, text-based CV in English.",
+      "footer": "Built with care. Available in English & French.",
+      "top": "Back to top ↑",
+      "back": "← Back to projects",
+      "role": "My contribution",
+      "problem": "The problem",
+      "approach": "The approach",
+      "result": "What came out of it",
+      "limit": "Limits & next steps",
+      "evidence": "Source & supporting evidence",
+      "evidenceMissing": "Detailed project materials are not published here.",
+      "source": "Content basis",
+      "imageAlt": "Chart reproduced from the consumer insights capstone notebook",
+      "drivingAlt": "Screenshot of the driving theory practice project",
+      "privacy": "Privacy",
+      "privacyText": "This portfolio uses browser storage for language and theme preferences. There is no analytics tracker or contact form. Email links open your email application. External services have their own privacy policies. The optional private review service stores project candidates and review decisions in Cloudflare D1. No private GitHub repository metadata is intentionally collected."
+    },
+    "fr": {
+      "nav": [
+        "Projets",
+        "Expérience",
+        "À propos",
+        "Contact"
+      ],
+      "skip": "Aller au contenu",
+      "menu": "Menu",
+      "heroLabel": "INFORMATIQUE · UNIVERSITÉ ASHESI",
+      "hero": "Curieux par nature.<br>Créer <span>avec du sens.</span>",
+      "intro": "Je suis Clément Sampebgo, étudiant en dernière année d’informatique, originaire du Burkina Faso. Je développe des logiciels, explore les données et m’intéresse à une IA utile dans différentes langues et différents contextes.",
+      "work": "Découvrir mes projets",
+      "cv": "Télécharger le CV",
+      "caption": "Clément Sampebgo",
+      "caption2": "Berekuso, Ghana · Promotion 2027",
+      "bottom": "Développement logiciel / Science des données / IA appliquée",
+      "scroll": "En savoir plus ↓",
+      "selected": "01 / PROJETS CHOISIS",
+      "workTitle": "Des idées à la pratique.",
+      "workText": "Une sélection de projets et de contributions scientifiques : la démarche, les preuves et les enseignements tirés.",
+      "filters": [
+        "À la une",
+        "Tous les projets",
+        "Logiciel",
+        "Données",
+        "IA",
+        "Recherche"
+      ],
+      "case": "Découvrir le projet ↗",
+      "journey": "02 / EXPÉRIENCE",
+      "journeyTitle": "Apprendre par<br>des problèmes concrets.",
+      "journeyText": "Comprendre les avis clients ou rendre des documents interrogeables : j’aime relier une analyse rigoureuse à un résultat utile.",
+      "education": "FORMATION",
+      "skills": "Mes outils de travail",
+      "skillList": [
+        "Python, Pandas et SQL pour l’analyse",
+        "OCR, LlamaIndex et Gradio pour l’IA documentaire",
+        "SQLite et modélisation relationnelle",
+        "HTML, CSS, JavaScript et React pour le web"
+      ],
+      "about": "03 / RECHERCHE & PARCOURS",
+      "aboutTitle": "Un ancrage local.<br>Une curiosité ouverte.",
+      "aboutText": "Je m’intéresse aux liens entre logiciel, données et langues. Ma contribution à Global PIQA porte sur le zarma, une langue ouest-africaine à faibles ressources, et reflète mon intérêt pour une IA utile au-delà des contextes les plus représentés.",
+      "researchLink": "Découvrir ma contribution ↗",
+      "communityTitle": "Apprendre, puis transmettre.",
+      "community": "En parallèle de mes études, j’accompagne mes pairs en Python et participe aux activités de Youths4Change à Ashesi. Je parle français et anglais, avec des racines au Burkina Faso et un regard enrichi par mes études au Ghana.",
+      "certTitle": "Quelques certifications",
+      "certText": "Des formations qui soutiennent les projets présentés. Les liens de vérification sont fournis lorsqu’ils sont disponibles.",
+      "contactLabel": "04 / PRENDRE CONTACT",
+      "contactTitle": "Tout commence<br>par une conversation.",
+      "contactText": "Un projet logiciel, des données à explorer, de l’IA appliquée ou une collaboration scientifique ? Échangeons.",
+      "contactNote": "Je prépare la poursuite de mes études et la prochaine étape après mon diplôme en juin 2027.",
+      "cvNote": "Un CV concis, en français et au format texte.",
+      "footer": "Conçu avec soin. Disponible en français et en anglais.",
+      "top": "Retour en haut ↑",
+      "back": "← Retour aux projets",
+      "role": "Ma contribution",
+      "problem": "Le problème",
+      "approach": "La démarche",
+      "result": "Les résultats",
+      "limit": "Limites et prochaines étapes",
+      "evidence": "Sources et éléments de preuve",
+      "evidenceMissing": "Les livrables détaillés du projet ne sont pas diffusés ici.",
+      "source": "Base documentaire",
+      "imageAlt": "Graphique reproduit du notebook final d’analyse des avis consommateurs",
+      "drivingAlt": "Capture du projet d’entraînement au code de la route",
+      "privacy": "Confidentialité",
+      "privacyText": "Ce portfolio utilise le stockage du navigateur pour les préférences de langue et de thème. Il ne contient ni outil de suivi analytique ni formulaire de contact. Les liens email ouvrent votre messagerie. Les services externes appliquent leurs propres politiques. Le service privé de revue optionnel conserve les propositions de projets et décisions dans Cloudflare D1. Aucune métadonnée de dépôt GitHub privé n’est volontairement collectée."
+    }
+  },
+  "experiences": [
+    {
+      "id": "experience-1",
+      "visible": true,
+      "order": 0,
+      "en": {
+        "period": "JUL–OCT 2026",
+        "organization": "Pfizer",
+        "title": "AI document insights & data extraction",
+        "description": "Built a Python document assistant combining OCR, semantic retrieval and a Gradio interface. Evaluated retrieval and answer quality separately, with source pages available for verification."
+      },
+      "fr": {
+        "period": "JUIL–OCT 2026",
+        "organization": "Pfizer",
+        "title": "Analyse documentaire et extraction de données par IA",
+        "description": "Développement d’un assistant documentaire Python associant OCR, recherche sémantique et interface Gradio. Évaluation distincte de la recherche et des réponses, avec accès aux pages sources pour vérification."
+      },
+      "logo": "/assets/brands/pfizer.png",
+      "viaExtern": true
+    },
+    {
+      "id": "experience-2",
+      "visible": true,
+      "order": 1,
+      "en": {
+        "period": "JUL–SEP 2026",
+        "organization": "Breaking Games",
+        "title": "SQL & database architecture",
+        "description": "Designed a SQLite analytics database and an HTML/Chart.js dashboard. Used SQL validation to check joins, reporting periods and metric definitions before drawing conclusions."
+      },
+      "fr": {
+        "period": "JUIL–SEPT 2026",
+        "organization": "Breaking Games",
+        "title": "SQL et architecture de bases de données",
+        "description": "Conception d’une base analytique SQLite et d’un tableau de bord HTML/Chart.js. Validation des jointures, des périodes et du calcul des indicateurs avant interprétation des résultats."
+      },
+      "logo": "/assets/brands/breaking-games.png",
+      "viaExtern": true
+    },
+    {
+      "id": "experience-3",
+      "visible": true,
+      "order": 2,
+      "en": {
+        "period": "SEP–NOV 2025",
+        "organization": "National Geographic Society + TNC",
+        "title": "Marine & community conservation externship",
+        "description": "Turned local reporting and community footage into a public ArcGIS StoryMap on Tanghin Dam. Connected environmental pressures with fishing livelihoods and community responses through clear, attributed storytelling."
+      },
+      "fr": {
+        "period": "SEPT–NOV 2025",
+        "organization": "National Geographic Society + TNC",
+        "title": "Externat en conservation marine et communautaire",
+        "description": "Création d’un ArcGIS StoryMap public sur le barrage de Tanghin à partir de publications locales et de vidéos communautaires. Mise en récit des liens entre pressions environnementales, pêche et réponses locales, avec attribution des sources."
+      },
+      "logo": "/assets/brands/natgeo-tnc.png",
+      "viaExtern": true
+    },
+    {
+      "id": "experience-4",
+      "visible": true,
+      "order": 3,
+      "en": {
+        "period": "JUN–JUL 2024",
+        "organization": "Beats by Dre",
+        "title": "Consumer insights data analytics",
+        "description": "Cleaned and analyzed consumer reviews with Python, exploratory analysis and NLP. Translated recurring feedback into visualizations and evidence-based recommendations for brand decisions."
+      },
+      "fr": {
+        "period": "JUIN–JUIL 2024",
+        "organization": "Beats by Dre",
+        "title": "Analyse des avis consommateurs",
+        "description": "Nettoyage et analyse d’avis consommateurs avec Python, l’analyse exploratoire et le NLP. Synthèse des retours récurrents en visualisations et recommandations étayées pour les décisions de marque."
+      },
+      "logo": "/assets/brands/beats.png",
+      "viaExtern": true
+    }
+  ],
+  "education": [
+    {
+      "id": "ashesi",
+      "visible": true,
+      "order": 0,
+      "en": {
+        "title": "BSc Computer Science",
+        "organization": "Ashesi University",
+        "period": "2023–2027",
+        "description": "Berekuso, Ghana · Expected graduation: June 2027 · Mastercard Foundation Scholar"
+      },
+      "fr": {
+        "title": "BSc en informatique",
+        "organization": "Université Ashesi",
+        "period": "2023–2027",
+        "description": "Berekuso, Ghana · Diplôme prévu en juin 2027 · Boursier de la Mastercard Foundation"
+      }
+    }
+  ],
+  "credentials": [
+    {
+      "id": "credential-1",
+      "visible": true,
+      "order": 0,
+      "url": "https://coursera.org/verify/professional-cert/7EYGRZTVA0UE",
+      "en": {
+        "period": "DECEMBER 2024",
+        "title": "Google Data Analytics",
+        "description": "Professional Certificate · Eight courses covering data preparation, analysis, visualization, SQL and R."
+      },
+      "fr": {
+        "period": "DÉCEMBRE 2024",
+        "title": "Google Data Analytics",
+        "description": "Certificat professionnel · Huit cours sur la préparation, l’analyse et la visualisation des données, SQL et R."
+      }
+    },
+    {
+      "id": "credential-2",
+      "visible": true,
+      "order": 1,
+      "url": "https://coursera.org/verify/A7OJWYW9IJ4T",
+      "en": {
+        "period": "JANUARY 2025",
+        "title": "Prompt Engineering for ChatGPT",
+        "description": "Vanderbilt University · Online course completed January 24, 2025."
+      },
+      "fr": {
+        "period": "JANVIER 2025",
+        "title": "Prompt Engineering for ChatGPT",
+        "description": "Université Vanderbilt · Cours en ligne terminé le 24 janvier 2025."
+      }
+    },
+    {
+      "id": "credential-3",
+      "visible": true,
+      "order": 2,
+      "url": "",
+      "en": {
+        "period": "2023–2027",
+        "title": "Mastercard Foundation Scholar",
+        "description": "Scholarship at Ashesi University. Also recognized on the Dean’s List for several semesters."
+      },
+      "fr": {
+        "period": "2023–2027",
+        "title": "Boursier de la Mastercard Foundation",
+        "description": "Bourse d’études à l’Université Ashesi. Également inscrit à la Dean’s List pendant plusieurs semestres."
+      }
+    }
+  ],
+  "socials": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/CSampebgo333",
+      "visible": true,
+      "order": 0
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/clement-sampebgo/",
+      "visible": true,
+      "order": 1
+    }
+  ],
+  "projects": [
+    {
+      "id": "document-intelligence",
+      "category": "ai",
+      "featured": true,
+      "source": "Skills-based summary of completed externship; notebook retained at owner request. Confidentiality agreement not supplied for review.",
+      "url": "https://colab.research.google.com/drive/1oKOFv4ePj6kStwwtyQYme1I4scJ04VhS#scrollTo=final-cell-00",
+      "repo": null,
+      "image": "/assets/pfizer-cover.jpg",
+      "tags": [
+        "Python",
+        "Tesseract",
+        "FAISS",
+        "Qwen 2.5",
+        "Gradio"
+      ],
+      "en": {
+        "title": "Document search with verifiable sources",
+        "client": "PFIZER · VIA EXTERN",
+        "summary": "Building a Python document assistant that combines OCR, semantic search and a clear path back to source pages.",
+        "role": "AI document intelligence extern. I developed and evaluated a document-processing pipeline and a Gradio interface.",
+        "problem": "Document review requires more than generating an answer: readers need to locate relevant information and inspect the passage it comes from.",
+        "approach": "I worked with PDF text extraction, OCR, document classification, text chunking and semantic retrieval. I connected these components to a local language model and an interface that displays supporting passages and source pages.\n\nI explored the trade-offs between model size, response time and answer quality, and evaluated retrieval separately from generated answers.",
+        "result": "I developed practical experience integrating Python, OCR, vector search and a usable interface. Testing helped me recognize that relevant retrieved text can still lead to an incorrect answer, and that source references need to support the specific claim being made.",
+        "limitation": "This is an externship prototype, not a production or compliance decision system. Human verification remains essential. Further work would focus on structured table extraction, citation checks and testing on independent documents. Company-specific examples and detailed evaluation results are omitted from this overview.",
+        "evaluationNote": "",
+        "imageAlt": "Original Pfizer document intelligence externship cover from Extern.",
+        "imageCredit": "Illustrative program artwork provided by Extern."
+      },
+      "fr": {
+        "title": "Rechercher dans les documents, vérifier les sources",
+        "client": "PFIZER · VIA EXTERN",
+        "summary": "Développer un assistant documentaire Python associant OCR, recherche sémantique et accès aux pages sources.",
+        "role": "Externat en analyse documentaire par IA. J’ai développé et évalué une chaîne de traitement documentaire et une interface Gradio.",
+        "problem": "La revue documentaire ne se limite pas à générer une réponse : il faut retrouver l’information pertinente et pouvoir examiner le passage dont elle provient.",
+        "approach": "J’ai travaillé sur l’extraction de texte PDF, l’OCR, la classification documentaire, le découpage du texte et la recherche sémantique. J’ai relié ces éléments à un modèle de langage local et à une interface affichant les passages et pages sources.\n\nJ’ai étudié les compromis entre taille du modèle, temps de réponse et qualité, en évaluant séparément la recherche et les réponses générées.",
+        "result": "J’ai acquis une expérience pratique de l’intégration de Python, de l’OCR, de la recherche vectorielle et d’une interface utilisable. Les tests m’ont appris qu’un passage pertinent peut malgré tout conduire à une réponse incorrecte et qu’une référence doit étayer précisément l’affirmation présentée.",
+        "limitation": "Il s’agit d’un prototype d’externat, sans usage décisionnel en production ou en conformité. La vérification humaine reste essentielle. Les pistes d’amélioration portent sur l’extraction structurée des tableaux, les citations et des tests sur des documents indépendants. Les exemples propres à l’entreprise et les résultats détaillés de l’évaluation sont omis de cette présentation.",
+        "evaluationNote": "",
+        "imageAlt": "Couverture originale de l’externat Pfizer en analyse documentaire, fournie par Extern.",
+        "imageCredit": "Illustration du programme fournie par Extern."
+      },
+      "order": 0,
+      "visible": true,
+      "metrics": [],
+      "evidence": [
+        {
+          "url": "https://colab.research.google.com/drive/1oKOFv4ePj6kStwwtyQYme1I4scJ04VhS#scrollTo=final-cell-00",
+          "en": {
+            "label": "Explore the technical notebook",
+            "description": "Python implementation and technical documentation (English)."
+          },
+          "fr": {
+            "label": "Explorer le notebook technique",
+            "description": "Implémentation Python et documentation technique (en anglais)."
+          }
+        }
+      ],
+      "imageEnabled": true
+    },
+    {
+      "id": "consumer-insights",
+      "category": "data",
+      "featured": true,
+      "source": "Repository README and capstone notebook; completion letter 29 July 2024",
+      "url": "https://github.com/CSampebgo333/Consumer-Insights-Data-Analytics-Externship/tree/main/Project_5%20-%20Capstone_Project",
+      "repo": "CSampebgo333/Consumer-Insights-Data-Analytics-Externship",
+      "image": "/assets/beats-chart.png",
+      "tags": [
+        "Python",
+        "Pandas",
+        "NLP",
+        "Gemini"
+      ],
+      "en": {
+        "title": "Listening to the customer",
+        "client": "BEATS BY DRE · EXTERNSHIP",
+        "summary": "Cleaning and exploring consumer reviews to understand sentiment and turn feedback into useful recommendations.",
+        "role": "Consumer insights data analytics extern · June–July 2024",
+        "problem": "Product reviews contain useful feedback, but unstructured text makes recurring concerns difficult to compare.",
+        "approach": "I cleaned review data, carried out exploratory and sentiment analysis, and used Gemini AI to help interpret consumer feedback. The capstone brings the analysis together in a notebook.",
+        "result": "I developed visualizations and recommendations intended to inform brand decisions. The repository includes the cleaning, EDA, AI analysis and capstone stages.",
+        "limitation": "Review samples and model-generated sentiment can be biased. Recommendations are analytical work, not evidence of a business outcome."
+      },
+      "fr": {
+        "title": "À l’écoute des consommateurs",
+        "client": "BEATS BY DRE · EXTERNAT",
+        "summary": "Nettoyer et explorer les avis clients pour comprendre les sentiments exprimés et formuler des recommandations utiles.",
+        "role": "Externat en analyse des avis consommateurs · Juin–juillet 2024",
+        "problem": "Les avis contiennent des retours utiles, mais leur format libre rend les préoccupations récurrentes difficiles à comparer.",
+        "approach": "J’ai nettoyé les avis, mené une analyse exploratoire et une analyse des sentiments, puis utilisé Gemini AI pour faciliter leur interprétation. Le notebook final rassemble ces étapes.",
+        "result": "J’ai produit des visualisations et des recommandations destinées à éclairer les décisions de marque. Le dépôt contient les étapes de nettoyage, d’exploration, d’analyse par IA et de synthèse.",
+        "limitation": "Les échantillons et les sentiments générés par modèle peuvent être biaisés. Les recommandations ne constituent pas la preuve d’un résultat commercial."
+      },
+      "order": 1,
+      "visible": true,
+      "imageEnabled": true
+    },
+    {
+      "id": "breaking-games",
+      "category": "data",
+      "featured": true,
+      "source": "Skills-based summary of completed externship. Reports, internal findings and numerical results withheld pending publication clearance.",
+      "url": null,
+      "repo": null,
+      "image": "/assets/breaking-cover.jpg",
+      "tags": [
+        "SQLite",
+        "SQL",
+        "Chart.js",
+        "Data modeling"
+      ],
+      "en": {
+        "title": "From data modeling to clear reporting",
+        "client": "BREAKING GAMES · VIA EXTERN",
+        "summary": "A SQL analytics project focused on relational modeling, data validation and communicating findings through a dashboard.",
+        "role": "SQL and database architecture extern. I designed an analytics database, wrote SQL queries and developed an HTML/Chart.js reporting interface.",
+        "problem": "Useful analytics depends on a consistent data model, well-defined measures and clear reporting. I worked on connecting these stages into an understandable workflow.",
+        "approach": "I used SQLite to organize data into relational tables and practiced joins, window functions and validation queries. I checked table relationships, record granularity and time-period consistency before interpreting measures.\n\nI then built a reporting layer and a dashboard to make the analysis easier to explore and explain.",
+        "result": "The project strengthened my ability to move from database design to analysis and presentation. I learned to question how an indicator is calculated, document assumptions and distinguish analytical recommendations from measured outcomes.",
+        "limitation": "This overview describes my skills and contribution. Source data, exact figures, internal findings, business recommendations and submitted reports or dashboards are not shared here. No company performance or business impact is claimed.",
+        "evaluationNote": "",
+        "imageAlt": "Original Breaking Games SQL and database architecture externship cover from Extern.",
+        "imageCredit": "Illustrative program artwork provided by Extern."
+      },
+      "fr": {
+        "title": "De la modélisation des données au reporting",
+        "client": "BREAKING GAMES · VIA EXTERN",
+        "summary": "Un projet analytique SQL centré sur la modélisation relationnelle, la validation des données et la présentation des analyses dans un tableau de bord.",
+        "role": "Externat SQL et architecture de bases de données. J’ai conçu une base analytique, rédigé des requêtes SQL et développé une interface de reporting HTML/Chart.js.",
+        "problem": "Une analyse utile repose sur un modèle cohérent, des indicateurs bien définis et une présentation claire. J’ai travaillé à relier ces étapes dans une démarche compréhensible.",
+        "approach": "J’ai utilisé SQLite pour organiser les données en tables relationnelles et pratiquer les jointures, les fonctions de fenêtrage et les requêtes de validation. J’ai vérifié les relations entre tables, la granularité des enregistrements et la cohérence des périodes avant d’interpréter les indicateurs.\n\nJ’ai ensuite créé une couche de reporting et un tableau de bord pour faciliter l’exploration et l’explication des analyses.",
+        "result": "Le projet a renforcé ma capacité à passer de la conception d’une base à l’analyse et à la présentation. J’ai appris à examiner le calcul d’un indicateur, expliciter mes hypothèses et distinguer les recommandations des résultats mesurés.",
+        "limitation": "Cette présentation décrit mes compétences et ma contribution. Les données sources, chiffres précis, constats internes, recommandations commerciales, rapports et tableaux de bord soumis ne sont pas diffusés ici. Aucun résultat de l’entreprise ni impact commercial n’est revendiqué.",
+        "evaluationNote": "",
+        "imageAlt": "Couverture originale de l’externat Breaking Games en SQL et bases de données, fournie par Extern.",
+        "imageCredit": "Illustration du programme fournie par Extern."
+      },
+      "order": 2,
+      "visible": true,
+      "metrics": [],
+      "evidence": [],
+      "imageEnabled": true
+    },
+    {
+      "id": "global-piqa",
+      "category": "research",
+      "featured": false,
+      "source": "English CV; public Global PIQA author list",
+      "url": "https://arxiv.org/abs/2510.24081",
+      "repo": null,
+      "image": null,
+      "tags": [
+        "Multilingual NLP",
+        "Evaluation",
+        "Zarma"
+      ],
+      "en": {
+        "title": "Global PIQA",
+        "client": "RESEARCH · COLLABORATION",
+        "summary": "Contributing Zarma examples to a multilingual benchmark of commonsense reasoning across languages and cultures.",
+        "role": "Contributing author · Zarma dataset contribution",
+        "problem": "Commonsense evaluation needs to reflect languages and cultural contexts beyond high-resource benchmarks.",
+        "approach": "Working with M. K. Keita, I helped prepare prompts, filter and format generated examples, and review French seed examples for cultural relevance.",
+        "result": "I contributed to the Zarma dataset within a large international collaboration. My name appears in the public author list; the paper and benchmark provide the wider research context.",
+        "limitation": "My contribution concerns the Zarma dataset, not ownership of the whole benchmark. NeurIPS 2026 acceptance is reported in my CV; the linked preprint is the public evidence supplied here."
+      },
+      "fr": {
+        "title": "Global PIQA",
+        "client": "RECHERCHE · COLLABORATION",
+        "summary": "Contribuer aux exemples en zarma d’un benchmark multilingue du raisonnement de bon sens à travers les langues et les cultures.",
+        "role": "Coauteur contributeur · Contribution au jeu de données zarma",
+        "problem": "L’évaluation du bon sens doit refléter des langues et des contextes culturels au-delà des benchmarks à fortes ressources.",
+        "approach": "Avec M. K. Keita, j’ai contribué à préparer les prompts, filtrer et formater les exemples générés, et examiner la pertinence culturelle des exemples sources en français.",
+        "result": "J’ai participé au jeu de données zarma dans une vaste collaboration internationale. Mon nom figure dans la liste publique des auteurs ; l’article présente le contexte scientifique global.",
+        "limitation": "Ma contribution porte sur le jeu zarma, et non sur l’ensemble du benchmark. L’acceptation à NeurIPS 2026 est indiquée dans mon CV ; le préprint lié constitue ici la preuve publique."
+      },
+      "order": 4,
+      "visible": true,
+      "paperUrl": "https://arxiv.org/pdf/2510.24081",
+      "imageEnabled": false
+    },
+    {
+      "id": "driving-theory",
+      "category": "software",
+      "featured": false,
+      "source": "Public repository README and source",
+      "url": "https://github.com/CSampebgo333/driving-test-platform",
+      "repo": "CSampebgo333/driving-test-platform",
+      "image": "/assets/driving.png",
+      "tags": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Accessibility"
+      ],
+      "en": {
+        "title": "Driving theory, one question at a time",
+        "client": "SOFTWARE · PERSONAL PROJECT",
+        "summary": "A focused practice quiz with instant grading, answer review and a keyboard-friendly question navigator.",
+        "role": "Personal project · Frontend development",
+        "problem": "Learners need a simple way to practise theory questions and understand their mistakes.",
+        "approach": "I built a dependency-free HTML, CSS and JavaScript quiz with local attempt storage, a correction page and print support.",
+        "result": "The repository provides a ten-question practice flow with progress tracking, validation and explanations. Its screenshot is reproduced here.",
+        "limitation": "A practice tool, not an official licensing resource. The question bank is small and requires review against local rules."
+      },
+      "fr": {
+        "title": "Le code de la route, question par question",
+        "client": "LOGICIEL · PROJET PERSONNEL",
+        "summary": "Un quiz ciblé avec correction immédiate, explications et navigation utilisable au clavier.",
+        "role": "Projet personnel · Développement frontend",
+        "problem": "Les apprenants ont besoin d’un moyen simple de s’entraîner et de comprendre leurs erreurs.",
+        "approach": "J’ai créé un quiz sans dépendances en HTML, CSS et JavaScript, avec sauvegarde locale, page de correction et impression.",
+        "result": "Le dépôt propose dix questions, un suivi de progression, une validation et des explications. Sa capture d’écran est présentée ici.",
+        "limitation": "Un outil d’entraînement, pas une ressource officielle. La banque de questions est limitée et doit être vérifiée selon les règles locales."
+      },
+      "order": 5,
+      "visible": true,
+      "imageEnabled": true
+    },
+    {
+      "id": "tanghin-dam",
+      "category": "research",
+      "featured": true,
+      "visible": true,
+      "order": 3,
+      "url": "https://storymaps.arcgis.com/stories/1be64865cac54781b74819c4f519da58",
+      "repo": null,
+      "image": "/assets/tanghin-storymap.jpg",
+      "tags": [
+        "ArcGIS StoryMaps",
+        "GIS",
+        "Research synthesis",
+        "Storytelling"
+      ],
+      "certificatesEnabled": false,
+      "certificates": [],
+      "source": "Completed Extern research records; public StoryMap dated 20 November 2025. Cover screenshot captured from the published StoryMap; background credit retained.",
+      "en": {
+        "title": "Story Map of Tanghin Dam",
+        "client": "NATIONAL GEOGRAPHIC SOCIETY + TNC · VIA EXTERN",
+        "summary": "A public ArcGIS StoryMap connecting plastic pollution, invasive water hyacinths and fishing livelihoods in Ouagadougou, Burkina Faso.",
+        "role": "Conservation extern · September–November 2025. I researched the issue, organized three research records and built the StoryMap.",
+        "problem": "Tanghin Dam is a freshwater reservoir within my home city. I wanted to explain how pressures on the water also affect the people who rely on it, and make existing reporting easier for a wider audience to navigate.",
+        "approach": "I reviewed published reporting on plastic pollution and aquaculture, alongside existing footage of community action against water hyacinths. For each research record, I assessed relevance, summarized the issue and community implications, and considered possible responses.\n\nI then organized the final StoryMap around place, environmental pressures, livelihoods, existing community action and proposed next steps. ArcGIS maps, attributed photographs and video support the written narrative.",
+        "result": "The completed work includes three research records and a published StoryMap. The final narrative links environmental pressures with fishing access and livelihoods, then explains practical responses such as continued cleanups, waste collection, awareness and coordination.\n\nMy contribution was to bring sources together into a clear, place-based account. The cleanup activities described belong to the community organizations featured in those sources. I did not lead those activities or measure an environmental improvement.",
+        "limitation": "This is a research and communication project based on existing sources, not a field survey or a water-quality monitoring study. Interviews in the source reports were conducted by their original creators. Mapped zones are qualitative illustrations, not measured pollution concentrations or a validated change analysis.\n\nThe written explanations on this page and in the StoryMap convey the argument without requiring map interaction. ArcGIS maps need a compatible WebGL browser.",
+        "evaluationNote": "These figures describe completed deliverables, not changes in biodiversity, water quality or community income. The public StoryMap is in English and includes its original media credits and references.",
+        "imageAlt": "Screenshot of my StoryMap cover: Plastic Pollution and Biodiversity Decline in Tanghin Dam, over a view of the reservoir, with my name and publication date.",
+        "imageCredit": "Screenshot of my ArcGIS StoryMap. Background footage: Burkina View, credited in the original StoryMap."
+      },
+      "fr": {
+        "title": "Story Map du barrage de Tanghin",
+        "client": "NATIONAL GEOGRAPHIC SOCIETY + TNC · VIA EXTERN",
+        "summary": "Un ArcGIS StoryMap public reliant pollution plastique, jacinthes d’eau envahissantes et activités de pêche à Ouagadougou, au Burkina Faso.",
+        "role": "Externat en conservation · Septembre–novembre 2025. J’ai étudié le sujet, organisé trois fiches de recherche et créé le StoryMap.",
+        "problem": "Le barrage de Tanghin est un réservoir d’eau douce situé dans ma ville d’origine. Je voulais expliquer les liens entre les pressions sur ce milieu et la vie des personnes qui en dépendent, en rendant les informations disponibles plus accessibles à un large public.",
+        "approach": "J’ai examiné des publications sur la pollution plastique et l’aquaculture, ainsi que des vidéos existantes d’actions communautaires contre les jacinthes d’eau. Pour chaque fiche, j’ai évalué la pertinence de la source, résumé le problème et ses implications locales, puis envisagé des réponses possibles.\n\nJ’ai structuré le StoryMap autour du lieu, des pressions environnementales, des moyens de subsistance, des initiatives communautaires et des pistes d’action. Cartes ArcGIS, photographies créditées et vidéos accompagnent le récit.",
+        "result": "Le travail final comprend trois fiches de recherche et un StoryMap publié. Le récit relie les pressions environnementales à l’accès à la pêche et aux moyens de subsistance, puis présente des pistes : poursuite des nettoyages, collecte des déchets, sensibilisation et coordination.\n\nMa contribution consiste à synthétiser les sources dans un récit clair ancré dans un lieu. Les actions de nettoyage décrites sont celles des organisations communautaires citées. Je ne les ai pas dirigées et je n’ai pas mesuré d’amélioration environnementale.",
+        "limitation": "Il s’agit d’un travail de recherche documentaire et de communication, et non d’une enquête de terrain ou d’un suivi de la qualité de l’eau. Les entretiens présents dans les reportages ont été réalisés par leurs auteurs. Les zones cartographiées sont des illustrations qualitatives, sans mesure de concentration des polluants ni analyse validée de leur évolution.\n\nLes textes de cette page et du StoryMap permettent de comprendre le raisonnement sans manipuler les cartes. Les cartes ArcGIS nécessitent un navigateur compatible WebGL.",
+        "evaluationNote": "Ces chiffres décrivent les livrables terminés, pas une évolution de la biodiversité, de la qualité de l’eau ou des revenus. Le StoryMap public est en anglais et conserve ses crédits et références.",
+        "imageAlt": "Capture de la couverture de mon StoryMap sur la pollution plastique et le déclin de la biodiversité au barrage de Tanghin, sur une vue du réservoir, avec mon nom et la date de publication.",
+        "imageCredit": "Capture de mon ArcGIS StoryMap. Images de fond : Burkina View, crédité dans le StoryMap original."
+      },
+      "metrics": [
+        {
+          "en": {
+            "label": "Research records",
+            "value": "3"
+          },
+          "fr": {
+            "label": "Fiches de recherche",
+            "value": "3"
+          }
+        },
+        {
+          "en": {
+            "label": "Published StoryMap",
+            "value": "1"
+          },
+          "fr": {
+            "label": "StoryMap publié",
+            "value": "1"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://storymaps.arcgis.com/stories/1be64865cac54781b74819c4f519da58",
+          "en": {
+            "label": "Explore the public StoryMap",
+            "description": "The main work sample: narrative, maps, attributed media and references (English). The written sections remain useful if the interactive maps cannot load."
+          },
+          "fr": {
+            "label": "Explorer le StoryMap public",
+            "description": "Le livrable principal : récit, cartes, médias crédités et références (en anglais). Les textes restent utiles si les cartes interactives ne se chargent pas."
+          }
+        }
+      ],
+      "imageEnabled": true
+    }
+  ],
+  "documents": []
+}

@@ -1,0 +1,1 @@
+(()=>{let value;try{value=localStorage.getItem('portfolio-theme')}catch{}document.documentElement.dataset.theme=['light','dark'].includes(value)?value:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');})();

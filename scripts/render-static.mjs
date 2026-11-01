@@ -1,0 +1,3 @@
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';import {renderMain,esc,ordered} from '../assets/cms-render.js';
+const site=JSON.parse(readFileSync(new URL('../content/site.json',import.meta.url),'utf8'));const root=new URL('../dist/',import.meta.url);
+for(const l of ['en','fr']){for(const path of ['',...ordered(site.projects).map(p=>'projects/'+p.id+'/'),'privacy/']){const target=new URL(l+'/'+path+'index.html',root);const template=existsSync(target)?readFileSync(target,'utf8'):readFileSync(new URL(l+'/index.html',root),'utf8');mkdirSync(new URL('./',target),{recursive:true});writeFileSync(target,template.replace(/<main id="main">[\s\S]*?<\/main>/,()=>'<main id="main">'+renderMain(site,l,path)+'</main>'))}}

@@ -291,12 +291,12 @@
       "en": {
         "period": "2023–2027",
         "title": "Mastercard Foundation Scholar",
-        "description": "Scholarship at Ashesi University. Also recognized on the Dean’s List for several semesters."
+        "description": "Scholarship recipient at Ashesi University through the Mastercard Foundation Scholars Program."
       },
       "fr": {
         "period": "2023–2027",
         "title": "Boursier de la Mastercard Foundation",
-        "description": "Bourse d’études à l’Université Ashesi. Également inscrit à la Dean’s List pendant plusieurs semestres."
+        "description": "Boursier à l’Université Ashesi dans le cadre du Mastercard Foundation Scholars Program."
       },
       "kind": "distinction"
     },
@@ -316,6 +316,57 @@
         "period": "SEPTEMBRE 2026",
         "title": "Global PIQA · NeurIPS 2026",
         "description": "Auteur contributeur de Global PIQA, accepté en poster dans la catégorie Evaluations & Datasets de NeurIPS 2026. Ma contribution portait sur le jeu de données en zarma."
+      }
+    },
+    {
+      "id": "french-government-scholarship",
+      "kind": "distinction",
+      "visible": true,
+      "order": 1,
+      "url": "",
+      "en": {
+        "period": "2025–2026",
+        "title": "French Government Scholarship",
+        "description": "Recipient of a French Government Scholarship for CESI Graduate School of Engineering, France."
+      },
+      "fr": {
+        "period": "2025–2026",
+        "title": "Bourse du gouvernement français",
+        "description": "Lauréat d’une bourse du gouvernement français pour CESI École d’ingénieurs, France."
+      }
+    },
+    {
+      "id": "cesi-exchange-nomination",
+      "kind": "distinction",
+      "visible": true,
+      "order": 3,
+      "url": "",
+      "en": {
+        "period": "2024–2025",
+        "title": "CESI exchange nomination",
+        "description": "Nominated for an exchange program at CESI’s Aix-en-Provence campus, France."
+      },
+      "fr": {
+        "period": "2024–2025",
+        "title": "Nomination pour un échange à CESI",
+        "description": "Nommé pour un programme d’échange au campus CESI d’Aix-en-Provence, France."
+      }
+    },
+    {
+      "id": "deans-list",
+      "kind": "distinction",
+      "visible": true,
+      "order": 4,
+      "url": "",
+      "en": {
+        "period": "2023–2025",
+        "title": "Dean’s List · Ashesi University",
+        "description": "Recognized on the Dean’s List for several semesters."
+      },
+      "fr": {
+        "period": "2023–2025",
+        "title": "Dean’s List · Université Ashesi",
+        "description": "Inscrit à la Dean’s List pendant plusieurs semestres."
       }
     }
   ],

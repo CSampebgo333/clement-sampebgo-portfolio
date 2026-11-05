@@ -193,7 +193,7 @@
     {
       "id": "experience-3",
       "visible": true,
-      "order": 2,
+      "order": 3,
       "en": {
         "period": "SEP–NOV 2025",
         "organization": "National Geographic Society + TNC",
@@ -212,7 +212,7 @@
     {
       "id": "experience-4",
       "visible": true,
-      "order": 3,
+      "order": 5,
       "en": {
         "period": "JUN–JUL 2024",
         "organization": "Beats by Dre",
@@ -227,6 +227,48 @@
       },
       "logo": "/assets/brands/beats.png",
       "viaExtern": true
+    },
+    {
+      "id": "iom-innovation-sprint",
+      "visible": true,
+      "order": 2,
+      "viaExtern": false,
+      "certificatesEnabled": false,
+      "certificates": [],
+      "en": {
+        "period": "OCT–NOV 2025",
+        "organization": "IOM Africa × African Leadership Academy",
+        "title": "Infrastructure, climate & human mobility · Innovation sprint",
+        "description": "Virtual · Eight-week program, 1 October–26 November 2025 · Team of five.\nParticipated in a multidisciplinary challenge focused on infrastructure for climate-displaced communities and the resilience of host communities. The sprint combined research, solution design and prototyping with mentor feedback."
+      },
+      "fr": {
+        "period": "OCT–NOV 2025",
+        "organization": "OIM Afrique × African Leadership Academy",
+        "title": "Infrastructures, climat et mobilité humaine · Défi d’innovation",
+        "description": "À distance · Programme de huit semaines, du 1er octobre au 26 novembre 2025 · Équipe de cinq.\nParticipation à un défi pluridisciplinaire consacré aux infrastructures pour les populations déplacées par le climat et à la résilience des communautés d’accueil. Le programme associait recherche, conception et prototypage, avec l’accompagnement de mentors."
+      },
+      "logo": "/assets/brands/iom.png"
+    },
+    {
+      "id": "market-theatre-laboratory",
+      "visible": true,
+      "order": 4,
+      "viaExtern": false,
+      "certificatesEnabled": false,
+      "certificates": [],
+      "en": {
+        "period": "APR–JUN 2025",
+        "organization": "Market Theatre Laboratory · via ACN / AL for the Arts",
+        "title": "Arts design & innovation · Theatre track",
+        "description": "Virtual · Eight-week program · Host: Johannesburg, South Africa · Team of five.\nLed theatre-maker interviews, developed low-fidelity wireframes and moderated user testing for a proof-of-concept platform connecting emerging artists with audiences. Contributed to the team’s final pitch and presentation, turning research into a practical design proposal."
+      },
+      "fr": {
+        "period": "AVR–JUIN 2025",
+        "organization": "Market Theatre Laboratory · via ACN / AL for the Arts",
+        "title": "Design et innovation dans les arts · Parcours théâtre",
+        "description": "À distance · Programme de huit semaines · Structure d’accueil : Johannesburg, Afrique du Sud · Équipe de cinq.\nConduite d’entretiens avec des créateurs de théâtre, réalisation de maquettes basse fidélité et animation de tests utilisateurs pour un concept de plateforme reliant artistes émergents et publics. Contribution au pitch et à la présentation de l’équipe, pour traduire la recherche en proposition de conception concrète."
+      },
+      "logo": "/assets/brands/market-theatre.png"
     }
   ],
   "education": [
@@ -245,6 +287,23 @@
         "organization": "Université Ashesi",
         "period": "2023–2027",
         "description": "Berekuso, Ghana · Diplôme prévu en juin 2027 · Boursier de la Mastercard Foundation"
+      }
+    },
+    {
+      "id": "cesi-exchange",
+      "visible": true,
+      "order": 1,
+      "en": {
+        "period": "SEP 2025–SEP 2026",
+        "organization": "CESI Graduate School of Engineering · Aix-en-Provence, France",
+        "title": "Computer Science exchange · FISE A3",
+        "description": "English-taught FISE Informatique A3 program.\nEnrollment period: 16 September 2025–12 September 2026."
+      },
+      "fr": {
+        "period": "SEPT 2025–SEPT 2026",
+        "organization": "CESI École d’ingénieurs · Aix-en-Provence, France",
+        "title": "Échange en informatique · FISE A3",
+        "description": "Formation FISE informatique A3 dispensée en anglais.\nPériode d’inscription : du 16 septembre 2025 au 12 septembre 2026."
       }
     }
   ],

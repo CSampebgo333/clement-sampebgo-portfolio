@@ -160,16 +160,33 @@
         "period": "JUL–OCT 2026",
         "organization": "Pfizer",
         "title": "AI document insights & data extraction",
-        "description": "Built a Python document assistant combining OCR, semantic retrieval and a Gradio interface. Evaluated retrieval and answer quality separately, with source pages available for verification."
+        "description": "Built a Python document-retrieval prototype with OCR, semantic search and a Gradio interface. Evaluated retrieval and answer quality separately, with source-page references to help users check responses.",
+        "context": "Remote · Extern program",
+        "overview": "A learning-focused externship exploring how to make complex documents easier to search and verify. I developed a document-processing and retrieval prototype and examined where extraction, retrieval and answer generation could fail.",
+        "timeline": "July–October 2026 · Pfizer Advanced: AI-Powered Document Insights & Data Extraction, delivered through Extern.",
+        "contribution": "Developed OCR and document-processing workflows, organized document classification and routing, and built a Gradio interface for retrieval-based questions. Used source-page references to make answers easier to review.",
+        "approach": "Separated document extraction, retrieval and answer generation so each stage could be assessed. Explored chunking, semantic search and prompt design, then documented limitations and possible improvements.",
+        "outcomes": "A working prototype and practical experience evaluating document AI. The public notebook shows the implementation approach; it is a learning prototype rather than a claim of production deployment."
       },
       "fr": {
         "period": "JUIL–OCT 2026",
         "organization": "Pfizer",
         "title": "Analyse documentaire et extraction de données par IA",
-        "description": "Développement d’un assistant documentaire Python associant OCR, recherche sémantique et interface Gradio. Évaluation distincte de la recherche et des réponses, avec accès aux pages sources pour vérification."
+        "description": "Développement d’un prototype Python de recherche documentaire associant OCR, recherche sémantique et interface Gradio. Évaluation distincte de la recherche et des réponses, avec références aux pages sources pour faciliter leur vérification.",
+        "context": "À distance · Programme Extern",
+        "overview": "Un externat consacré à la recherche et à la vérification d’informations dans des documents complexes. J’ai développé un prototype de traitement documentaire et étudié les limites de l’extraction, de la recherche et de la génération de réponses.",
+        "timeline": "Juillet–octobre 2026 · Pfizer Advanced: AI-Powered Document Insights & Data Extraction, via Extern.",
+        "contribution": "Développement de traitements OCR et documentaires, organisation de la classification et du routage, et création d’une interface Gradio pour interroger les documents. Ajout de références aux pages sources pour faciliter la relecture.",
+        "approach": "Séparation de l’extraction, de la recherche et de la génération afin d’évaluer chaque étape. Exploration du découpage documentaire, de la recherche sémantique et de la conception de prompts, puis documentation des limites et des améliorations possibles.",
+        "outcomes": "Un prototype fonctionnel et une pratique de l’évaluation de l’IA documentaire. Le notebook public présente la démarche technique ; il s’agit d’un prototype d’apprentissage."
       },
       "logo": "/assets/brands/pfizer.png",
-      "viaExtern": true
+      "viaExtern": true,
+      "projectIds": [
+        "document-intelligence"
+      ],
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "experience-2",
@@ -179,16 +196,33 @@
         "period": "JUL–SEP 2026",
         "organization": "Breaking Games",
         "title": "SQL & database architecture",
-        "description": "Designed a SQLite analytics database and an HTML/Chart.js dashboard. Used SQL validation to check joins, reporting periods and metric definitions before drawing conclusions."
+        "description": "Designed a SQLite analytics database and an HTML/Chart.js reporting dashboard. Checked joins, reporting periods and metric definitions to make the analysis more reliable and understandable.",
+        "context": "Remote · Extern program",
+        "overview": "A SQL and database architecture externship connecting relational modeling with business reporting. My focus was on turning separate data sources into a coherent analytical structure and checking what the resulting indicators actually meant.",
+        "timeline": "July–September 2026 · SQL & Database Architecture Externship with Breaking Games, through Extern.",
+        "contribution": "Designed the relational model, wrote analytical SQL queries and developed a reporting interface with HTML and Chart.js. Examined how joins, data quality and time windows affect conclusions.",
+        "approach": "Kept modeling, validation and presentation as distinct steps. Investigated mismatched records and metric assumptions before communicating findings in a dashboard.",
+        "outcomes": "Practical experience building an analytical database and translating SQL outputs into readable reporting. This overview shares methods and responsibilities while keeping internal datasets, figures and detailed project materials private."
       },
       "fr": {
         "period": "JUIL–SEPT 2026",
         "organization": "Breaking Games",
         "title": "SQL et architecture de bases de données",
-        "description": "Conception d’une base analytique SQLite et d’un tableau de bord HTML/Chart.js. Validation des jointures, des périodes et du calcul des indicateurs avant interprétation des résultats."
+        "description": "Conception d’une base analytique SQLite et d’un tableau de bord HTML/Chart.js. Vérification des jointures, des périodes et des définitions d’indicateurs pour rendre l’analyse plus fiable et lisible.",
+        "context": "À distance · Programme Extern",
+        "overview": "Un externat en SQL et architecture de bases de données, reliant modélisation relationnelle et reporting. Mon travail consistait à structurer des sources distinctes et à vérifier le sens des indicateurs produits.",
+        "timeline": "Juillet–septembre 2026 · Externat SQL et architecture de bases de données avec Breaking Games, via Extern.",
+        "contribution": "Conception du modèle relationnel, rédaction de requêtes SQL analytiques et création d’une interface de reporting HTML/Chart.js. Étude des effets des jointures, de la qualité des données et des périodes sur les conclusions.",
+        "approach": "Séparation de la modélisation, de la validation et de la présentation. Vérification des correspondances entre enregistrements et des hypothèses de calcul avant de communiquer les résultats.",
+        "outcomes": "Une pratique de la conception de bases analytiques et de la présentation des résultats SQL. Cet aperçu décrit les méthodes et responsabilités ; les jeux de données, chiffres internes et livrables détaillés restent privés."
       },
       "logo": "/assets/brands/breaking-games.png",
-      "viaExtern": true
+      "viaExtern": true,
+      "projectIds": [
+        "breaking-games"
+      ],
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "experience-3",
@@ -198,16 +232,33 @@
         "period": "SEP–NOV 2025",
         "organization": "National Geographic Society + TNC",
         "title": "Marine & community conservation externship",
-        "description": "Turned local reporting and community footage into a public ArcGIS StoryMap on Tanghin Dam. Connected environmental pressures with fishing livelihoods and community responses through clear, attributed storytelling."
+        "description": "Created a public ArcGIS StoryMap about Tanghin Dam, connecting environmental pressures with fishing livelihoods and community responses. Synthesized local reporting and attributed community footage into an accessible research narrative.",
+        "context": "Remote · National Geographic Society + TNC · via Extern",
+        "overview": "A marine and community conservation externship applied to a place close to home: Tanghin Dam in Ouagadougou, Burkina Faso. I explored how environmental change intersects with local livelihoods and how mapping and narrative can communicate those connections.",
+        "timeline": "September–November 2025 · Marine & Community Conservation Remote Externship.",
+        "contribution": "Synthesized local reporting and existing community footage into research records and a public ArcGIS StoryMap. Connected plastic pollution, invasive water hyacinths, fishing livelihoods and community responses, with attribution for external material.",
+        "approach": "Organized the research around the place, its environmental pressures and the people affected. Combined written explanations, maps and attributed media so the story remained understandable beyond a specialist audience.",
+        "outcomes": "A public StoryMap that brings research, mapping and storytelling together. The case study links to the map and includes a preview. The work is a synthesis of existing sources, not a claim of original field sampling."
       },
       "fr": {
         "period": "SEPT–NOV 2025",
         "organization": "National Geographic Society + TNC",
         "title": "Externat en conservation marine et communautaire",
-        "description": "Création d’un ArcGIS StoryMap public sur le barrage de Tanghin à partir de publications locales et de vidéos communautaires. Mise en récit des liens entre pressions environnementales, pêche et réponses locales, avec attribution des sources."
+        "description": "Création d’un ArcGIS StoryMap public sur le barrage de Tanghin, reliant pressions environnementales, pêche et réponses communautaires. Synthèse de reportages locaux et de vidéos attribuées dans un récit documentaire accessible.",
+        "context": "À distance · National Geographic Society + TNC · via Extern",
+        "overview": "Un externat en conservation marine et communautaire appliqué au barrage de Tanghin, à Ouagadougou, au Burkina Faso. J’ai étudié les liens entre évolutions environnementales et moyens de subsistance, puis utilisé cartes et narration pour les rendre lisibles.",
+        "timeline": "Septembre–novembre 2025 · Externat à distance en conservation marine et communautaire.",
+        "contribution": "Synthèse de reportages locaux et de vidéos communautaires existantes dans des fiches de recherche et un ArcGIS StoryMap public. Mise en relation de la pollution plastique, des jacinthes d’eau, de la pêche et des réponses locales, avec attribution des sources.",
+        "approach": "Organisation de la recherche autour du lieu, des pressions environnementales et des personnes concernées. Association de textes, de cartes et de médias attribués pour rendre le sujet accessible.",
+        "outcomes": "Un StoryMap public réunissant recherche, cartographie et communication narrative. L’étude de cas propose un lien vers la carte et un aperçu. Le travail synthétise des sources existantes."
       },
       "logo": "/assets/brands/natgeo-tnc.png",
-      "viaExtern": true
+      "viaExtern": true,
+      "projectIds": [
+        "tanghin-dam"
+      ],
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "experience-4",
@@ -217,16 +268,33 @@
         "period": "JUN–JUL 2024",
         "organization": "Beats by Dre",
         "title": "Consumer insights data analytics",
-        "description": "Cleaned and analyzed consumer reviews with Python, exploratory analysis and NLP. Translated recurring feedback into visualizations and evidence-based recommendations for brand decisions."
+        "description": "Cleaned and analyzed consumer reviews using Python, exploratory analysis and NLP. Turned recurring feedback into visualizations and evidence-based recommendations, with attention to the limits of the review sample.",
+        "context": "Remote · Extern program",
+        "overview": "A consumer insights data analytics externship exploring how customer reviews can inform brand decisions. I worked through data preparation, analysis and communication rather than treating sentiment scores as a complete explanation of customer experience.",
+        "timeline": "June–July 2024 · Beats by Dre consumer insights data analytics externship, via Extern.",
+        "contribution": "Prepared and explored review data in Python, examined sentiment and recurring themes, and created visualizations to communicate patterns. Developed recommendations grounded in the analysis.",
+        "approach": "Combined exploratory analysis with NLP to look at both broad sentiment and specific feedback. Used charts to make comparisons readable and considered the composition of the dataset when interpreting results.",
+        "outcomes": "A consumer insights analysis connecting technical exploration with business communication. The public project includes a chart from the capstone notebook; review samples describe the dataset and should not be interpreted as market share."
       },
       "fr": {
         "period": "JUIN–JUIL 2024",
         "organization": "Beats by Dre",
         "title": "Analyse des avis consommateurs",
-        "description": "Nettoyage et analyse d’avis consommateurs avec Python, l’analyse exploratoire et le NLP. Synthèse des retours récurrents en visualisations et recommandations étayées pour les décisions de marque."
+        "description": "Nettoyage et analyse d’avis consommateurs avec Python, analyse exploratoire et NLP. Transformation des retours récurrents en visualisations et recommandations argumentées, en tenant compte des limites de l’échantillon.",
+        "context": "À distance · Programme Extern",
+        "overview": "Un externat en analyse des avis consommateurs pour éclairer des décisions de marque. J’ai travaillé de la préparation des données à la communication des résultats, sans réduire l’expérience client à un score de sentiment.",
+        "timeline": "Juin–juillet 2024 · Externat Beats by Dre en analyse des avis consommateurs, via Extern.",
+        "contribution": "Préparation et exploration des avis en Python, étude des sentiments et des thèmes récurrents, puis création de visualisations. Formulation de recommandations fondées sur l’analyse.",
+        "approach": "Association de l’analyse exploratoire et du NLP pour examiner le sentiment général et les retours précis. Utilisation de graphiques et prise en compte de la composition du jeu de données dans l’interprétation.",
+        "outcomes": "Une analyse reliant exploration technique et communication métier. Le projet public comprend un graphique issu du notebook final ; les échantillons décrivent les données étudiées et ne représentent pas des parts de marché."
       },
       "logo": "/assets/brands/beats.png",
-      "viaExtern": true
+      "viaExtern": true,
+      "projectIds": [
+        "consumer-insights"
+      ],
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "iom-innovation-sprint",
@@ -239,15 +307,28 @@
         "period": "OCT–NOV 2025",
         "organization": "IOM Africa × African Leadership Academy",
         "title": "Infrastructure, climate & human mobility · Innovation sprint",
-        "description": "Virtual · Eight-week program, 1 October–26 November 2025 · Team of five.\nParticipated in a multidisciplinary challenge focused on infrastructure for climate-displaced communities and the resilience of host communities. The sprint combined research, solution design and prototyping with mentor feedback."
+        "description": "Participated in a five-person team in a virtual innovation sprint on climate displacement and community resilience. The program focused on researching and designing infrastructure responses for displaced and host communities.",
+        "context": "Virtual · Eight-week program · Team of five",
+        "overview": "Selected for an IOM Africa and African Leadership Academy innovation sprint examining infrastructure, climate change and human mobility. I participated in a multidisciplinary team of five in a program centered on research, solution design and prototyping.",
+        "timeline": "1 October–26 November 2025 · Eight-week virtual sprint. The program brief scheduled a final showcase for 10 December 2025.",
+        "contribution": "Collaborated in a five-person team on the challenge of infrastructure for climate-displaced and host communities.",
+        "approach": "The program used mentor-supported exploration of physical, ecological, social and digital infrastructure, with attention to resilience and practical implementation."
       },
       "fr": {
         "period": "OCT–NOV 2025",
         "organization": "OIM Afrique × African Leadership Academy",
         "title": "Infrastructures, climat et mobilité humaine · Défi d’innovation",
-        "description": "À distance · Programme de huit semaines, du 1er octobre au 26 novembre 2025 · Équipe de cinq.\nParticipation à un défi pluridisciplinaire consacré aux infrastructures pour les populations déplacées par le climat et à la résilience des communautés d’accueil. Le programme associait recherche, conception et prototypage, avec l’accompagnement de mentors."
+        "description": "Participation à une équipe de cinq dans un défi d’innovation à distance sur les déplacements climatiques et la résilience communautaire. Le programme portait sur la recherche et la conception de réponses infrastructurelles pour les populations déplacées et les communautés d’accueil.",
+        "context": "À distance · Programme de huit semaines · Équipe de cinq",
+        "overview": "Sélection pour un défi d’innovation de l’OIM Afrique et de l’African Leadership Academy, consacré aux infrastructures, au climat et à la mobilité humaine. Participation à une équipe pluridisciplinaire de cinq dans un programme de recherche, conception et prototypage.",
+        "timeline": "Du 1er octobre au 26 novembre 2025 · Défi de huit semaines à distance. Le descriptif prévoyait une présentation finale le 10 décembre 2025.",
+        "contribution": "Collaboration au sein d’une équipe de cinq sur les infrastructures pour les populations déplacées par le climat et les communautés d’accueil.",
+        "approach": "Le programme proposait une exploration accompagnée par des mentors des infrastructures physiques, écologiques, sociales et numériques, en lien avec la résilience et la faisabilité."
       },
-      "logo": "/assets/brands/iom.png"
+      "logo": "/assets/brands/iom.png",
+      "projectIds": [],
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "market-theatre-laboratory",
@@ -260,15 +341,30 @@
         "period": "APR–JUN 2025",
         "organization": "Market Theatre Laboratory · via ACN / AL for the Arts",
         "title": "Arts design & innovation · Theatre track",
-        "description": "Virtual · Eight-week program · Host: Johannesburg, South Africa · Team of five.\nLed theatre-maker interviews, developed low-fidelity wireframes and moderated user testing for a proof-of-concept platform connecting emerging artists with audiences. Contributed to the team’s final pitch and presentation, turning research into a practical design proposal."
+        "description": "Led theatre-maker interviews, developed low-fidelity wireframes and moderated user testing in a five-person team. Helped turn user research into a proof-of-concept platform connecting emerging artists with audiences, then contributed to the final pitch.",
+        "context": "Virtual · Host in Johannesburg, South Africa · Team of five",
+        "overview": "An AL for the Arts design and innovation challenge hosted by Market Theatre Laboratory. Our five-person team explored artist visibility, sustainability and creative collaboration through a virtual design-thinking program.",
+        "timeline": "April–June 2025 · Described as an eight-week program. My submitted report records 25 April–27 June 2025.",
+        "contribution": "Led interviews with theatre-makers and desk research, co-authored the problem brief, developed low-fidelity wireframes and moderated user-testing sessions. Contributed to the pitch video, slide deck and final presentation.",
+        "approach": "Moved from problem exploration to ideation, mentor feedback, prototyping and user testing. Used qualitative feedback to refine the proposal and worked with teammates across time zones.",
+        "outcomes": "A proof-of-concept platform proposal and a final team pitch, as recorded in my internship report. The experience strengthened my research, prototyping and presentation skills; it is not presented as a launched product."
       },
       "fr": {
         "period": "AVR–JUIN 2025",
         "organization": "Market Theatre Laboratory · via ACN / AL for the Arts",
         "title": "Design et innovation dans les arts · Parcours théâtre",
-        "description": "À distance · Programme de huit semaines · Structure d’accueil : Johannesburg, Afrique du Sud · Équipe de cinq.\nConduite d’entretiens avec des créateurs de théâtre, réalisation de maquettes basse fidélité et animation de tests utilisateurs pour un concept de plateforme reliant artistes émergents et publics. Contribution au pitch et à la présentation de l’équipe, pour traduire la recherche en proposition de conception concrète."
+        "description": "Conduite d’entretiens, réalisation de maquettes basse fidélité et animation de tests utilisateurs dans une équipe de cinq. Transformation de la recherche en concept de plateforme reliant artistes émergents et publics, puis contribution au pitch final.",
+        "context": "À distance · Structure d’accueil à Johannesburg, Afrique du Sud · Équipe de cinq",
+        "overview": "Un défi de design et d’innovation AL for the Arts, accueilli par le Market Theatre Laboratory. Notre équipe de cinq a exploré la visibilité des artistes, la pérennité du secteur et la collaboration créative à travers un programme de design thinking à distance.",
+        "timeline": "Avril–juin 2025 · Programme présenté comme un parcours de huit semaines. Mon rapport indique la période du 25 avril au 27 juin 2025.",
+        "contribution": "Conduite d’entretiens et de recherches documentaires, corédaction de la problématique, réalisation de maquettes basse fidélité et animation de tests utilisateurs. Contribution à la vidéo de pitch, aux diapositives et à la présentation finale.",
+        "approach": "Progression de l’exploration du problème à l’idéation, aux retours des mentors, au prototypage et aux tests. Utilisation des retours qualitatifs pour affiner la proposition et collaboration à travers plusieurs fuseaux horaires.",
+        "outcomes": "Un concept de plateforme et un pitch final en équipe, décrits dans mon rapport de stage. Une pratique de la recherche, du prototypage et de la présentation ; le projet reste un prototype."
       },
-      "logo": "/assets/brands/market-theatre.png"
+      "logo": "/assets/brands/market-theatre.png",
+      "projectIds": [],
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     }
   ],
   "education": [
@@ -287,7 +383,9 @@
         "organization": "Université Ashesi",
         "period": "2023–2027",
         "description": "Berekuso, Ghana · Diplôme prévu en juin 2027 · Boursier de la Mastercard Foundation"
-      }
+      },
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "cesi-exchange",
@@ -304,7 +402,9 @@
         "organization": "CESI École d’ingénieurs · Aix-en-Provence, France",
         "title": "Échange en informatique · FISE A3",
         "description": "Formation FISE informatique A3 dispensée en anglais.\nPériode d’inscription : du 16 septembre 2025 au 12 septembre 2026."
-      }
+      },
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     }
   ],
   "credentials": [
@@ -323,7 +423,9 @@
         "title": "Google Data Analytics",
         "description": "Certificat professionnel · Huit cours sur la préparation, l’analyse et la visualisation des données, SQL et R."
       },
-      "kind": "certificate"
+      "kind": "certificate",
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "credential-2",
@@ -340,7 +442,9 @@
         "title": "Prompt Engineering for ChatGPT",
         "description": "Université Vanderbilt · Cours en ligne terminé le 24 janvier 2025."
       },
-      "kind": "certificate"
+      "kind": "certificate",
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "neurips-2026",
@@ -358,7 +462,9 @@
         "period": "SEPTEMBRE 2026",
         "title": "Global PIQA · NeurIPS 2026",
         "description": "Auteur contributeur de Global PIQA, accepté en poster dans la catégorie Evaluations & Datasets de NeurIPS 2026. Ma contribution portait sur le jeu de données en zarma."
-      }
+      },
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "scholarships",
@@ -401,7 +507,9 @@
             "description": "Lauréat d’une bourse du gouvernement français pour CESI École d’ingénieurs, France."
           }
         }
-      ]
+      ],
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "academic-recognition",
@@ -444,7 +552,9 @@
             "description": "Inscrit à la Dean’s List pendant plusieurs semestres."
           }
         }
-      ]
+      ],
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     }
   ],
   "socials": [
@@ -523,7 +633,9 @@
       ],
       "imageEnabled": true,
       "coverLogo": "/assets/brands/pfizer.png",
-      "coverLogoLabel": "Pfizer"
+      "coverLogoLabel": "Pfizer",
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "consumer-insights",
@@ -561,7 +673,9 @@
       },
       "order": 1,
       "visible": true,
-      "imageEnabled": true
+      "imageEnabled": true,
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "breaking-games",
@@ -609,7 +723,9 @@
       "evidence": [],
       "imageEnabled": true,
       "coverLogo": "/assets/brands/breaking-games.png",
-      "coverLogoLabel": "Breaking Games"
+      "coverLogoLabel": "Breaking Games",
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "global-piqa",
@@ -651,7 +767,9 @@
       "order": 4,
       "visible": true,
       "paperUrl": "https://arxiv.org/pdf/2510.24081",
-      "imageEnabled": true
+      "imageEnabled": true,
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "driving-theory",
@@ -689,7 +807,9 @@
       },
       "order": 5,
       "visible": true,
-      "imageEnabled": true
+      "imageEnabled": true,
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     },
     {
       "id": "tanghin-dam",
@@ -770,8 +890,1276 @@
           }
         }
       ],
-      "imageEnabled": true
+      "imageEnabled": true,
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
     }
   ],
-  "documents": []
+  "documents": [],
+  "skills": [
+    {
+      "id": "development-1",
+      "visible": true,
+      "order": 0,
+      "category": "development",
+      "en": {
+        "title": "Python",
+        "description": ""
+      },
+      "fr": {
+        "title": "Python",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "document-intelligence"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        }
+      ]
+    },
+    {
+      "id": "development-2",
+      "visible": true,
+      "order": 1,
+      "category": "development",
+      "en": {
+        "title": "JavaScript",
+        "description": ""
+      },
+      "fr": {
+        "title": "JavaScript",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "driving-theory"
+        },
+        {
+          "collection": "education",
+          "id": "ashesi"
+        }
+      ]
+    },
+    {
+      "id": "development-3",
+      "visible": true,
+      "order": 2,
+      "category": "development",
+      "en": {
+        "title": "HTML & CSS",
+        "description": ""
+      },
+      "fr": {
+        "title": "HTML et CSS",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "driving-theory"
+        },
+        {
+          "collection": "education",
+          "id": "ashesi"
+        }
+      ]
+    },
+    {
+      "id": "development-4",
+      "visible": true,
+      "order": 3,
+      "category": "development",
+      "en": {
+        "title": "React",
+        "description": "Academic and project use; no proficiency rating implied."
+      },
+      "fr": {
+        "title": "React",
+        "description": "Utilisation académique et dans des projets, sans niveau de maîtrise revendiqué."
+      },
+      "sources": [
+        {
+          "collection": "education",
+          "id": "ashesi"
+        }
+      ]
+    },
+    {
+      "id": "development-5",
+      "visible": true,
+      "order": 4,
+      "category": "development",
+      "en": {
+        "title": "Java",
+        "description": "Academic and project use; no proficiency rating implied."
+      },
+      "fr": {
+        "title": "Java",
+        "description": "Utilisation académique et dans des projets, sans niveau de maîtrise revendiqué."
+      },
+      "sources": [
+        {
+          "collection": "education",
+          "id": "ashesi"
+        }
+      ]
+    },
+    {
+      "id": "development-6",
+      "visible": true,
+      "order": 5,
+      "category": "development",
+      "en": {
+        "title": "C++",
+        "description": "Academic and project use; no proficiency rating implied."
+      },
+      "fr": {
+        "title": "C++",
+        "description": "Utilisation académique et dans des projets, sans niveau de maîtrise revendiqué."
+      },
+      "sources": [
+        {
+          "collection": "education",
+          "id": "ashesi"
+        }
+      ]
+    },
+    {
+      "id": "development-7",
+      "visible": true,
+      "order": 6,
+      "category": "development",
+      "en": {
+        "title": "C",
+        "description": "Academic and project use; no proficiency rating implied."
+      },
+      "fr": {
+        "title": "C",
+        "description": "Utilisation académique et dans des projets, sans niveau de maîtrise revendiqué."
+      },
+      "sources": [
+        {
+          "collection": "education",
+          "id": "ashesi"
+        }
+      ]
+    },
+    {
+      "id": "development-8",
+      "visible": true,
+      "order": 7,
+      "category": "development",
+      "en": {
+        "title": "PHP & Ajax",
+        "description": "Academic and project use; no proficiency rating implied."
+      },
+      "fr": {
+        "title": "PHP et Ajax",
+        "description": "Utilisation académique et dans des projets, sans niveau de maîtrise revendiqué."
+      },
+      "sources": [
+        {
+          "collection": "education",
+          "id": "ashesi"
+        }
+      ]
+    },
+    {
+      "id": "development-9",
+      "visible": true,
+      "order": 8,
+      "category": "development",
+      "en": {
+        "title": "Git & GitHub",
+        "description": "Academic and project use; no proficiency rating implied."
+      },
+      "fr": {
+        "title": "Git et GitHub",
+        "description": "Utilisation académique et dans des projets, sans niveau de maîtrise revendiqué."
+      },
+      "sources": [
+        {
+          "collection": "education",
+          "id": "ashesi"
+        }
+      ]
+    },
+    {
+      "id": "development-10",
+      "visible": true,
+      "order": 9,
+      "category": "development",
+      "en": {
+        "title": "Keyboard accessibility",
+        "description": ""
+      },
+      "fr": {
+        "title": "Accessibilité au clavier",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "driving-theory"
+        },
+        {
+          "collection": "education",
+          "id": "ashesi"
+        }
+      ]
+    },
+    {
+      "id": "data-1",
+      "visible": true,
+      "order": 0,
+      "category": "data",
+      "en": {
+        "title": "SQL",
+        "description": ""
+      },
+      "fr": {
+        "title": "SQL",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-2",
+      "visible": true,
+      "order": 1,
+      "category": "data",
+      "en": {
+        "title": "SQLite",
+        "description": ""
+      },
+      "fr": {
+        "title": "SQLite",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-3",
+      "visible": true,
+      "order": 2,
+      "category": "data",
+      "en": {
+        "title": "Relational data modeling",
+        "description": ""
+      },
+      "fr": {
+        "title": "Modélisation relationnelle",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-4",
+      "visible": true,
+      "order": 3,
+      "category": "data",
+      "en": {
+        "title": "Data validation & joins",
+        "description": ""
+      },
+      "fr": {
+        "title": "Validation des données et jointures",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-5",
+      "visible": true,
+      "order": 4,
+      "category": "data",
+      "en": {
+        "title": "Data cleaning",
+        "description": ""
+      },
+      "fr": {
+        "title": "Nettoyage des données",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-6",
+      "visible": true,
+      "order": 5,
+      "category": "data",
+      "en": {
+        "title": "Exploratory data analysis",
+        "description": ""
+      },
+      "fr": {
+        "title": "Analyse exploratoire",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-7",
+      "visible": true,
+      "order": 6,
+      "category": "data",
+      "en": {
+        "title": "Pandas",
+        "description": ""
+      },
+      "fr": {
+        "title": "Pandas",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-8",
+      "visible": true,
+      "order": 7,
+      "category": "data",
+      "en": {
+        "title": "NumPy",
+        "description": ""
+      },
+      "fr": {
+        "title": "NumPy",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-9",
+      "visible": true,
+      "order": 8,
+      "category": "data",
+      "en": {
+        "title": "R",
+        "description": ""
+      },
+      "fr": {
+        "title": "R",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-10",
+      "visible": true,
+      "order": 9,
+      "category": "data",
+      "en": {
+        "title": "Spreadsheets",
+        "description": ""
+      },
+      "fr": {
+        "title": "Tableurs",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-11",
+      "visible": true,
+      "order": 10,
+      "category": "data",
+      "en": {
+        "title": "Tableau",
+        "description": ""
+      },
+      "fr": {
+        "title": "Tableau",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-12",
+      "visible": true,
+      "order": 11,
+      "category": "data",
+      "en": {
+        "title": "Matplotlib",
+        "description": ""
+      },
+      "fr": {
+        "title": "Matplotlib",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-13",
+      "visible": true,
+      "order": 12,
+      "category": "data",
+      "en": {
+        "title": "Chart.js",
+        "description": ""
+      },
+      "fr": {
+        "title": "Chart.js",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "data-14",
+      "visible": true,
+      "order": 13,
+      "category": "data",
+      "en": {
+        "title": "Data visualization",
+        "description": ""
+      },
+      "fr": {
+        "title": "Visualisation de données",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "breaking-games"
+        },
+        {
+          "collection": "projects",
+          "id": "consumer-insights"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-1"
+        }
+      ]
+    },
+    {
+      "id": "ai-1",
+      "visible": true,
+      "order": 0,
+      "category": "ai",
+      "en": {
+        "title": "OCR · Tesseract / PaddleOCR",
+        "description": ""
+      },
+      "fr": {
+        "title": "OCR · Tesseract / PaddleOCR",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "document-intelligence"
+        },
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-2"
+        }
+      ]
+    },
+    {
+      "id": "ai-2",
+      "visible": true,
+      "order": 1,
+      "category": "ai",
+      "en": {
+        "title": "Retrieval-augmented generation",
+        "description": ""
+      },
+      "fr": {
+        "title": "Génération augmentée par recherche",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "document-intelligence"
+        },
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-2"
+        }
+      ]
+    },
+    {
+      "id": "ai-3",
+      "visible": true,
+      "order": 2,
+      "category": "ai",
+      "en": {
+        "title": "Semantic search · FAISS",
+        "description": ""
+      },
+      "fr": {
+        "title": "Recherche sémantique · FAISS",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "document-intelligence"
+        },
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-2"
+        }
+      ]
+    },
+    {
+      "id": "ai-4",
+      "visible": true,
+      "order": 3,
+      "category": "ai",
+      "en": {
+        "title": "LlamaIndex",
+        "description": ""
+      },
+      "fr": {
+        "title": "LlamaIndex",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "document-intelligence"
+        },
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-2"
+        }
+      ]
+    },
+    {
+      "id": "ai-5",
+      "visible": true,
+      "order": 4,
+      "category": "ai",
+      "en": {
+        "title": "Gradio",
+        "description": ""
+      },
+      "fr": {
+        "title": "Gradio",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "document-intelligence"
+        },
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-2"
+        }
+      ]
+    },
+    {
+      "id": "ai-6",
+      "visible": true,
+      "order": 5,
+      "category": "ai",
+      "en": {
+        "title": "Document classification",
+        "description": ""
+      },
+      "fr": {
+        "title": "Classification documentaire",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "document-intelligence"
+        },
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-2"
+        }
+      ]
+    },
+    {
+      "id": "ai-7",
+      "visible": true,
+      "order": 6,
+      "category": "ai",
+      "en": {
+        "title": "Prompt engineering",
+        "description": ""
+      },
+      "fr": {
+        "title": "Ingénierie de prompts",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "document-intelligence"
+        },
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-2"
+        }
+      ]
+    },
+    {
+      "id": "ai-8",
+      "visible": true,
+      "order": 7,
+      "category": "ai",
+      "en": {
+        "title": "Sentiment analysis & NLP",
+        "description": ""
+      },
+      "fr": {
+        "title": "Analyse de sentiments et NLP",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "document-intelligence"
+        },
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-2"
+        }
+      ]
+    },
+    {
+      "id": "ai-9",
+      "visible": true,
+      "order": 8,
+      "category": "ai",
+      "en": {
+        "title": "Gemini",
+        "description": ""
+      },
+      "fr": {
+        "title": "Gemini",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "document-intelligence"
+        },
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        },
+        {
+          "collection": "credentials",
+          "id": "credential-2"
+        }
+      ]
+    },
+    {
+      "id": "ai-10",
+      "visible": true,
+      "order": 9,
+      "category": "ai",
+      "en": {
+        "title": "Multilingual evaluation",
+        "description": ""
+      },
+      "fr": {
+        "title": "Évaluation multilingue",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        }
+      ]
+    },
+    {
+      "id": "ai-11",
+      "visible": true,
+      "order": 10,
+      "category": "ai",
+      "en": {
+        "title": "Dataset review & annotation",
+        "description": ""
+      },
+      "fr": {
+        "title": "Relecture et annotation de données",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "global-piqa"
+        }
+      ]
+    },
+    {
+      "id": "research-1",
+      "visible": true,
+      "order": 0,
+      "category": "research",
+      "en": {
+        "title": "Research synthesis",
+        "description": ""
+      },
+      "fr": {
+        "title": "Synthèse documentaire",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "tanghin-dam"
+        },
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        }
+      ]
+    },
+    {
+      "id": "research-2",
+      "visible": true,
+      "order": 1,
+      "category": "research",
+      "en": {
+        "title": "ArcGIS StoryMaps & GIS",
+        "description": ""
+      },
+      "fr": {
+        "title": "ArcGIS StoryMaps et SIG",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "tanghin-dam"
+        },
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        }
+      ]
+    },
+    {
+      "id": "research-3",
+      "visible": true,
+      "order": 2,
+      "category": "research",
+      "en": {
+        "title": "Design thinking",
+        "description": ""
+      },
+      "fr": {
+        "title": "Design thinking",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "tanghin-dam"
+        },
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        }
+      ]
+    },
+    {
+      "id": "research-4",
+      "visible": true,
+      "order": 3,
+      "category": "research",
+      "en": {
+        "title": "Stakeholder interviews",
+        "description": ""
+      },
+      "fr": {
+        "title": "Entretiens avec les parties prenantes",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "tanghin-dam"
+        },
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        }
+      ]
+    },
+    {
+      "id": "research-5",
+      "visible": true,
+      "order": 4,
+      "category": "research",
+      "en": {
+        "title": "Low-fidelity wireframes",
+        "description": ""
+      },
+      "fr": {
+        "title": "Maquettes basse fidélité",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "tanghin-dam"
+        },
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        }
+      ]
+    },
+    {
+      "id": "research-6",
+      "visible": true,
+      "order": 5,
+      "category": "research",
+      "en": {
+        "title": "User testing",
+        "description": ""
+      },
+      "fr": {
+        "title": "Tests utilisateurs",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "tanghin-dam"
+        },
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        }
+      ]
+    },
+    {
+      "id": "research-7",
+      "visible": true,
+      "order": 6,
+      "category": "research",
+      "en": {
+        "title": "Source verification",
+        "description": ""
+      },
+      "fr": {
+        "title": "Vérification des sources",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "projects",
+          "id": "tanghin-dam"
+        },
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        }
+      ]
+    },
+    {
+      "id": "collaboration-1",
+      "visible": true,
+      "order": 0,
+      "category": "collaboration",
+      "en": {
+        "title": "Team collaboration",
+        "description": ""
+      },
+      "fr": {
+        "title": "Travail en équipe",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        },
+        {
+          "collection": "credentials",
+          "id": "business-development"
+        }
+      ]
+    },
+    {
+      "id": "collaboration-2",
+      "visible": true,
+      "order": 1,
+      "category": "collaboration",
+      "en": {
+        "title": "Remote collaboration",
+        "description": ""
+      },
+      "fr": {
+        "title": "Collaboration à distance",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        },
+        {
+          "collection": "credentials",
+          "id": "business-development"
+        }
+      ]
+    },
+    {
+      "id": "collaboration-3",
+      "visible": true,
+      "order": 2,
+      "category": "collaboration",
+      "en": {
+        "title": "Technical presentations",
+        "description": ""
+      },
+      "fr": {
+        "title": "Présentations techniques",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        },
+        {
+          "collection": "credentials",
+          "id": "business-development"
+        }
+      ]
+    },
+    {
+      "id": "collaboration-4",
+      "visible": true,
+      "order": 3,
+      "category": "collaboration",
+      "en": {
+        "title": "Research communication",
+        "description": ""
+      },
+      "fr": {
+        "title": "Communication scientifique",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "experiences",
+          "id": "market-theatre-laboratory"
+        },
+        {
+          "collection": "credentials",
+          "id": "business-development"
+        }
+      ]
+    },
+    {
+      "id": "collaboration-5",
+      "visible": true,
+      "order": 4,
+      "category": "collaboration",
+      "en": {
+        "title": "Peer tutoring · Python",
+        "description": ""
+      },
+      "fr": {
+        "title": "Tutorat entre pairs · Python",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "education",
+          "id": "ashesi"
+        }
+      ]
+    },
+    {
+      "id": "collaboration-6",
+      "visible": true,
+      "order": 5,
+      "category": "collaboration",
+      "en": {
+        "title": "Business development fundamentals",
+        "description": ""
+      },
+      "fr": {
+        "title": "Bases du développement commercial",
+        "description": ""
+      },
+      "sources": [
+        {
+          "collection": "credentials",
+          "id": "business-development"
+        }
+      ]
+    },
+    {
+      "id": "languages-1",
+      "visible": true,
+      "order": 0,
+      "category": "languages",
+      "en": {
+        "title": "French · native",
+        "description": ""
+      },
+      "fr": {
+        "title": "Français · langue maternelle",
+        "description": ""
+      },
+      "sources": []
+    },
+    {
+      "id": "languages-2",
+      "visible": true,
+      "order": 1,
+      "category": "languages",
+      "en": {
+        "title": "English · professional",
+        "description": ""
+      },
+      "fr": {
+        "title": "Anglais · professionnel",
+        "description": ""
+      },
+      "sources": []
+    },
+    {
+      "id": "languages-3",
+      "visible": true,
+      "order": 2,
+      "category": "languages",
+      "en": {
+        "title": "Mooré · spoken",
+        "description": ""
+      },
+      "fr": {
+        "title": "Mooré · oral",
+        "description": ""
+      },
+      "sources": []
+    },
+    {
+      "id": "languages-4",
+      "visible": true,
+      "order": 3,
+      "category": "languages",
+      "en": {
+        "title": "Dioula · spoken",
+        "description": ""
+      },
+      "fr": {
+        "title": "Dioula · oral",
+        "description": ""
+      },
+      "sources": []
+    }
+  ]
 }

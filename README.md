@@ -59,3 +59,13 @@ Use [the dashboard guide](docs/DASHBOARD.md) for normal content forms, profile/C
 The Certifications & Distinctions section follows Research & Background. In the manager's credentials tab, select Certification / training or Distinction, enter both translations, and optionally upload a PDF and a PNG/JPEG/WebP preview of that document. Preview images are optional; a card remains readable without one. Review personal details before saving. Use the existing ordering controls to arrange entries or hide/remove them. Uploaded media requires the configured Cloudflare R2 bucket and D1 database; the hosted preview does not provide those production credentials. The gallery supports touch scrolling, keyboard scrolling and Previous/Next buttons, without automatic rotation.
 
 Original personal certificate PDFs and their previews are intentionally omitted from this public repository. Add reviewed documents and previews through the private manager after configuring storage. The hosted portfolio keeps the approved gallery content separately.
+
+### Skills, formatting and experience pages
+
+The Skills tab manages the bilingual skills catalogue and links skills to supporting projects, experiences, education or credentials. Each project, experience, education entry, credential/distinction and document also has an optional **I learned skills** checkbox. Enabling it publishes the entered skills in the shared Skills section, with a link back to that entry. Turning it off preserves draft entries privately; hiding the source entry removes its contributions from the public skills list. Repeated skill names within a group are merged for display.
+
+Long text fields offer bold, italic, bullet lists, HTTPS/mailto links and inline code, with a preview. Formatting is stored as a small Markdown subset. Arbitrary HTML is escaped and unsafe link schemes are rejected. Titles remain plain text.
+
+Each experience has a short homepage summary and its own English/French detail page. Edit the overview, timeline, contribution, approach, work/learning and scope fields, choose associated portfolio projects, and optionally upload a cover. Linked projects supply their existing cover previews. Extern entries show the program reference email support@extern.com; this is a contact channel, not a claim of personal endorsement. Review confidential information before publishing. Original reports and private supporting records must stay out of public source control.
+
+See [Search visibility](docs/SEARCH_VISIBILITY.md) for domain configuration, Search Console and indexing requirements. The management controls still need the configured D1, R2 and Cloudflare Access services for live saving and uploads; the static preview does not simulate a successful save.

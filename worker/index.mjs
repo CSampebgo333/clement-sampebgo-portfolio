@@ -1,3 +1,5 @@
+import {publicContent} from '../assets/public-content.js';
+import {sitemap} from '../assets/seo.js';
 import {getContent,saveContent,uploadMedia,publicMedia,renderLive,usesURL} from './cms.mjs';
 const API='https://api.github.com';
 const JSON_HEADERS={'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'};
@@ -113,11 +115,11 @@ async function admin(request,env,url,actor){
  }
  fail(404,'Not found');
 }
-export async function publishedSite(env){const {site}=await getContent(env);if(env.DB){const rows=(await env.DB.prepare("SELECT * FROM projects WHERE status='approved' AND public_verified=1").all()).results;for(const row of rows){try{if(row.repo)await publicRepo(row.repo,env);const p=publicRecord(row);if(p){site.projects.push({id:'github-'+p.id.replaceAll('_','-'),category:p.category,featured:p.featured,visible:true,order:1000,url:p.url,tags:[],en:p.en,fr:p.fr})}}catch{}}}for(const k of ['experiences','education','credentials','documents','socials','projects'])site[k]=site[k].filter(x=>x.visible!==false);for(const k of ['projects','experiences'])site[k]=site[k].map(x=>x.certificatesEnabled===true?x:{...x,certificates:[]});return site}
+export async function publishedSite(env){const {site}=await getContent(env);if(env.DB){const rows=(await env.DB.prepare("SELECT * FROM projects WHERE status='approved' AND public_verified=1").all()).results;for(const row of rows){try{if(row.repo)await publicRepo(row.repo,env);const p=publicRecord(row);if(p){site.projects.push({id:'github-'+p.id.replaceAll('_','-'),category:p.category,featured:p.featured,visible:true,order:1000,url:p.url,tags:[],en:p.en,fr:p.fr})}}catch{}}}return publicContent(site)}
 export default {
  async fetch(request,env){try{
   const url=new URL(request.url);let response;
-  if(url.pathname==='/sitemap.xml'){const site=await publishedSite(env);const paths=['',...site.projects.map(p=>'projects/'+p.id+'/'),'privacy/'];return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+['en','fr'].flatMap(l=>paths.map(p=>'<url><loc>'+url.origin+'/'+l+'/'+p+'</loc></url>')).join('')+'</urlset>',{headers:{'Content-Type':'application/xml','Cache-Control':'no-store'}})}
+  if(url.pathname==='/sitemap.xml'){return new Response(sitemap(await publishedSite(env),env.SITE_ORIGIN||url.origin),{headers:{'Content-Type':'application/xml','Cache-Control':'no-store'}})}
   if(url.pathname==='/assets/site-content.json')return json(await publishedSite(env));
   if(url.pathname.startsWith('/documents/')){const {site}=await getContent(env);if(!usesURL(site,url.pathname))return new Response('Not found',{status:404})}
   if(url.pathname==='/api/content'){if(request.method!=='GET')return json({error:'Method not allowed'},405);return json(await publishedSite(env))}
@@ -133,7 +135,7 @@ export default {
    if(url.pathname.startsWith('/api/admin/'))return await admin(request,env,url,actor);
    response=await env.ASSETS.fetch(new Request(new URL('/admin.html',url),request));
   }else if(url.pathname.startsWith('/api/'))return json({error:'Not found'},404);
-  else {response=await env.ASSETS.fetch(request);if(response.status===404&&/^\/(en|fr)\/projects\/[^/]+\/?$/.test(url.pathname)){const l=url.pathname.split('/')[1];response=await env.ASSETS.fetch(new Request(new URL('/'+l+'/',url),request))}if(response.headers.get('content-type')?.includes('text/html')&&/^\/(en|fr)\//.test(url.pathname))response=await renderLive(request,env,response,await publishedSite(env))}
+  else {response=await env.ASSETS.fetch(request);if(response.status===404&&/^\/(en|fr)\/(projects|experiences)\/[^/]+\/?$/.test(url.pathname)){const l=url.pathname.split('/')[1];response=await env.ASSETS.fetch(new Request(new URL('/'+l+'/',url),request))}if(response.headers.get('content-type')?.includes('text/html')&&/^\/(en|fr)\//.test(url.pathname))response=await renderLive(request,env,response,await publishedSite(env))}
   const headers=new Headers(response.headers);if(headers.get('content-type')?.includes('text/html'))headers.set('Cache-Control','no-store');headers.set('X-Content-Type-Options','nosniff');headers.set('Referrer-Policy','strict-origin-when-cross-origin');headers.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');
   headers.set('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'");
   if(/^\/admin(?:\/|\.|$)/.test(url.pathname)){headers.set('Cache-Control','no-store');headers.set('X-Robots-Tag','noindex, nofollow')}

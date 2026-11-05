@@ -1,7 +1,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit
-import json,xml.etree.ElementTree as ET
+import json,re,xml.etree.ElementTree as ET
 R=Path(__file__).resolve().parents[1];D=R/'dist';errors=[]
 class Page(HTMLParser):
  def __init__(self):super().__init__();self.ids=set();self.links=[];self.h1=0;self.lang=None;self.alt=[]
@@ -35,8 +35,20 @@ for p,q in pages.items():
 for l in ['en','fr']:
  assert (D/f'documents/clement-sampebgo-cv-{l}.pdf').read_bytes().startswith(b'%PDF')
  assert f'cv-{l}.pdf' in (D/l/'index.html').read_text()
- assert (D/l/'index.html').stat().st_size<40000
+ assert (D/l/'index.html').stat().st_size<120000
 ET.parse(D/'sitemap.xml')
+for language in ['en','fr']:
+ for page_path in (D/language).rglob('index.html'):
+  body=page_path.read_text();relative=page_path.parent.relative_to(D/language).as_posix();route='' if relative=='.' else relative+'/'
+  canonical=re.findall(r'<link rel="canonical" href="([^"]+)"',body)
+  assert len(canonical)==1 and canonical[0].endswith('/'+language+'/'+route), f'Wrong canonical: {page_path}'
+  schemas=re.findall(r'<script type="application/ld\+json">(.*?)</script>',body,re.S)
+  assert len(schemas)==1 and '@graph' in json.loads(schemas[0]), f'Invalid structured data: {page_path}'
+  for alternate in ['en','fr']:
+   assert re.search(r'hreflang="'+alternate+r'" href="[^"]*/'+alternate+'/'+re.escape(route)+r'"',body), f'Missing alternate: {page_path}'
+  other='fr' if language=='en' else 'en'
+  assert 'id="language" href="/'+other+'/'+route+'"' in body, f'Language switch loses route: {page_path}'
+
 projects=json.loads((R/'content/projects.json').read_text())
 assert len({p['id'] for p in projects})==len(projects)
 for project in projects:

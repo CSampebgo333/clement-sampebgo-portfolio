@@ -376,35 +376,37 @@
         "title": "BSc Computer Science",
         "organization": "Ashesi University",
         "period": "2023–2027",
-        "description": "Berekuso, Ghana · Expected graduation: June 2027 · Mastercard Foundation Scholar"
+        "description": "Berekuso, Ghana\nExpected graduation: June 2027\nMastercard Foundation Scholar"
       },
       "fr": {
         "title": "BSc en informatique",
         "organization": "Université Ashesi",
         "period": "2023–2027",
-        "description": "Berekuso, Ghana · Diplôme prévu en juin 2027 · Boursier de la Mastercard Foundation"
+        "description": "Berekuso, Ghana\nDiplôme prévu en juin 2027\nBoursier de la Mastercard Foundation"
       },
       "skillsLearnedEnabled": false,
-      "learnedSkills": []
+      "learnedSkills": [],
+      "kind": "degree"
     },
     {
       "id": "cesi-exchange",
       "visible": true,
       "order": 1,
       "en": {
-        "period": "SEP 2025–SEP 2026",
-        "organization": "CESI Graduate School of Engineering · Aix-en-Provence, France",
-        "title": "Computer Science exchange · FISE A3",
-        "description": "English-taught FISE Informatique A3 program.\nEnrollment period: 16 September 2025–12 September 2026."
+        "period": "2025–2026",
+        "organization": "CESI Graduate School of Engineering",
+        "title": "Semester exchange · Computer Science",
+        "description": "Aix-en-Provence, France\nOne semester in the English-taught FISE Informatique A3 program."
       },
       "fr": {
-        "period": "SEPT 2025–SEPT 2026",
-        "organization": "CESI École d’ingénieurs · Aix-en-Provence, France",
-        "title": "Échange en informatique · FISE A3",
-        "description": "Formation FISE informatique A3 dispensée en anglais.\nPériode d’inscription : du 16 septembre 2025 au 12 septembre 2026."
+        "period": "2025–2026",
+        "organization": "CESI École d’ingénieurs",
+        "title": "Échange d’un semestre · Informatique",
+        "description": "Aix-en-Provence, France\nUn semestre dans la formation FISE informatique A3 dispensée en anglais."
       },
       "skillsLearnedEnabled": false,
-      "learnedSkills": []
+      "learnedSkills": [],
+      "kind": "exchange"
     }
   ],
   "credentials": [

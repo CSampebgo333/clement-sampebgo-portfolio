@@ -426,8 +426,8 @@
         "description": "Certificat professionnel · Huit cours sur la préparation, l’analyse et la visualisation des données, SQL et R."
       },
       "kind": "certificate",
-      "preview": "/assets/certificates/google-data-analytics.png",
-      "document": "/documents/certificates/google-data-analytics.pdf",
+      "preview": null,
+      "document": null,
       "skillsLearnedEnabled": false,
       "learnedSkills": []
     },
@@ -447,8 +447,8 @@
         "description": "Université Vanderbilt · Cours en ligne terminé le 24 janvier 2025."
       },
       "kind": "certificate",
-      "preview": "/assets/certificates/prompt-engineering.png",
-      "document": "/documents/certificates/prompt-engineering.pdf",
+      "preview": null,
+      "document": null,
       "skillsLearnedEnabled": false,
       "learnedSkills": []
     },
@@ -478,8 +478,8 @@
       "kind": "certificate",
       "order": 2,
       "url": "",
-      "preview": "/assets/certificates/pfizer.png",
-      "document": "/documents/certificates/pfizer.pdf",
+      "preview": null,
+      "document": null,
       "en": {
         "period": "OCTOBER 2026",
         "title": "Pfizer · AI document insights",
@@ -499,8 +499,8 @@
       "kind": "certificate",
       "order": 3,
       "url": "",
-      "preview": "/assets/certificates/breaking-games.png",
-      "document": "/documents/certificates/breaking-games.pdf",
+      "preview": null,
+      "document": null,
       "en": {
         "period": "SEPTEMBER 2026",
         "title": "Breaking Games · SQL & databases",
@@ -520,8 +520,8 @@
       "kind": "certificate",
       "order": 4,
       "url": "",
-      "preview": "/assets/certificates/natgeo-tnc.png",
-      "document": "/documents/certificates/natgeo-tnc.pdf",
+      "preview": null,
+      "document": null,
       "en": {
         "period": "NOVEMBER 2025",
         "title": "National Geographic Society + TNC",
@@ -541,8 +541,8 @@
       "kind": "certificate",
       "order": 5,
       "url": "",
-      "preview": "/assets/certificates/issadar.png",
-      "document": "/documents/certificates/issadar.pdf",
+      "preview": null,
+      "document": null,
       "en": {
         "period": "JULY 2026",
         "title": "ISSADAR 2026 · Summer school",
@@ -562,8 +562,8 @@
       "kind": "certificate",
       "order": 6,
       "url": "",
-      "preview": "/assets/certificates/business-development.png",
-      "document": "/documents/certificates/business-development.pdf",
+      "preview": null,
+      "document": null,
       "en": {
         "period": "MAY 2023",
         "title": "Business Development · One Percent Club",

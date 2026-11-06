@@ -188,3 +188,21 @@
  .credential-track::-webkit-scrollbar-thumb:hover{background:var(--accent)}
 }
 @media(forced-colors:active){.credential-track{scrollbar-color:auto}.credential-track::-webkit-scrollbar-thumb{background:ButtonText}.credential-track::-webkit-scrollbar-track{background:Canvas}}
+
+/* Align the controls themselves, independently of CV labels and descriptions. */
+.hero .actions{align-items:flex-end}
+#contact .contact-right{container-type:inline-size;container-name:contact-panel}
+#contact .contact-actions{display:grid;grid-template-columns:max-content minmax(0,1fr);grid-template-rows:auto auto auto auto auto;column-gap:24px;row-gap:7px;align-items:start}
+#contact .contact-actions .social{grid-column:1;grid-row:2;align-self:end}
+#contact .contact-cv{display:contents}
+#contact .contact-cv .cv-tools{display:grid;grid-template-rows:subgrid;grid-column:2;grid-row:1/span 4;gap:7px}
+#contact .cv-label{grid-row:1}#contact .cv-actions{grid-row:2}
+#contact .cv-copy-status{grid-row:3}#contact .cv-copy-fallback{grid-row:4}
+#contact .contact-cv>p{grid-column:2;grid-row:5;margin:0;max-width:none}
+#contact .cv-actions a,#contact .cv-actions button{padding-left:11px;padding-right:11px}
+@container contact-panel (max-width:480px){
+ #contact .contact-actions{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto auto auto;row-gap:7px}
+ #contact .contact-actions .social{grid-column:1;grid-row:1;margin-bottom:17px}
+ #contact .contact-cv .cv-tools{grid-column:1;grid-row:2/span 4;justify-self:start;max-width:100%}
+ #contact .contact-cv>p{grid-column:1;grid-row:6}
+}

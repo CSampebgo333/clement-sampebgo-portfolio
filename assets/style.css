@@ -142,3 +142,16 @@
 .skill-chips li{max-width:100%;overflow-wrap:anywhere}
 .skill-toggle{display:inline-flex;align-items:center;gap:8px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding:5px 0;margin-top:13px;font-size:12px;line-height:1.6;color:var(--accent)}
 .skill-toggle:hover{border-color:var(--accent)}.skill-toggle-chevron{font-size:16px;line-height:1;transition:transform 160ms ease}.skill-toggle[aria-expanded=true] .skill-toggle-chevron{transform:rotate(180deg)}
+
+/* One shared experience card. Its grid-spanning surface preserves the aligned
+   education rows and the skills link's existing sticky boundary. */
+#experience .experience-grid{isolation:isolate}
+#experience .timeline::before{content:'';grid-column:2;grid-row:2/span var(--experience-count);background:var(--card);border:1px solid var(--line);border-radius:12px;z-index:0;pointer-events:none}
+#experience .timeline>article{z-index:1;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;margin:0 26px;padding:28px 4px 28px 26px;min-width:0}
+#experience .timeline>article:last-child{border-bottom:0}
+#experience .timeline>article::before{left:0;top:-25px;bottom:-1px}
+#experience .timeline>article::after{left:-4px;top:30px;background:var(--card);box-shadow:0 0 0 5px var(--card)}
+#experience .timeline>article:first-child::before{top:34px}
+#experience .timeline>article:last-child::before{bottom:calc(100% - 34px)}
+#experience .timeline>article:first-child::after{background:var(--accent)}
+@media(max-width:780px){#experience .timeline{display:grid;gap:24px;padding:0 22px;background:var(--card);border:1px solid var(--line);border-radius:12px}#experience .timeline::before{display:none}#experience .timeline>article{margin:0;padding:26px 0 26px 24px}#experience .timeline>article::before{left:0}#experience .timeline>article::after{left:-4px}}

@@ -136,3 +136,9 @@
 .cv-actions a:focus-visible,.cv-actions button:focus-visible{outline-offset:-3px}.cv-copy-fallback{width:100%;padding:10px;border:1px solid var(--accent);background:var(--bg);font-size:12px;border-radius:4px;color:var(--ink)}.cv-copy-fallback[hidden]{display:none}
 #contact .contact-cv{max-width:100%}#contact .contact-actions{gap:24px}#contact .contact-cv p{max-width:280px}
 .cv-copy-status{font-size:11px;line-height:1.5;color:var(--accent)}.cv-copy-status:empty{display:none}
+
+/* Three complete rows of skill chips, with an inline disclosure only when needed. */
+.skill-chips li[hidden],.skill-toggle[hidden]{display:none}
+.skill-chips li{max-width:100%;overflow-wrap:anywhere}
+.skill-toggle{display:inline-flex;align-items:center;gap:8px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding:5px 0;margin-top:13px;font-size:12px;line-height:1.6;color:var(--accent)}
+.skill-toggle:hover{border-color:var(--accent)}.skill-toggle-chevron{font-size:16px;line-height:1;transition:transform 160ms ease}.skill-toggle[aria-expanded=true] .skill-toggle-chevron{transform:rotate(180deg)}

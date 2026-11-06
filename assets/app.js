@@ -1,3 +1,4 @@
+import {setupSkillLists} from './skill-lists.js';
 import {setupEffects,transitionProjects} from './effects.js';
 import {loadContent} from './cms-public.js';
 const fr=document.documentElement.lang==='fr';
@@ -64,3 +65,5 @@ document.addEventListener('click',async event=>{
   status.textContent=fr?'Copie automatique indisponible. Copiez le lien sélectionné.':'Automatic copying is unavailable. Copy the selected link.';
  }finally{button.disabled=false}
 });
+
+let disposeSkillLists=()=>{};function bindSkillLists(){disposeSkillLists();disposeSkillLists=setupSkillLists()}bindSkillLists();document.addEventListener('portfolio-content-updated',bindSkillLists);

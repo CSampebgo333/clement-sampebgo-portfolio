@@ -781,7 +781,7 @@
         "imageAlt": "Couverture originale de le stage Pfizer en analyse documentaire, fournie par Extern.",
         "imageCredit": "Illustration du programme fournie par Extern."
       },
-      "order": 0,
+      "order": 1,
       "visible": true,
       "metrics": [],
       "evidence": [
@@ -837,7 +837,7 @@
         "result": "J’ai produit des visualisations et des recommandations argumentées. Le dépôt présente les étapes de nettoyage, d’exploration, d’analyse par IA et de synthèse. L’aperçu montre la composition de l’échantillon pour situer la comparaison.\n\nCe projet m’a appris à transformer des retours non structurés en un raisonnement analytique documenté, en distinguant ce que l’échantillon suggère de ce qu’il permet d’établir.",
         "limitation": "L’échantillon d’avis n’est pas un sondage représentatif de tous les clients. Les écarts de taille entre échantillons et les sentiments attribués par modèle peuvent affecter les comparaisons. Les recommandations sont des propositions analytiques ; je n’ai mesuré ni leur adoption ni un résultat commercial ultérieur."
       },
-      "order": 1,
+      "order": 4,
       "visible": true,
       "imageEnabled": true,
       "skillsLearnedEnabled": false,
@@ -930,49 +930,9 @@
         "imageAlt": "Première page de l’article Global PIQA: Evaluating Commonsense Reasoning Across 100+ Languages and Cultures.",
         "imageCredit": "Aperçu de la première page du préprint Global PIQA, arXiv:2510.24081. La liste complète des auteurs figure dans l’article."
       },
-      "order": 4,
+      "order": 0,
       "visible": true,
       "paperUrl": "https://arxiv.org/pdf/2510.24081",
-      "imageEnabled": true,
-      "skillsLearnedEnabled": false,
-      "learnedSkills": []
-    },
-    {
-      "id": "driving-theory",
-      "category": "software",
-      "featured": false,
-      "source": "Public repository README and source",
-      "url": "https://github.com/CSampebgo333/driving-test-platform",
-      "repo": "CSampebgo333/driving-test-platform",
-      "image": "/assets/driving.png",
-      "tags": [
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Accessibility"
-      ],
-      "en": {
-        "title": "Driving theory, one question at a time",
-        "client": "SOFTWARE · PERSONAL PROJECT",
-        "summary": "A focused practice quiz with instant grading, answer review and a keyboard-friendly question navigator.",
-        "role": "Personal frontend project. I built the quiz flow, question navigation, answer review and local attempt storage using HTML, CSS and JavaScript.",
-        "problem": "A learner needs to practise questions, see progress and understand mistakes without navigating a complicated interface. I designed a small browser-based practice tool around that sequence.",
-        "approach": "- **Keep the flow focused.** Built a dependency-free interface with a question navigator, progress tracking and answer validation.\n- **Close the feedback loop.** Added instant grading and a correction page with explanations so users can review their answers.\n- **Support practical use.** Stored attempts locally in the browser and added print support. Made the question navigator usable by keyboard.",
-        "result": "The repository contains a complete ten-question practice flow, from answering and validation to grading and review. The screenshot is from the implemented interface.\n\nThe project demonstrates frontend state handling and interaction design in plain JavaScript, without a framework dependency.",
-        "limitation": "This is a practice tool, not an official licensing resource. Its question bank is small and must be checked against the relevant local rules. Attempts are saved in the current browser; they are not a synchronized account history."
-      },
-      "fr": {
-        "title": "Le code de la route, question par question",
-        "client": "LOGICIEL · PROJET PERSONNEL",
-        "summary": "Un quiz ciblé avec correction immédiate, explications et navigation utilisable au clavier.",
-        "role": "Projet personnel de développement frontend. J’ai créé le parcours de quiz, la navigation, la correction et la sauvegarde locale des tentatives en HTML, CSS et JavaScript.",
-        "problem": "Un apprenant doit pouvoir s’entraîner, suivre sa progression et comprendre ses erreurs sans interface compliquée. J’ai organisé ce petit outil dans le navigateur autour de cette séquence.",
-        "approach": "- **Centrer le parcours.** Interface sans dépendances avec navigation entre questions, suivi de progression et validation des réponses.\n- **Expliquer les erreurs.** Ajout d’une notation immédiate et d’une page de correction avec explications.\n- **Faciliter l’utilisation.** Sauvegarde locale des tentatives, prise en charge de l’impression et navigation utilisable au clavier.",
-        "result": "Le dépôt propose un parcours complet de dix questions : réponses, validation, notation et correction. La capture provient de l’interface réalisée.\n\nLe projet illustre la gestion de l’état et des interactions en JavaScript natif, sans dépendance à un framework.",
-        "limitation": "Il s’agit d’un outil d’entraînement, pas d’une ressource officielle. La banque de questions est limitée et doit être vérifiée selon les règles locales. Les tentatives sont enregistrées dans le navigateur utilisé, sans historique de compte synchronisé."
-      },
-      "order": 5,
-      "visible": true,
       "imageEnabled": true,
       "skillsLearnedEnabled": false,
       "learnedSkills": []

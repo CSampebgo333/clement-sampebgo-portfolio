@@ -289,7 +289,7 @@
       "visible": true,
       "order": 5,
       "en": {
-        "period": "Jun - July 2024",
+        "period": "JUN–JUL 2024",
         "organization": "Beats by Dre",
         "title": "Consumer insights data analytics",
         "description": "Cleaned and analyzed consumer reviews using Python, exploratory analysis and NLP. Turned recurring feedback into visualizations and evidence-based recommendations, with attention to the limits of the review sample.",
@@ -305,7 +305,7 @@
         "location": ""
       },
       "fr": {
-        "period": "Juin - Juillet 2024",
+        "period": "JUIN–JUIL 2024",
         "organization": "Beats by Dre",
         "title": "Analyse des avis consommateurs",
         "description": "Nettoyage et analyse d’avis consommateurs avec Python, analyse exploratoire et NLP. Transformation des retours récurrents en visualisations et recommandations argumentées, en tenant compte des limites de l’échantillon.",

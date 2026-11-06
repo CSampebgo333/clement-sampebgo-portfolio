@@ -178,12 +178,12 @@
         "title": "Analyse documentaire et extraction de données par IA",
         "description": "Développement d’un prototype Python de recherche documentaire associant OCR, recherche sémantique et interface Gradio. Évaluation distincte de la recherche et des réponses, avec références aux pages sources pour faciliter leur vérification.",
         "context": "À distance · Programme Extern",
-        "overview": "Un externat consacré à la recherche et à la vérification d’informations dans des documents complexes. J’ai développé un prototype de traitement documentaire et étudié les limites de l’extraction, de la recherche et de la génération de réponses.",
+        "overview": "Un stage consacré à la recherche et à la vérification d’informations dans des documents complexes. J’ai développé un prototype de traitement documentaire et étudié les limites de l’extraction, de la recherche et de la génération de réponses.",
         "timeline": "Juillet–octobre 2026 · Pfizer Advanced: AI-Powered Document Insights & Data Extraction, via Extern.",
         "contribution": "Développement de traitements OCR et documentaires, organisation de la classification et du routage, et création d’une interface Gradio pour interroger les documents. Ajout de références aux pages sources pour faciliter la relecture.",
         "approach": "Séparation de l’extraction, de la recherche et de la génération afin d’évaluer chaque étape. Exploration du découpage documentaire, de la recherche sémantique et de la conception de prompts, puis documentation des limites et des améliorations possibles.",
         "outcomes": "Un prototype fonctionnel et une pratique de l’évaluation de l’IA documentaire. Le notebook public présente la démarche technique ; il s’agit d’un prototype d’apprentissage.",
-        "experienceType": "Externat",
+        "experienceType": "Stage",
         "format": "À distance",
         "duration": "",
         "location": ""
@@ -222,12 +222,12 @@
         "title": "SQL et architecture de bases de données",
         "description": "Conception d’une base analytique SQLite et d’un tableau de bord HTML/Chart.js. Vérification des jointures, des périodes et des définitions d’indicateurs pour rendre l’analyse plus fiable et lisible.",
         "context": "À distance · Programme Extern",
-        "overview": "Un externat en SQL et architecture de bases de données, reliant modélisation relationnelle et reporting. Mon travail consistait à structurer des sources distinctes et à vérifier le sens des indicateurs produits.",
-        "timeline": "Juillet–septembre 2026 · Externat SQL et architecture de bases de données avec Breaking Games, via Extern.",
+        "overview": "Un stage en SQL et architecture de bases de données, reliant modélisation relationnelle et reporting. Mon travail consistait à structurer des sources distinctes et à vérifier le sens des indicateurs produits.",
+        "timeline": "Juillet–septembre 2026 · Stage SQL et architecture de bases de données avec Breaking Games, via Extern.",
         "contribution": "Conception du modèle relationnel, rédaction de requêtes SQL analytiques et création d’une interface de reporting HTML/Chart.js. Étude des effets des jointures, de la qualité des données et des périodes sur les conclusions.",
         "approach": "Séparation de la modélisation, de la validation et de la présentation. Vérification des correspondances entre enregistrements et des hypothèses de calcul avant de communiquer les résultats.",
         "outcomes": "Une pratique de la conception de bases analytiques et de la présentation des résultats SQL. Cet aperçu décrit les méthodes et responsabilités ; les jeux de données, chiffres internes et livrables détaillés restent privés.",
-        "experienceType": "Externat",
+        "experienceType": "Stage",
         "format": "À distance",
         "duration": "",
         "location": ""
@@ -263,15 +263,15 @@
       "fr": {
         "period": "22 SEPT–17 NOV 2025",
         "organization": "National Geographic Society + TNC",
-        "title": "Externat en conservation marine et communautaire",
+        "title": "Stage en conservation marine et communautaire",
         "description": "Création d’un ArcGIS StoryMap public sur le barrage de Tanghin, reliant pressions environnementales, pêche et réponses communautaires. Synthèse de reportages locaux et de vidéos attribuées dans un récit documentaire accessible.",
         "context": "À distance · National Geographic Society + TNC · via Extern",
-        "overview": "Un externat en conservation marine et communautaire appliqué au barrage de Tanghin, à Ouagadougou, au Burkina Faso. J’ai étudié les liens entre évolutions environnementales et moyens de subsistance, puis utilisé cartes et narration pour les rendre lisibles.",
-        "timeline": "Du 22 septembre au 17 novembre 2025 · Externat à distance de deux mois. Le StoryMap public a été publié le 20 novembre 2025, après le programme.",
+        "overview": "Un stage en conservation marine et communautaire appliqué au barrage de Tanghin, à Ouagadougou, au Burkina Faso. J’ai étudié les liens entre évolutions environnementales et moyens de subsistance, puis utilisé cartes et narration pour les rendre lisibles.",
+        "timeline": "Du 22 septembre au 17 novembre 2025 · Stage à distance de deux mois. Le StoryMap public a été publié le 20 novembre 2025, après le programme.",
         "contribution": "Synthèse de reportages locaux et de vidéos communautaires existantes dans des fiches de recherche et un ArcGIS StoryMap public. Mise en relation de la pollution plastique, des jacinthes d’eau, de la pêche et des réponses locales, avec attribution des sources.",
         "approach": "Organisation de la recherche autour du lieu, des pressions environnementales et des personnes concernées. Association de textes, de cartes et de médias attribués pour rendre le sujet accessible.",
         "outcomes": "Un StoryMap public réunissant recherche, cartographie et communication narrative. L’étude de cas propose un lien vers la carte et un aperçu. Le travail synthétise des sources existantes.",
-        "experienceType": "Externat",
+        "experienceType": "Stage",
         "format": "À distance",
         "duration": "2 mois",
         "location": ""
@@ -310,12 +310,12 @@
         "title": "Analyse des avis consommateurs",
         "description": "Nettoyage et analyse d’avis consommateurs avec Python, analyse exploratoire et NLP. Transformation des retours récurrents en visualisations et recommandations argumentées, en tenant compte des limites de l’échantillon.",
         "context": "À distance · Programme Extern",
-        "overview": "Un externat en analyse des avis consommateurs pour éclairer des décisions de marque. J’ai travaillé de la préparation des données à la communication des résultats, sans réduire l’expérience client à un score de sentiment.",
-        "timeline": "Juin–juillet 2024 · Externat de deux mois en analyse des avis consommateurs via Extern.",
+        "overview": "Un stage en analyse des avis consommateurs pour éclairer des décisions de marque. J’ai travaillé de la préparation des données à la communication des résultats, sans réduire l’expérience client à un score de sentiment.",
+        "timeline": "Juin–juillet 2024 · Stage de deux mois en analyse des avis consommateurs via Extern.",
         "contribution": "Préparation et exploration des avis en Python, étude des sentiments et des thèmes récurrents, puis création de visualisations. Formulation de recommandations fondées sur l’analyse.",
         "approach": "Association de l’analyse exploratoire et du NLP pour examiner le sentiment général et les retours précis. Utilisation de graphiques et prise en compte de la composition du jeu de données dans l’interprétation.",
         "outcomes": "Une analyse reliant exploration technique et communication métier. Le projet public comprend un graphique issu du notebook final ; les échantillons décrivent les données étudiées et ne représentent pas des parts de marché.",
-        "experienceType": "Externat",
+        "experienceType": "Stage",
         "format": "À distance",
         "duration": "2 mois",
         "location": ""
@@ -536,7 +536,7 @@
       "fr": {
         "period": "OCTOBRE 2026",
         "title": "Pfizer · IA documentaire",
-        "description": "Externat Advanced AI-Powered Document Insights & Data Extraction terminé via Extern."
+        "description": "Stage Advanced AI-Powered Document Insights & Data Extraction terminé via Extern."
       },
       "skillsLearnedEnabled": false,
       "learnedSkills": []
@@ -557,7 +557,7 @@
       "fr": {
         "period": "SEPTEMBRE 2026",
         "title": "Breaking Games · SQL et bases de données",
-        "description": "Externat SQL et architecture de bases de données terminé via Extern."
+        "description": "Stage SQL et architecture de bases de données terminé via Extern."
       },
       "skillsLearnedEnabled": false,
       "learnedSkills": []
@@ -578,7 +578,7 @@
       "fr": {
         "period": "NOVEMBRE 2025",
         "title": "National Geographic Society + TNC",
-        "description": "Externat à distance en conservation marine et communautaire terminé."
+        "description": "Stage à distance en conservation marine et communautaire terminé."
       },
       "skillsLearnedEnabled": false,
       "learnedSkills": []
@@ -772,13 +772,13 @@
         "title": "Rechercher dans les documents, vérifier les sources",
         "client": "PFIZER · VIA EXTERN",
         "summary": "Un prototype Python de recherche documentaire associant OCR, recherche sémantique et interface Gradio avec références aux pages sources.",
-        "role": "J’ai développé la chaîne de traitement et de recherche documentaire, relié les passages retrouvés à un modèle de langage local et créé l’interface Gradio pendant l’externat Pfizer via Extern.",
+        "role": "J’ai développé la chaîne de traitement et de recherche documentaire, relié les passages retrouvés à un modèle de langage local et créé l’interface Gradio pendant le stage Pfizer via Extern.",
         "problem": "Un assistant documentaire utile ne doit pas seulement produire une réponse fluide. Il doit extraire un texte exploitable, retrouver les passages pertinents et permettre au lecteur de vérifier la source. Le prototype explore cette démarche pour la consultation de PDF complexes.",
         "approach": "- **Préparer les documents.** Association de l’extraction de texte PDF et de l’OCR pour traiter les contenus textuels et numérisés. Exploration de la classification et du routage, puis découpage du texte en segments.\n- **Retrouver les passages utiles.** Recherche sémantique avec FAISS et transmission du contexte à Qwen 2.5. Séparation de l’extraction, de la recherche et de la génération pour examiner les erreurs à chaque étape.\n- **Faciliter la vérification.** Création d’une interface Gradio pour interroger les documents, avec passages justificatifs et références aux pages sources.\n- **Évaluer les compromis.** Examen distinct de la qualité de recherche et des réponses, ainsi que des compromis entre taille du modèle et temps de réponse.",
         "result": "Le livrable est un prototype fonctionnel de questions-réponses documentaires, décrit dans le notebook Python lié. Il réunit OCR, classification, recherche et interface dans une même démarche.\n\nUn enseignement central : retrouver un passage pertinent ne garantit pas une réponse correcte. La réponse et sa citation doivent étayer l’affirmation précise. Ce constat a guidé mon évaluation et la présentation des sources.",
-        "limitation": "Ce prototype d’externat n’est ni un système déployé par Pfizer ni un outil de décision clinique ou de conformité. La vérification humaine des sources reste nécessaire. L’extraction des tableaux, le contrôle des citations et l’évaluation sur des documents indépendants sont des pistes d’amélioration.\n\nLes exemples documentaires propres à l’entreprise et les détails sensibles de l’évaluation sont réservés. Le notebook technique reste accessible pour présenter l’implémentation.",
+        "limitation": "Ce prototype de stage n’est ni un système déployé par Pfizer ni un outil de décision clinique ou de conformité. La vérification humaine des sources reste nécessaire. L’extraction des tableaux, le contrôle des citations et l’évaluation sur des documents indépendants sont des pistes d’amélioration.\n\nLes exemples documentaires propres à l’entreprise et les détails sensibles de l’évaluation sont réservés. Le notebook technique reste accessible pour présenter l’implémentation.",
         "evaluationNote": "",
-        "imageAlt": "Couverture originale de l’externat Pfizer en analyse documentaire, fournie par Extern.",
+        "imageAlt": "Couverture originale de le stage Pfizer en analyse documentaire, fournie par Extern.",
         "imageCredit": "Illustration du programme fournie par Extern."
       },
       "order": 0,
@@ -831,7 +831,7 @@
         "title": "À l’écoute des consommateurs",
         "client": "BEATS BY DRE · EXTERNAT",
         "summary": "Nettoyer et explorer les avis clients pour comprendre les sentiments exprimés et formuler des recommandations utiles.",
-        "role": "Externat en analyse des avis consommateurs · Juin–juillet 2024. J’ai nettoyé et exploré les avis, analysé les sentiments avec Python et le NLP, puis réuni le travail dans un notebook final.",
+        "role": "Stage en analyse des avis consommateurs · Juin–juillet 2024. J’ai nettoyé et exploré les avis, analysé les sentiments avec Python et le NLP, puis réuni le travail dans un notebook final.",
         "problem": "Les avis clients révèlent les attentes et les difficultés rencontrées, mais leur format libre rend les comparaisons difficiles. Le projet visait à transformer ces retours en une analyse compréhensible pour éclairer les décisions de marque.",
         "approach": "- **Préparer et explorer.** Nettoyage avec Python et Pandas, puis analyse exploratoire et visualisations pour comprendre la composition de l’échantillon avant d’interpréter les textes.\n- **Examiner les sentiments.** Analyse des sentiments et NLP, avec Gemini pour faciliter l’interprétation des retours et des thèmes récurrents.\n- **Construire une recommandation argumentée.** Regroupement du nettoyage, de l’exploration et de l’analyse assistée par IA dans un notebook final, en reliant les recommandations aux avis étudiés.",
         "result": "J’ai produit des visualisations et des recommandations argumentées. Le dépôt présente les étapes de nettoyage, d’exploration, d’analyse par IA et de synthèse. L’aperçu montre la composition de l’échantillon pour situer la comparaison.\n\nCe projet m’a appris à transformer des retours non structurés en un raisonnement analytique documenté, en distinguant ce que l’échantillon suggère de ce qu’il permet d’établir.",
@@ -874,13 +874,13 @@
         "title": "De la modélisation des données au reporting",
         "client": "BREAKING GAMES · VIA EXTERN",
         "summary": "Un projet analytique SQL centré sur la modélisation relationnelle, la validation des données et la présentation des analyses dans un tableau de bord.",
-        "role": "J’ai conçu le modèle analytique SQLite, rédigé les requêtes d’investigation et de validation, puis développé un tableau de bord HTML/Chart.js pendant l’externat SQL & Database Architecture via Extern.",
+        "role": "J’ai conçu le modèle analytique SQLite, rédigé les requêtes d’investigation et de validation, puis développé un tableau de bord HTML/Chart.js pendant le stage SQL & Database Architecture via Extern.",
         "problem": "Les ventes, paniers, données de trafic et publicités décrivent des événements et des périodes différents. Les réunir sans vérifier leur granularité et leurs relations peut dupliquer les mesures, masquer des enregistrements sans correspondance ou produire un indicateur trompeur. Mon travail reliait modélisation, validation et reporting dans une démarche explicable.",
         "approach": "- **Modéliser les sources.** Organisation de six sources commerciales et marketing en tables relationnelles SQLite. Séparation des ventes et des mesures de trafic et de publicité, sans supposer une granularité commune.\n- **Investiguer avec SQL.** Utilisation de jointures, de fonctions de fenêtrage et de requêtes de validation pour examiner les relations, les correspondances manquantes et la différence entre enregistrements et sessions uniques.\n- **Vérifier les indicateurs.** Contrôle de la cohérence des périodes utilisées au numérateur et au dénominateur, avec exclusions de qualité explicites. Une absence de correspondance était traitée comme un point à examiner, pas comme une preuve d’absence d’activité.\n- **Présenter l’analyse.** Création d’une couche de reporting et d’un tableau de bord HTML/Chart.js pour rendre les requêtes et leur interprétation plus accessibles.",
         "result": "J’ai produit une base analytique, des investigations SQL et un tableau de bord. Le travail montre le passage de la modélisation des sources à une interface visuelle interprétable.\n\nMon principal enseignement technique : vérifier la structure d’une requête avant de faire confiance à son résultat. Corriger une mesure améliore la fiabilité de l’analyse ; cela ne prouve pas à lui seul une amélioration commerciale.",
         "limitation": "L’analyse dépend de la couverture des sources, de la qualité des correspondances et de définitions cohérentes. Elle n’établit pas d’impact commercial causal.\n\nLes enregistrements sources, chiffres commerciaux précis, constats internes identifiables et recommandations commerciales restent réservés. Le rapport et le tableau de bord soumis ne sont pas liés car ils contiennent ces éléments ; la démarche de modélisation et de validation est présentée ici.",
         "evaluationNote": "",
-        "imageAlt": "Couverture originale de l’externat Breaking Games en SQL et bases de données, fournie par Extern.",
+        "imageAlt": "Couverture originale de le stage Breaking Games en SQL et bases de données, fournie par Extern.",
         "imageCredit": "Illustration du programme fournie par Extern."
       },
       "order": 2,
@@ -1012,7 +1012,7 @@
         "title": "Story Map du barrage de Tanghin",
         "client": "NATIONAL GEOGRAPHIC SOCIETY + TNC · VIA EXTERN",
         "summary": "Un ArcGIS StoryMap public reliant pollution plastique, jacinthes d’eau envahissantes et activités de pêche à Ouagadougou, au Burkina Faso.",
-        "role": "Externat en conservation · Septembre–novembre 2025. J’ai étudié le sujet, organisé trois fiches de recherche et créé le StoryMap.",
+        "role": "Stage en conservation · Septembre–novembre 2025. J’ai étudié le sujet, organisé trois fiches de recherche et créé le StoryMap.",
         "problem": "Le barrage de Tanghin est un réservoir d’eau douce situé dans ma ville d’origine. Je voulais expliquer les liens entre les pressions sur ce milieu et la vie des personnes qui en dépendent, en rendant les informations disponibles plus accessibles à un large public.",
         "approach": "- **Étudier le sujet.** Examen de publications sur la pollution plastique et l’aquaculture, ainsi que de vidéos d’actions communautaires contre les jacinthes d’eau. Évaluation des sources et synthèse des enjeux environnementaux et locaux dans trois fiches de recherche.\n- **Structurer le récit.** Organisation du StoryMap autour du lieu, des pressions environnementales, des moyens de subsistance, des initiatives communautaires et des pistes d’action.\n- **Rendre les sources accessibles.** Association de cartes ArcGIS, photographies attribuées, vidéos et explications écrites dans un récit public, en conservant les crédits et références.",
         "result": "Le travail final comprend trois fiches de recherche et un StoryMap publié. Le récit relie les pressions environnementales à l’accès à la pêche et aux moyens de subsistance, puis présente des pistes : poursuite des nettoyages, collecte des déchets, sensibilisation et coordination.\n\nMa contribution consiste à synthétiser les sources dans un récit clair ancré dans un lieu. Les actions de nettoyage décrites sont celles des organisations communautaires citées. Je ne les ai pas dirigées et je n’ai pas mesuré d’amélioration environnementale.",

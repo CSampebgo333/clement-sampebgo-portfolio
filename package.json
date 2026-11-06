@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
+  },
+  "dependencies": {
+    "pdfjs-dist": "6.5.438"
   }
 }

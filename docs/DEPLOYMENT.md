@@ -61,3 +61,22 @@ In **Profile & CVs**, uploaded CVs are archived immediately, including drafts th
 Only uploads and replacements made through this dashboard after activation are guaranteed to be retained. Changes made by overwriting source PDFs outside the dashboard bypass history. Earlier overwritten PDFs cannot be recovered unless a separate backup exists. Back up both D1 and R2; the metadata database alone does not contain the PDF bytes. Storage usage grows with retained uploads. Do not expose the R2 bucket publicly or add a lifecycle rule that deletes archived CVs.
 
 The Sites static preview displays the history interface and its setup message; it cannot provide durable private CV storage. Activate and test the configured Cloudflare Worker before relying on version recovery.
+
+
+### Certificate PDFs and automatic previews
+
+In Certifications & distinctions, upload one PDF (maximum 8 MB). The private
+dashboard renders its first page locally with the pinned, self-hosted PDF.js
+dependency and uploads the PDF and PNG through the existing authenticated API.
+Save & publish attaches both references together. Until then, neither upload
+is publicly accessible. No conversion service, extra credentials or migration
+is needed. npm ci and the build copy the renderer, fonts and character maps
+into dist/assets/pdfjs; public visitors do not load the renderer.
+
+A password-protected, malformed or unsupported PDF shows a localized error
+and leaves the previous document and preview references unchanged. A failed
+second upload can leave an unreferenced private file in R2, never a public
+partial update. A custom preview remains available under the optional advanced
+control. Existing credential verification URLs are preserved. Automatic previews
+apply to the certification/distinction PDF field, not CV uploads or the separate
+completion-certificate attachment lists. Those lists keep their existing PDF links.

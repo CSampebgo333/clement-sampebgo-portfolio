@@ -999,7 +999,7 @@ export default {
     'Content-Security-Policy',
     "default-src 'self'; script-src 'self'; " +
     "style-src 'self' 'unsafe-inline'; img-src 'self'; " +
-    "connect-src 'self'; object-src 'none'; " +
+    "connect-src 'self'; worker-src 'self'; object-src 'none'; " +
     "base-uri 'none'; frame-ancestors 'none'"
    );
 

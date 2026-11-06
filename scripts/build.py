@@ -3,6 +3,13 @@ from pathlib import Path
 R=Path(__file__).resolve().parents[1];D=R/'dist'
 if D.exists():shutil.rmtree(D)
 D.mkdir();shutil.copytree(R/'assets',D/'assets')
+pdfjs=R/'node_modules/pdfjs-dist';vendor=D/'assets/pdfjs'
+vendor.mkdir()
+for filename in ['pdf.min.mjs','pdf.worker.min.mjs','pdf.renderer.min.mjs']:
+ if (pdfjs/'build'/filename).exists():shutil.copy(pdfjs/'build'/filename,vendor/filename)
+for dirname in ['cmaps','standard_fonts']:
+ shutil.copytree(pdfjs/dirname,vendor/dirname)
+shutil.copy(pdfjs/'LICENSE',vendor/'LICENSE')
 if (R/'documents').exists():shutil.copytree(R/'documents',D/'documents')
 profile=json.loads((R/'content/profile.json').read_text());projects=json.loads((R/'content/projects.json').read_text());origin=os.environ.get('SITE_ORIGIN',profile['origin']).rstrip('/')
 if not origin.startswith('https://'):raise ValueError('SITE_ORIGIN must be HTTPS')
@@ -61,7 +68,7 @@ for path in urls:
  for l in T:xml.append(f'<url><loc>{origin}/{l}/{path}</loc>'+''.join(f'<xhtml:link rel="alternate" hreflang="{lang}" href="{origin}/{lang}/{path}"/>' for lang in T)+'</url>')
 xml.append('</urlset>');(D/'sitemap.xml').write_text(''.join(xml));(D/'robots.txt').write_text(f'User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/admin/\nSitemap: {origin}/sitemap.xml\n')
 shutil.copy(R/'worker/admin.html',D/'admin.html')
-(D/'_headers').write_text('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: default-src \'self\'; script-src \'self\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\'; connect-src \'self\'; object-src \'none\'; base-uri \'none\'; frame-ancestors \'none\'\n/admin*\n  X-Robots-Tag: noindex, nofollow\n')
+(D/'_headers').write_text('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: default-src \'self\'; script-src \'self\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\'; connect-src \'self\'; worker-src \'self\'; object-src \'none\'; base-uri \'none\'; frame-ancestors \'none\'\n/admin*\n  X-Robots-Tag: noindex, nofollow\n')
 print(f'Built {len(list(D.rglob("*.html")))} HTML pages in {D}')
 
 shutil.copy(R/'content/site.json',D/'assets/site-content.json')

@@ -1,71 +1,89 @@
-# Clément Sampebgo · Portfolio
+# Clément Sampebgo — Portfolio
 
-My bilingual portfolio brings together software projects, data analysis, document AI and multilingual research. It preserves the blue, white and dark slate palette from my original learning project while replacing sample content with documented work.
+**[Visit the portfolio →](https://clementsampebgo.com)**
+[English](https://clementsampebgo.com/en/) · [Français](https://clementsampebgo.com/fr/)
 
-## Run and check
+[![Portfolio checks and deployment](https://github.com/CSampebgo333/clement-sampebgo-portfolio/actions/workflows/check.yml/badge.svg)](https://github.com/CSampebgo333/clement-sampebgo-portfolio/actions/workflows/check.yml)
 
-Requirements: Python 3.10+, Node 24 and npm. The public site has no JavaScript framework or runtime dependencies.
+I'm a final-year Computer Science student at **Ashesi University**, graduating
+in June 2027. This portfolio presents my work in software, data analysis, applied
+AI and multilingual research: what I contributed, how I approached each problem,
+and the evidence available to explore it.
+
+## Explore my work
+
+- [Global PIQA](https://clementsampebgo.com/en/projects/global-piqa/) — my Zarma contribution to a multilingual commonsense-reasoning benchmark.
+- [Document search with verifiable sources](https://clementsampebgo.com/en/projects/document-intelligence/) — OCR, semantic retrieval and a Python document assistant, developed through the Pfizer program via Extern.
+- [From data modeling to clear reporting](https://clementsampebgo.com/en/projects/breaking-games/) — relational modeling, SQL validation and reporting through Breaking Games via Extern.
+- [Story Map of Tanghin Dam](https://clementsampebgo.com/en/projects/tanghin-dam/) — a public conservation narrative connecting environmental pressures and local livelihoods.
+- [Listening to the customer](https://clementsampebgo.com/en/projects/consumer-insights/) — consumer-review exploration and sentiment analysis through Beats by Dre via Extern.
+
+Each case study describes my role and scope. Confidential business information
+is excluded; public evidence and technical methods are presented where appropriate.
+
+## How the site works
+
+- Complete French and English versions, system-aware light/dark themes and responsive layouts.
+- Featured work shown first, with category filters and four projects per batch.
+- Project case studies, experience details, skills, credentials and supporting evidence.
+- Language-specific CV preview, download and link copying.
+- An owner-only content dashboard protected by Cloudflare Access, with D1 content storage and R2 media uploads.
+- CV version history and certificate previews generated from uploaded PDFs.
+- GitHub project discovery with a private approval/rejection queue; discoveries never publish automatically.
+- Aggregate audience reports in the private dashboard, with geographic exclusions and privacy preferences.
+
+The public interface uses HTML, CSS and JavaScript. A Cloudflare Worker serves
+pages and APIs; the build uses Python and Node.js. PDF.js loads only when the
+owner generates a certificate preview.
+
+## Local setup
+
+Requirements: **Node.js 24**, **Python 3.10+** and npm.
 
 ```bash
+npm ci
 npm run build
-python3 -m http.server 8000 --directory dist
 npm test
+python3 -m http.server 8000 --directory dist
 ```
 
-Open `http://localhost:8000/en/` or `/fr/`. The root chooses a remembered language, then the browser language. Theme selection follows the system until a visitor makes a choice. A static server supports every public page; the private review service runs only with the Cloudflare Worker.
+Open `http://localhost:8000/en/` or `/fr/`. The static server previews public
+pages; authenticated administration requires the configured Cloudflare Worker.
+On Windows, if `python3` is unavailable, use `py -3 -X utf8 scripts/build.py`
+and `py -3 -X utf8 scripts/check.py`; run `node --test tests/*.test.mjs` for
+JavaScript checks.
 
-## Project structure
+## Content and deployment
 
-| Path | Purpose |
+Routine updates happen in the private `/admin` dashboard. They are stored in D1
+and R2 rather than committed back to GitHub. Source changes merged or pushed to
+`main` build, run tests and deploy to the existing Cloudflare Worker through
+GitHub Actions. Pull requests run checks without deploying.
+
+| Guide | Contents |
 | --- | --- |
-| `content/profile.json` | Public identity, email, professional links and canonical origin |
-| `content/projects.json` | Curated bilingual project copy, evidence and content provenance |
-| `content/credentials.json` | Optional, explicitly approved public documents |
-| `assets/` | Styles, browser interactions, portrait, verified project visuals and social image |
-| `documents/` | Public English and French CVs; only reviewed documents belong here |
-| `scripts/build.py` | Generates localized HTML, project pages, sitemap and metadata |
-| `scripts/cv.py` | Recreates the two text-based, single-column CV PDFs |
-| `worker/` | Cloudflare review API, discovery and owner interface |
-| `migrations/` | D1 schema, decisions and audit records |
-| `tests/` | Authentication, discovery and publication safeguards |
-| `docs/` | Deployment, editing, evidence and verification notes |
+| [Content editing](docs/CONTENT.md) | Bilingual entries, featured projects, ordering and publication |
+| [Dashboard](docs/DASHBOARD.md) | Profile, CVs, media and management forms |
+| [Deployment](docs/DEPLOYMENT.md) | Cloudflare bindings, Access, secrets, CV history and analytics |
+| [Project review](docs/REVIEW.md) | Discovery, approvals, rejection and exclusions |
+| [Rights](COPYRIGHT.md) | Original material, third-party licenses and collaborative work |
 
-## Deployment
+`content/site.json` seeds the site; existing D1 publications take precedence.
+Credentials belong in Worker secrets or GitHub Actions secrets, never source
+files. Personal documents and certificates are uploaded through the private
+dashboard after review. Email notification code is available but sending remains
+optional and requires a configured provider.
 
-The portfolio targets Cloudflare Workers Static Assets with a D1 database and Cloudflare Access protecting the review interface. A weekly Cron Trigger discovers public repositories and public pull-request contributions. See [deployment](docs/DEPLOYMENT.md) for the exact setup and [review workflow](docs/REVIEW.md) for publication rules.
+## Structure
 
-A static owner-private preview can be hosted independently. That preview includes the public portfolio and an explanatory review-interface shell, but it has no live D1, authentication, discovery schedule or email service. Do not treat it as proof that those services are configured.
+```text
+assets/       Public interface and dashboard modules
+content/      Initial bilingual content and legacy source material
+worker/       Cloudflare APIs, authentication and server rendering
+migrations/   D1 schema migrations
+scripts/      Static build, validation and CV generation utilities
+tests/        Content, publication, security and interaction checks
+docs/         Maintenance and deployment guides
+```
 
-## Content and maintenance
-
-See [content editing](docs/CONTENT.md). Update both language entries together. Never infer contribution ownership from repository ownership. Public project copy is edited deliberately; discovery updates its private snapshot without overwriting edited descriptions.
-
-The CVs use the newer supplied English CV as the primary content source, with certificate dates taking precedence where they provide a more precise date. See [content review](docs/CONTENT_REVIEW.md) for unresolved evidence and publication decisions.
-
-## Current scope
-
-Implemented: localized static pages and case studies, filters, theme and language persistence, CV generation/downloads, technical SEO, optional supporting documents, full bilingual content dashboard, profile/CV/document uploads, private approval API, bilingual review editor, repository exclusions, weekly discovery code, email notification integration and tests.
-
-Configuration still required: your Cloudflare account, D1 ID, R2 media bucket, Access application and owner policy, domain, optional GitHub read token, and optional verified Resend sender/API key. Discovery and email are not running in the static preview. Additional social links and sanitized Pfizer/Breaking Games demos can be added when supplied.
-
-No original certificates or completion letters are automatically published. The Beats completion letter includes a supervisor’s contact details and should not be uploaded without redaction.
-
-## Portfolio dashboard
-
-Use [the dashboard guide](docs/DASHBOARD.md) for normal content forms, profile/CV uploads, ordering, hiding and removing entries. The current static preview displays these forms but cannot save; the configured Cloudflare Worker persists changes and renders them immediately on subsequent page loads. GPA has been removed from the website and both CVs.
-
-### Certificate gallery
-
-The Certifications & Distinctions section follows Research & Background. In the manager's credentials tab, select Certification / training or Distinction, enter both translations, and optionally upload a PDF and a PNG/JPEG/WebP preview of that document. Preview images are optional; a card remains readable without one. Review personal details before saving. Use the existing ordering controls to arrange entries or hide/remove them. Uploaded media requires the configured Cloudflare R2 bucket and D1 database; the hosted preview does not provide those production credentials. The gallery supports touch scrolling, keyboard scrolling and Previous/Next buttons, without automatic rotation.
-
-Original personal certificate PDFs and their previews are intentionally omitted from this public repository. Add reviewed documents and previews through the private manager after configuring storage. The hosted portfolio keeps the approved gallery content separately.
-
-### Skills, formatting and experience pages
-
-The Skills tab manages the bilingual skills catalogue and links skills to supporting projects, experiences, education or credentials. Each project, experience, education entry, credential/distinction and document also has an optional **I learned skills** checkbox. Enabling it publishes the entered skills in the shared Skills section, with a link back to that entry. Turning it off preserves draft entries privately; hiding the source entry removes its contributions from the public skills list. Repeated skill names within a group are merged for display.
-
-Long text fields offer bold, italic, bullet lists, HTTPS/mailto links and inline code, with a preview. Formatting is stored as a small Markdown subset. Arbitrary HTML is escaped and unsafe link schemes are rejected. Titles remain plain text.
-
-Each experience has a short homepage summary and its own English/French detail page. Edit the overview, timeline, contribution, approach, work/learning and scope fields, choose associated portfolio projects, and optionally upload a cover. Linked projects supply their existing cover previews. Extern entries show the program reference email support@extern.com; this is a contact channel, not a claim of personal endorsement. Review confidential information before publishing. Original reports and private supporting records must stay out of public source control.
-
-See [Search visibility](docs/SEARCH_VISIBILITY.md) for domain configuration, Search Console and indexing requirements. The management controls still need the configured D1, R2 and Cloudflare Access services for live saving and uploads; the static preview does not simulate a successful save.
+[Visit the live portfolio](https://clementsampebgo.com) · [GitHub profile](https://github.com/CSampebgo333)

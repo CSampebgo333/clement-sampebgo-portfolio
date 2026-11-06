@@ -11,7 +11,7 @@
 
 .detail .image-credit{font-size:.75rem;line-height:1.6;margin:-16px 0 28px}.case-metrics{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
 
-.experience-brands{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 16px}.brand-tile{display:flex;align-items:center;justify-content:center;min-width:100px;height:56px;padding:8px 12px;border:1px solid #e2e8f0;border-radius:6px;background:#fff}.brand-tile img{width:108px;height:40px;object-fit:contain}.extern-tile{min-width:84px}.extern-tile img{width:68px;height:16px}.via-label{font:11px ui-monospace,monospace;color:var(--muted)}.project-more{text-align:center;margin-top:28px}.project-grid-paged:not(.projects-ready)>[data-project]:nth-child(n+5){display:none}.editor-card [hidden]{display:none!important}.project-more button[hidden]{display:none}
+.experience-brands{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 16px}.brand-tile{display:flex;align-items:center;justify-content:center;min-width:100px;height:56px;padding:8px 12px;border:1px solid #e2e8f0;border-radius:6px;background:#fff}.brand-tile img{width:108px;height:40px;object-fit:contain}.extern-tile{min-width:84px}.extern-tile img{width:68px;height:16px}.via-label{font:11px ui-monospace,monospace;color:var(--muted)}.project-more{text-align:center;margin-top:28px}.editor-card [hidden]{display:none!important}.project-more button[hidden]{display:none}
 .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.brand-tile:first-child{min-width:148px}.brand-tile:first-child img{width:124px}@media(max-width:640px){.project-grid{grid-template-columns:1fr}}
 
 .brand-tile{overflow:hidden}.brand-tile img[src$="pfizer.png"],.brand-tile img[src$="breaking-games.png"]{transform:scale(1.8)}

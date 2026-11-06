@@ -17,3 +17,16 @@ GitHub discoveries stay in their private review table until approved. The public
 Normal file replacement uses the protected dashboard and R2. Source-maintained PDFs can still be rebuilt with `python3 scripts/cv.py` (ReportLab and DejaVu Sans required). Render and inspect both languages after changes. Never copy original certificates into public source without reviewing personal and third-party information.
 
 Use `npm run build` and `npm test` before a source deployment. Test owner authentication, content publishing, R2 uploads, CV downloads, project review and notification receipt on the configured Cloudflare account before relying on the service.
+
+## Featured projects on the homepage
+
+Open `/admin` → Projects → Edit, check **Featured project / Projet à la une**,
+and Save & publish. Only visible featured projects appear in the default
+Featured filter, up to four initially. View more reveals the next four within
+the selected filter; All projects and category filters remain available.
+Use the collection's position selector or Move up / Move down to control the
+order; featuring does not change the order. Changes saved through the dashboard
+apply on the next public page load, without a GitHub deployment. New GitHub
+discoveries still require explicit approval, and their featured flag is selected
+in the GitHub review editor. A project without the featured flag remains
+available under All projects and its category once published.

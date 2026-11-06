@@ -17,3 +17,20 @@ test('case studies retain technical contributions and approved evidence without 
 test('all CV actions use the selected language and offer native preview, download and copy',()=>{for(const l of ['en','fr']){const html=renderMain(initial,l);const url=initial.profile.cv[l];assert.ok(html.includes('href="'+url+'" target="_blank" rel="noopener"'));assert.ok(html.includes('href="'+url+'" download'));assert.ok(html.includes('data-copy-cv="'+url+'"'));assert.ok(html.includes('class="cv-copy-status" role="status"'));assert.ok(!html.includes(initial.profile.cv[l==='en'?'fr':'en']))}});
 
 test('experience metadata survives validation and displays only supplied facts in both languages',()=>{const site=validateSite(structuredClone(initial));for(const l of ['en','fr']){const x=site.experiences.find(x=>x.id==='experience-4');assert.equal(x[l].duration,l==='fr'?'2 mois':'2 months');assert.equal(x[l].format,l==='fr'?'À distance':'Remote');assert.equal(site.experiences.find(x=>x.id==='experience-3')[l].duration,l==='fr'?'2 mois':'2 months');const home=renderMain(site,l);assert.ok(home.includes(l==='fr'?'Expériences professionnelles':'Professional experience'));assert.ok(home.includes('<dt>Format</dt>'));assert.ok(!home.includes('<dd></dd>'));const detail=renderMain(site,l,'experiences/'+x.id+'/');assert.ok(detail.includes(x[l].duration));assert.ok(!detail.includes('undefined'))}});
+
+test('homepage initially shows only four visible featured projects in their configured order',()=>{
+ const site=structuredClone(initial),base=site.projects[0];
+ site.projects=Array.from({length:7},(_,index)=>({...structuredClone(base),id:'test-project-'+index,order:index,featured:index!==0,visible:index!==1}));
+ for(const language of ['en','fr']){
+  const html=renderMain(site,language);
+  assert.match(html,/data-filter="featured" aria-pressed="true"/);
+  assert.match(html,/data-filter="all" aria-pressed="false"/);
+  const cards=[...html.matchAll(/<article class="project" ([^>]*?)data-project="([^"]+)"/g)];
+  assert.deepEqual(cards.filter(match=>!match[1].includes('hidden')).map(match=>match[2]),['test-project-2','test-project-3','test-project-4','test-project-5']);
+  assert.ok(cards.find(match=>match[2]==='test-project-0')[1].includes('hidden'));
+  assert.ok(cards.find(match=>match[2]==='test-project-6')[1].includes('hidden'));
+  assert.ok(!cards.some(match=>match[2]==='test-project-1'));
+ }
+ site.projects.forEach(project=>project.featured=false);
+ assert.match(renderMain(site,'en'),/id="projects-empty" >No featured projects/);
+});

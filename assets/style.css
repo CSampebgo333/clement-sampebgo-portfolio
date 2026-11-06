@@ -216,3 +216,21 @@ html[data-theme=dark] .skill-group:focus-within{box-shadow:0 5px 18px #60a5fa20}
 @media(prefers-reduced-motion:reduce){.skill-group{transition:none}}
 
 .cv-history{margin-top:38px;border-top:1px solid var(--line);padding-top:28px}.cv-history>p{font-size:13px;max-width:80ch}.cv-history-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:24px}.cv-history-columns>section{border:1px solid var(--line);border-radius:10px;padding:20px;min-width:0;background:var(--card)}.cv-history ol{list-style:none;padding:0;margin:0}.cv-history li{border-top:1px solid var(--line);padding:18px 0}.cv-history li:first-child{border-top:0}.cv-history small{display:block;font-size:11px;color:var(--muted);margin-top:6px}.cv-current{display:inline-block;font-size:10px;color:var(--accent);background:var(--soft);padding:2px 7px;border-radius:4px;margin-left:8px}.cv-history-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:14px;font-size:12px}.cv-history-actions button{padding:5px 10px;font-size:12px}.cv-history [data-history-more]{font-size:12px}.cv-history [hidden]{display:none}@media(max-width:760px){.cv-history-columns{grid-template-columns:1fr}}
+
+/* Private GitHub review: explicit labels and accessible state colors. */
+.admin .review-state{--review-fg:#92400e;--review-bg:#fffbeb;--review-border:#d97706;display:inline-flex;align-items:center;gap:.5rem;padding:.25rem .7rem;border:1px solid var(--review-border);border-radius:999px;background:var(--review-bg);color:var(--review-fg);font-size:.82rem;font-weight:650;line-height:1.5}
+.admin .review-state::before{content:'';width:.45rem;height:.45rem;border-radius:50%;background:currentColor;flex:none}
+.admin .review-state[data-review-state=approved]{--review-fg:#1e40af;--review-bg:#eff6ff;--review-border:#2563eb}
+.admin .review-state[data-review-state=rejected],.admin .review-state[data-review-state=error]{--review-fg:#991b1b;--review-bg:#fef2f2;--review-border:#dc2626}
+.admin .review-state[data-review-state=excluded]{--review-fg:#374151;--review-bg:#f3f4f6;--review-border:#6b7280}
+.admin .review-feedback{border-radius:8px;padding:.65rem .9rem;margin:1rem 0}
+.admin #approve{background:#2563eb;border-color:#2563eb;color:#fff;font-weight:650}
+.admin #reject{background:#fef2f2;border-color:#dc2626;color:#991b1b}
+.admin button:disabled{opacity:.5;cursor:not-allowed}
+@media(hover:hover){.admin #approve:not(:disabled):hover{background:#1d4ed8}.admin #reject:not(:disabled):hover{background:#fee2e2}}
+html[data-theme=dark] .admin .review-state{--review-fg:#fde68a;--review-bg:#302515;--review-border:#b7791f}
+html[data-theme=dark] .admin .review-state[data-review-state=approved]{--review-fg:#bfdbfe;--review-bg:#172b4d;--review-border:#60a5fa}
+html[data-theme=dark] .admin .review-state[data-review-state=rejected],html[data-theme=dark] .admin .review-state[data-review-state=error]{--review-fg:#fecaca;--review-bg:#3b2028;--review-border:#f87171}
+html[data-theme=dark] .admin .review-state[data-review-state=excluded]{--review-fg:#e5e7eb;--review-bg:#263244;--review-border:#9ca3af}
+html[data-theme=dark] .admin #reject{color:#fecaca;background:#3b2028;border-color:#f87171}
+@media(hover:hover){html[data-theme=dark] .admin #reject:not(:disabled):hover{background:#512633}}

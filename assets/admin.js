@@ -8,10 +8,34 @@ $('admin-language').addEventListener('change',e=>{language=e.target.value;transl
 async function api(path,body){const r=await fetch('/api/admin/'+path,body?{method:'POST',headers:{'Content-Type':'application/json','X-Portfolio-Request':'review'},body:JSON.stringify(body)}:{});if(!r.ok)throw Error(t('unavailable'));const data=await r.json();$('setup').hidden=true;return data}
 function renderQueue(){const queue=$('queue');queue.replaceChildren();if(!rows.length){const p=document.createElement('p');p.textContent=t('empty');queue.append(p)}for(const row of rows){const a=document.createElement('article');const h=document.createElement('h3');h.textContent=(row.repo||row.id)+(row.path?'/'+row.path:'');const p=document.createElement('p');p.textContent=t(row.status)+' · '+t(row.relationship);const btn=document.createElement('button');btn.textContent=t('edit');btn.onclick=()=>edit(row);a.append(h,p,btn);queue.append(a)}}
 async function load(){rows=await api('projects');renderQueue()}
-function edit(row){current=row||null;$('editor').hidden=false;const p=row?.content?JSON.parse(row.content):{category:'software',url:'',en:{},fr:{}};$('repo').value=row?.repo||'';$('path').value=row?.path||'';$('repo').disabled=!!row;$('path').disabled=!!row;$('category').value=p.category;$('url').value=p.url;$('featured').checked=!!row?.featured;for(const l of ['en','fr'])for(const key of ['title','summary','role'])$(`${l}-${key}`).value=p[l]?.[key]||'';$('approve').disabled=!row;$('reject').disabled=!row;$('reconsider').disabled=!row;$('editor').scrollIntoView({behavior:'auto'});$('url').focus()}
+function edit(row,{focus=true}={}){current=row||null;$('editor').hidden=false;const p=row?.content?JSON.parse(row.content):{category:'software',url:'',en:{},fr:{}};$('repo').value=row?.repo||'';$('path').value=row?.path||'';$('repo').disabled=!!row;$('path').disabled=!!row;$('category').value=p.category;$('url').value=p.url;$('featured').checked=!!row?.featured;for(const l of ['en','fr'])for(const key of ['title','summary','role'])$(`${l}-${key}`).value=p[l]?.[key]||'';$('approve').disabled=!row;$('reject').disabled=!row;$('reject').disabled=!row||row.status==='rejected'||row.status==='excluded';$('reconsider').disabled=!row||row.status==='pending'||row.status==='excluded';let state=$('review-editor-status');if(!state){state=document.createElement('p');state.id='review-editor-status';state.setAttribute('role','status');state.setAttribute('aria-live','polite');$('edit-form').before(state)}state.textContent=row?t(row.status):'';if(focus){$('editor').scrollIntoView({behavior:'auto'});$('edit-title').setAttribute('tabindex','-1');$('edit-title').focus()}}
 function content(){const p={category:$('category').value,url:$('url').value};for(const l of ['en','fr']){p[l]={};for(const key of ['title','summary','role'])p[l][key]=$(`${l}-${key}`).value}return p}
 async function run(fn){$('status').textContent=t('loading');try{await fn();$('status').textContent=t('saved')}catch(e){$('status').textContent=e.message}}
 $('reload').onclick=()=>run(load);$('sync').onclick=()=>run(async()=>{const result=await api('sync',{});await load();$('intro').textContent=language==='fr'?`${result.pending} projets en attente. Notifications email : ${result.notificationsConfigured?'configurées':'non configurées'}.`:`${result.pending} projects pending. Email notifications: ${result.notificationsConfigured?'configured':'not configured'}.`});$('new').onclick=()=>edit(null);
 $('edit-form').onsubmit=e=>{e.preventDefault();run(async()=>{if(current)await api('decision',{id:current.id,action:'save',content:content(),featured:$('featured').checked});else{const result=await api('manual',{repo:$('repo').value||null,path:$('path').value,content:content()});await load();edit(rows.find(r=>r.id===result.id));return}await load()})};
-for(const action of ['approve','reject','reconsider'])$(action).onclick=()=>run(async()=>{if(action==='approve'&&!$('edit-form').reportValidity())return;await api('decision',{id:current.id,action,...(action==='approve'?{content:content(),featured:$('featured').checked}:{})});await load();edit(rows.find(r=>r.id===current.id))});
+let deciding=false;
+for(const action of ['approve','reject','reconsider'])$(action).onclick=async event=>{
+ event?.preventDefault();
+ if(deciding||!current)return;
+ if(action==='approve'&&!$('edit-form').reportValidity())return;
+ deciding=true;
+ const id=current.id;
+ const state=$('review-editor-status');state.textContent=t('loading');
+ for(const name of ['approve','reject','reconsider','save'])$(name).disabled=true;
+ let succeeded=false;
+ try{
+  await api('decision',{id,action,...(action==='approve'?{content:content(),featured:$('featured').checked}:{})});
+  await load();
+  edit(rows.find(row=>row.id===id),{focus:false});
+  $('status').textContent=t('saved');
+  $('review-editor-status').textContent=t('saved')+' · '+t(current.status);
+  const target=action==='reject'?'reconsider':action==='reconsider'?'reject':'reject';
+  if(!$(target).disabled)$(target).focus({preventScroll:true});
+  succeeded=true;
+ }catch(error){state.textContent=error.message;$('status').textContent=error.message}
+ finally{
+  deciding=false;$('save').disabled=false;
+  if(!succeeded){$('approve').disabled=!current;$('reject').disabled=!current||current.status==='rejected'||current.status==='excluded';$('reconsider').disabled=!current||current.status==='pending'||current.status==='excluded'}
+ }
+};
 $('exclude-form').onsubmit=e=>{e.preventDefault();run(async()=>{await api('exclusions',{repo:$('excluded-repo').value});await load()})};$('unexclude').onclick=()=>run(()=>api('exclusions',{repo:$('excluded-repo').value,remove:true}));run(load);

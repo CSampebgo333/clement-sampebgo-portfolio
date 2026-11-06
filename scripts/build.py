@@ -65,4 +65,4 @@ shutil.copy(R/'worker/admin.html',D/'admin.html')
 print(f'Built {len(list(D.rglob("*.html")))} HTML pages in {D}')
 
 shutil.copy(R/'content/site.json',D/'assets/site-content.json')
-os.system('node '+str(R/'scripts/render-static.mjs'))
+import subprocess; subprocess.run(['node', str(R/'scripts/render-static.mjs')], check=True)

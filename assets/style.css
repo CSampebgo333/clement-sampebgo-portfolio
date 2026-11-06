@@ -177,3 +177,14 @@
 .case-index li a[aria-current="location"]>span{font-weight:700}
 @media(max-width:700px){.case-index li+li{margin-top:0}.case-index li a{padding:6px 8px}}
 .case-chapter,.case-evidence{scroll-margin-top:20px}
+
+/* Moderately slimmer credential rails; retain native touch and keyboard scrolling. */
+.credential-track{scrollbar-width:thin;scrollbar-color:var(--muted) var(--line)}
+@supports selector(::-webkit-scrollbar){
+ .credential-track{scrollbar-width:auto;scrollbar-color:auto}
+ .credential-track::-webkit-scrollbar{height:10px}
+ .credential-track::-webkit-scrollbar-track{background:var(--line);border-radius:999px}
+ .credential-track::-webkit-scrollbar-thumb{background:var(--muted);border:1px solid var(--line);border-radius:999px;min-width:44px}
+ .credential-track::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+}
+@media(forced-colors:active){.credential-track{scrollbar-color:auto}.credential-track::-webkit-scrollbar-thumb{background:ButtonText}.credential-track::-webkit-scrollbar-track{background:Canvas}}

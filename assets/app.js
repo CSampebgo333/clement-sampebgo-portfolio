@@ -50,16 +50,28 @@ Promise.all([contentReady,pageReady]).then(()=>{
  document.dispatchEvent(new Event('portfolio-layout-changed'));
 });
 
+// A single page-level live notification avoids layout shifts and duplicate toasts.
+const copyToast=document.createElement('div');copyToast.className='copy-toast';
+copyToast.setAttribute('role','status');copyToast.setAttribute('aria-live','polite');copyToast.setAttribute('aria-atomic','true');document.body.append(copyToast);
+let copyToastTimer;
+function hideCopyToast(){clearTimeout(copyToastTimer);copyToast.classList.remove('is-visible');copyToast.textContent=''}
+function showCopyToast(){
+ hideCopyToast();
+ const icon=document.createElement('span');icon.className='copy-toast-icon';icon.setAttribute('aria-hidden','true');icon.textContent='✓';
+ copyToast.append(icon,document.createTextNode(fr?'Lien copié':'Link copied'));copyToast.classList.add('is-visible');
+ copyToastTimer=setTimeout(hideCopyToast,4000);
+}
+
 // Delegation keeps CV actions working after content updates, without duplicate handlers.
 document.addEventListener('click',async event=>{
  const button=event.target.closest('[data-copy-cv]');if(!button)return;
  const tools=button.closest('.cv-tools'),status=tools.querySelector('.cv-copy-status'),fallback=tools.querySelector('.cv-copy-fallback');
  const url=new URL(button.dataset.copyCv,location.origin).href;
- button.disabled=true;status.textContent='';
+ button.disabled=true;status.textContent='';hideCopyToast();
  try{
   if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');
   await navigator.clipboard.writeText(url);fallback.hidden=true;
-  status.textContent=fr?'Lien du CV copié.':'CV link copied.';
+  showCopyToast();
  }catch{
   fallback.value=url;fallback.hidden=false;fallback.focus();fallback.select();
   status.textContent=fr?'Copie automatique indisponible. Copiez le lien sélectionné.':'Automatic copying is unavailable. Copy the selected link.';

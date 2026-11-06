@@ -155,3 +155,8 @@
 #experience .timeline>article:last-child::before{bottom:calc(100% - 34px)}
 #experience .timeline>article:first-child::after{background:var(--accent)}
 @media(max-width:780px){#experience .timeline{display:grid;gap:24px;padding:0 22px;background:var(--card);border:1px solid var(--line);border-radius:12px}#experience .timeline::before{display:none}#experience .timeline>article{margin:0;padding:26px 0 26px 24px}#experience .timeline>article::before{left:0}#experience .timeline>article::after{left:-4px}}
+
+.copy-toast{position:fixed;z-index:1000;left:50%;bottom:max(24px,env(safe-area-inset-bottom));transform:translate(-50%,12px);display:flex;align-items:center;gap:12px;max-width:calc(100% - 36px);padding:14px 22px;background:#2563eb;color:#fff;border:1px solid #60a5fa;border-radius:10px;box-shadow:0 8px 28px #11182730;font-size:14px;font-weight:550;line-height:1.5;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 180ms ease,transform 180ms ease,visibility 180ms}
+.copy-toast.is-visible{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.copy-toast-icon{display:grid;place-items:center;flex-shrink:0;width:23px;height:23px;border:1px solid #ffffff80;border-radius:50%;font-size:14px}
+@media(prefers-reduced-motion:reduce){.copy-toast{transition:none;transform:translate(-50%,0)}}

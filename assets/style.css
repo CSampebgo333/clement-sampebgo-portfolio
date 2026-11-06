@@ -169,3 +169,11 @@
 .experience-meta>div{min-width:0;max-width:100%}.experience-meta dt{font:8px/1.6 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:3px}.experience-meta dd{margin:0;font-size:11px;line-height:1.6;overflow-wrap:anywhere}
 .experience-detail-head .experience-meta{margin:24px 0}.experience-detail-head .experience-meta dd{font-size:13px}
 @media(max-width:780px){#experience .experience-collection-title{grid-column:auto;grid-row:auto;margin:24px 0 0;padding-bottom:14px;border-bottom:1px solid var(--line)}#experience .timeline>article:first-of-type{padding-top:4px}#experience .timeline>article:first-of-type::before{top:10px}#experience .timeline>article:first-of-type::after{top:6px}}
+
+/* Reading position is distinct from keyboard focus: no focus or URL changes. */
+.case-index li a{padding:7px 10px;border-left:2px solid transparent;border-radius:0 5px 5px 0}
+.case-index li+li{margin-top:5px}
+.case-index li a[aria-current="location"]{background:var(--soft);color:var(--accent);border-left-color:var(--accent);font-weight:650}
+.case-index li a[aria-current="location"]>span{font-weight:700}
+@media(max-width:700px){.case-index li+li{margin-top:0}.case-index li a{padding:6px 8px}}
+.case-chapter,.case-evidence{scroll-margin-top:20px}

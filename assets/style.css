@@ -206,3 +206,11 @@
  #contact .contact-cv .cv-tools{grid-column:1;grid-row:2/span 5;justify-self:start;max-width:100%}
  #contact .contact-cv>p{grid-column:1;grid-row:4}
 }
+
+/* Highlight a skill group without shifting it or implying a card-wide link. */
+.skill-group{transition:border-color 180ms ease,box-shadow 180ms ease}
+@media(hover:hover){.skill-group:hover{border-color:var(--accent);box-shadow:0 5px 18px #2563eb16}}
+.skill-group:focus-within{border-color:var(--accent);box-shadow:0 5px 18px #2563eb16}
+html[data-theme=dark] .skill-group:focus-within{box-shadow:0 5px 18px #60a5fa20}
+@media(hover:hover){html[data-theme=dark] .skill-group:hover{box-shadow:0 5px 18px #60a5fa20}}
+@media(prefers-reduced-motion:reduce){.skill-group{transition:none}}

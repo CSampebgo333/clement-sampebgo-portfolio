@@ -1,4 +1,4 @@
-﻿{
+{
  "$schema":"node_modules/wrangler/config-schema.json",
  "name":"clement-sampebgo-portfolio",
  "routes":[{"pattern":"clementsampebgo.com","custom_domain":true}],
@@ -10,6 +10,9 @@
  "triggers":{"crons":["0 9 * * 1"]},
  "vars":{
   "GITHUB_USERNAME":"CSampebgo333",
+  "ANALYTICS_ENABLED":"true",
+  "WEB_ANALYTICS_TOKEN":"2baf0fe681d34b2e8a29fa39feaf4d6d",
+  "CF_ANALYTICS_ACCOUNT_ID":"9e4dd1e2442bcea92052bac7914c4f4d",
   "SITE_ORIGIN":"https://clementsampebgo.com",
   "ACCESS_TEAM_DOMAIN":"clement-sampebgo.cloudflareaccess.com",
   "ACCESS_AUD":"147df828098f7c33eadaf140299432a228e000880ea272cff034d50d65d52861",

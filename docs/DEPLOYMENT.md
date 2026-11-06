@@ -80,3 +80,71 @@ partial update. A custom preview remains available under the optional advanced
 control. Existing credential verification URLs are preserved. Automatic previews
 apply to the certification/distinction PDF field, not CV uploads or the separate
 completion-certificate attachment lists. Those lists keep their existing PDF links.
+
+### Audience statistics and rights
+
+Cloudflare Web Analytics uses **manual snippet installation**. Keep automatic
+injection disabled, otherwise it could measure administration pages or bypass
+the geographic and privacy-signal controls in this Worker.
+
+Public Worker variables in `wrangler.jsonc`:
+
+- `ANALYTICS_ENABLED`: `true` to enable the guarded injection, `false` to stop it.
+- `WEB_ANALYTICS_TOKEN`: the public identifier from `data-cf-beacon`, not a secret.
+- `CF_ANALYTICS_ACCOUNT_ID`: your non-secret Cloudflare account identifier.
+
+Create a separate API token with **Account → Account Analytics → Read**, scoped
+to this account only. Do not reuse the deployment token. Account-level Analytics
+Read may authorize more account reports than this portfolio uses; the server
+queries only `SITE_ORIGIN`'s hostname and public `/en/` and `/fr/` paths.
+Store the value directly in Cloudflare, not GitHub code, browser fields or chat:
+
+```powershell
+npx wrangler secret put CF_ANALYTICS_API_TOKEN
+```
+
+Wrangler prompts privately for the value. This is a Worker runtime secret, not
+one of the GitHub Actions deployment secrets. Existing Worker secrets survive
+normal deployments. When first creating the secret, run the deployment workflow
+or `npx wrangler deploy` afterward so the active deployment uses the current
+code and secret together. Revoke and replace the token if it is exposed.
+
+The private dashboard **Audience statistics** tab requests
+`GET /api/admin/analytics?days=1|7|30`. It uses the same owner JWT checks as other
+admin APIs, returns no token and no visitor identifiers, and has no public
+counter endpoint. Aggregate results are cached in Worker memory for five minutes,
+not in D1/R2. A credential/plan/schema failure is shown as unavailable, never as
+zero visits. The GraphQL dataset is `rumPageloadEventsAdaptiveGroups`, account
+scoped; limits and availability depend on Cloudflare. Verify the actual account
+with the live token before considering this integration fully connected.
+
+Collection is omitted for EEA/EU, UK and Swiss country codes, unknown country,
+Do Not Track and Global Privacy Control. Browser-level opt-out is available on
+the privacy page. It stores only that preference. These controls limit coverage:
+reports are not a complete record of visitors or unique people. Country is
+approximate, beacons can be blocked, some bots can run JavaScript and Cloudflare
+may estimate/sample metrics. The last incomplete hour is excluded. Top lists
+are capped at ten; totals are queried independently, not summed from top lists.
+No historical data is backfilled. Retention follows Cloudflare's service; the
+portfolio does not create a second visit archive. Review the privacy setup and
+applicable requirements if collection settings, geography or purposes change.
+The geographic exclusion is an implementation choice to reduce collection,
+not a declaration of universal legal compliance.
+
+Copyright wording appears in both languages in the footer and on the privacy
+page. It preserves third-party licenses and collaborative rights; see
+`COPYRIGHT.md`. The year updates when the site renders/builds.
+
+Before using the feature, verify:
+
+1. With no secret, the tab explains configuration without showing fake metrics.
+2. After adding the read token, an authenticated owner can load 1/7/30-day reports;
+   anonymous requests remain blocked. New/empty sites show a truthful empty state.
+3. A successful public page from an allowed location contains the local beacon
+   loader and the narrowly scoped CSP; admin, errors, assets and excluded
+   locations contain no loader. Inspect real Cloudflare geographic requests.
+4. Opt-out, DNT and GPC prevent the external beacon from being loaded. Opt-out
+   persists after refresh. There is no consent popup.
+5. Privacy and rights notices are visible on both language versions. Existing CMS
+   text is preserved; the obsolete bundled claim of no analytics is corrected at
+   rendering time even when a D1 snapshot predates this deployment.

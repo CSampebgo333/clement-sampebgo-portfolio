@@ -1,3 +1,4 @@
+import {getAnalytics,measurementAllowed,analyticsSnippet} from './analytics.mjs';
 import {publicContent} from '../assets/public-content.js';
 import {sitemap} from '../assets/seo.js';
 import {
@@ -508,6 +509,7 @@ async function readBody(request) {
 }
 
 async function admin(request, env, url, actor) {
+ if (request.method === 'GET' && url.pathname === '/api/admin/analytics') return json(await getAnalytics(request,env));
  if (!env.DB) {
   fail(503, 'D1 is not configured');
  }
@@ -982,6 +984,8 @@ export default {
     }
    }
 
+   const measured = response.status === 200 && response.headers.get('content-type')?.includes('text/html') && !isAdminPage && measurementAllowed(request, env);
+   if (measured) response = new HTMLRewriter().on('body', {element(element){element.append(analyticsSnippet(env.WEB_ANALYTICS_TOKEN),{html:true})}}).transform(response);
    const headers = new Headers(response.headers);
 
    if (headers.get('content-type')?.includes('text/html')) {
@@ -997,9 +1001,9 @@ export default {
 
    headers.set(
     'Content-Security-Policy',
-    "default-src 'self'; script-src 'self'; " +
+    "default-src 'self'; script-src 'self'" + (measured ? " https://static.cloudflareinsights.com" : "") + "; " +
     "style-src 'self' 'unsafe-inline'; img-src 'self'; " +
-    "connect-src 'self'; worker-src 'self'; object-src 'none'; " +
+    "connect-src 'self'" + (measured ? " https://cloudflareinsights.com" : "") + "; worker-src 'self'; object-src 'none'; " +
     "base-uri 'none'; frame-ancestors 'none'"
    );
 

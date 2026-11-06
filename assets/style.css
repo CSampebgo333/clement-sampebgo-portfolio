@@ -234,3 +234,22 @@ html[data-theme=dark] .admin .review-state[data-review-state=rejected],html[data
 html[data-theme=dark] .admin .review-state[data-review-state=excluded]{--review-fg:#e5e7eb;--review-bg:#263244;--review-border:#9ca3af}
 html[data-theme=dark] .admin #reject{color:#fecaca;background:#3b2028;border-color:#f87171}
 @media(hover:hover){html[data-theme=dark] .admin #reject:not(:disabled):hover{background:#512633}}
+/* Owner-only audience reports: compact summaries and readable aggregate tables. */
+.analytics-controls{display:flex;gap:1rem;align-items:end;flex-wrap:wrap;margin:1.5rem 0}
+.analytics-controls label{display:grid;gap:.35rem;font-weight:600}
+.analytics-controls select{padding:.55rem .8rem;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+.analytics-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.5rem 0}
+.analytics-summary article{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:10px;padding:1.4rem;background:var(--card)}
+.analytics-summary span{display:block;color:var(--muted);font-size:.9rem}
+.analytics-summary strong{display:block;font-size:clamp(2rem,4vw,3rem);line-height:1.2;color:var(--ink);margin-top:.5rem;font-variant-numeric:tabular-nums}
+.analytics-tables{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.analytics-table{min-width:0;padding:1.2rem;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.analytics-table h3{font-size:1.1rem;letter-spacing:-.02em;margin-bottom:1rem}
+.analytics-table table{width:100%;border-collapse:collapse;font-size:.85rem}
+.analytics-table th,.analytics-table td{padding:.65rem .3rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.analytics-table tbody th{font-weight:400;color:var(--muted)}
+.analytics-table td,.analytics-table thead th:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.analytics-table thead th{color:var(--ink);font-weight:650}
+.analytics-range{font-size:.85rem}
+.privacy-measurement{margin:2rem 0}
+@media(max-width:600px){.analytics-tables{grid-template-columns:1fr}.analytics-summary{gap:.6rem}.analytics-summary article{padding:1rem}}

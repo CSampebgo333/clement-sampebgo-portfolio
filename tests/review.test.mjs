@@ -33,3 +33,14 @@ test('CV archive endpoints require owner access, enforce CSRF and revoke superse
  assert.equal((await request(env,'/api/admin/cv-restore',{id:archive.id,revision:1})).status,200);
  assert.equal((await request(env,'/api/admin/cv-restore',{id:archive.id,revision:1})).status,409);
 });
+
+test('analytics endpoint is owner-only, read-only and honest when the runtime secret is missing',async()=>{
+ const env={...base,DB:db()};
+ const anonymous=await worker.fetch(new Request('https://portfolio.test/api/admin/analytics?days=7'),env);
+ assert.equal(anonymous.status,401);
+ const signed=await token();
+ const response=await worker.fetch(new Request('https://portfolio.test/api/admin/analytics?days=7',{headers:{'cf-access-jwt-assertion':signed}}),env);
+ assert.equal(response.status,200);assert.equal((await response.json()).configured,false);
+ const invalid=await worker.fetch(new Request('https://portfolio.test/api/admin/analytics?days=999',{headers:{'cf-access-jwt-assertion':signed}}),env);
+ assert.equal(invalid.status,400);
+});

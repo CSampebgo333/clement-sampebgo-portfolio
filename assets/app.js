@@ -1,3 +1,4 @@
+import './privacy-controls.js';
 import {setupSkillLists} from './skill-lists.js';
 import {setupEffects,transitionProjects} from './effects.js';
 import {loadContent} from './cms-public.js';

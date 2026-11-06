@@ -426,6 +426,8 @@
         "description": "Certificat professionnel · Huit cours sur la préparation, l’analyse et la visualisation des données, SQL et R."
       },
       "kind": "certificate",
+      "preview": "/assets/certificates/google-data-analytics.png",
+      "document": "/documents/certificates/google-data-analytics.pdf",
       "skillsLearnedEnabled": false,
       "learnedSkills": []
     },
@@ -445,6 +447,8 @@
         "description": "Université Vanderbilt · Cours en ligne terminé le 24 janvier 2025."
       },
       "kind": "certificate",
+      "preview": "/assets/certificates/prompt-engineering.png",
+      "document": "/documents/certificates/prompt-engineering.pdf",
       "skillsLearnedEnabled": false,
       "learnedSkills": []
     },
@@ -464,6 +468,111 @@
         "period": "SEPTEMBRE 2026",
         "title": "Global PIQA · NeurIPS 2026",
         "description": "Auteur contributeur de Global PIQA, accepté en poster dans la catégorie Evaluations & Datasets de NeurIPS 2026. Ma contribution portait sur le jeu de données en zarma."
+      },
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
+    },
+    {
+      "id": "pfizer",
+      "visible": true,
+      "kind": "certificate",
+      "order": 2,
+      "url": "",
+      "preview": "/assets/certificates/pfizer.png",
+      "document": "/documents/certificates/pfizer.pdf",
+      "en": {
+        "period": "OCTOBER 2026",
+        "title": "Pfizer · AI document insights",
+        "description": "Completed the Advanced AI-Powered Document Insights & Data Extraction externship via Extern."
+      },
+      "fr": {
+        "period": "OCTOBRE 2026",
+        "title": "Pfizer · IA documentaire",
+        "description": "Externat Advanced AI-Powered Document Insights & Data Extraction terminé via Extern."
+      },
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
+    },
+    {
+      "id": "breaking-games",
+      "visible": true,
+      "kind": "certificate",
+      "order": 3,
+      "url": "",
+      "preview": "/assets/certificates/breaking-games.png",
+      "document": "/documents/certificates/breaking-games.pdf",
+      "en": {
+        "period": "SEPTEMBER 2026",
+        "title": "Breaking Games · SQL & databases",
+        "description": "Completed the SQL & Database Architecture externship via Extern."
+      },
+      "fr": {
+        "period": "SEPTEMBRE 2026",
+        "title": "Breaking Games · SQL et bases de données",
+        "description": "Externat SQL et architecture de bases de données terminé via Extern."
+      },
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
+    },
+    {
+      "id": "natgeo-tnc",
+      "visible": true,
+      "kind": "certificate",
+      "order": 4,
+      "url": "",
+      "preview": "/assets/certificates/natgeo-tnc.png",
+      "document": "/documents/certificates/natgeo-tnc.pdf",
+      "en": {
+        "period": "NOVEMBER 2025",
+        "title": "National Geographic Society + TNC",
+        "description": "Completed the Marine & Community Conservation Remote Externship."
+      },
+      "fr": {
+        "period": "NOVEMBRE 2025",
+        "title": "National Geographic Society + TNC",
+        "description": "Externat à distance en conservation marine et communautaire terminé."
+      },
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
+    },
+    {
+      "id": "issadar",
+      "visible": true,
+      "kind": "certificate",
+      "order": 5,
+      "url": "",
+      "preview": "/assets/certificates/issadar.png",
+      "document": "/documents/certificates/issadar.pdf",
+      "en": {
+        "period": "JULY 2026",
+        "title": "ISSADAR 2026 · Summer school",
+        "description": "Participation in the International Summer School on Artificial Intelligence, Data and Research, INP-HB, Yamoussoukro. Topics: advanced databases, AI and operations research."
+      },
+      "fr": {
+        "period": "JUILLET 2026",
+        "title": "ISSADAR 2026 · École d’été",
+        "description": "Participation à l’école d’été internationale en IA, données et recherche à l’INP-HB, Yamoussoukro. Thèmes : bases de données avancées, IA et recherche opérationnelle."
+      },
+      "skillsLearnedEnabled": false,
+      "learnedSkills": []
+    },
+    {
+      "id": "business-development",
+      "visible": true,
+      "kind": "certificate",
+      "order": 6,
+      "url": "",
+      "preview": "/assets/certificates/business-development.png",
+      "document": "/documents/certificates/business-development.pdf",
+      "en": {
+        "period": "MAY 2023",
+        "title": "Business Development · One Percent Club",
+        "description": "Completed the Business Development Module conducted by One Percent Club."
+      },
+      "fr": {
+        "period": "MAI 2023",
+        "title": "Développement commercial · One Percent Club",
+        "description": "Module de développement commercial du One Percent Club terminé."
       },
       "skillsLearnedEnabled": false,
       "learnedSkills": []
@@ -573,6 +682,13 @@
       "url": "https://www.linkedin.com/in/clement-sampebgo/",
       "visible": true,
       "order": 1
+    },
+    {
+      "id": "youtube",
+      "label": "YouTube",
+      "url": "https://www.youtube.com/channel/UCIJmquOXKPFddIOE-T7LX4Q",
+      "visible": true,
+      "order": 2
     }
   ],
   "projects": [
@@ -594,12 +710,12 @@
       "en": {
         "title": "Document search with verifiable sources",
         "client": "PFIZER · VIA EXTERN",
-        "summary": "Building a Python document assistant that combines OCR, semantic search and a clear path back to source pages.",
-        "role": "AI document intelligence extern. I developed and evaluated a document-processing pipeline and a Gradio interface.",
-        "problem": "Document review requires more than generating an answer: readers need to locate relevant information and inspect the passage it comes from.",
-        "approach": "I worked with PDF text extraction, OCR, document classification, text chunking and semantic retrieval. I connected these components to a local language model and an interface that displays supporting passages and source pages.\n\nI explored the trade-offs between model size, response time and answer quality, and evaluated retrieval separately from generated answers.",
-        "result": "I developed practical experience integrating Python, OCR, vector search and a usable interface. Testing helped me recognize that relevant retrieved text can still lead to an incorrect answer, and that source references need to support the specific claim being made.",
-        "limitation": "This is an externship prototype, not a production or compliance decision system. Human verification remains essential. Further work would focus on structured table extraction, citation checks and testing on independent documents. Company-specific examples and detailed evaluation results are omitted from this overview.",
+        "summary": "A Python document-search prototype combining OCR, semantic retrieval and a Gradio interface with source-page references.",
+        "role": "I developed the document-processing and retrieval pipeline, connected it to a local language model, and built the Gradio interface during the Pfizer externship via Extern.",
+        "problem": "A useful document assistant must do more than produce a fluent answer. It needs to extract readable text, retrieve relevant passages and give the reader a practical way to check the source. The prototype explores that workflow for people reviewing complex PDFs.",
+        "approach": "- **Prepare the documents.** Combined PDF text extraction and OCR to handle text-based and scanned content. Explored document classification and routing before splitting text into chunks for retrieval.\n- **Find supporting passages.** Used FAISS for semantic search and connected retrieved context to Qwen 2.5. Kept extraction, retrieval and answer generation as distinct stages so failures could be investigated separately.\n- **Make answers reviewable.** Built a Gradio interface for document questions, with supporting passages and page references rather than presenting generated answers without context.\n- **Evaluate the trade-offs.** Compared retrieval quality with answer quality and explored how model size and response time affect the experience.",
+        "result": "The deliverable is a working document-questioning prototype, documented in the linked Python notebook. It brings OCR, classification, retrieval and a user interface into one workflow.\n\nA key lesson was that retrieving a relevant passage does not guarantee a correct answer: the response and its citation still need to support the particular claim. This shaped how I assessed the system and presented its sources.",
+        "limitation": "The prototype was developed in an externship; it is not a deployed Pfizer system or a tool for clinical or compliance decisions. Human source verification remains necessary. Structured tables, citation checks and evaluation on independent documents are areas for further work.\n\nCompany-specific document examples and sensitive evaluation details are withheld. The technical notebook remains available to show the implementation.",
         "evaluationNote": "",
         "imageAlt": "Original Pfizer document intelligence externship cover from Extern.",
         "imageCredit": "Illustrative program artwork provided by Extern."
@@ -607,12 +723,12 @@
       "fr": {
         "title": "Rechercher dans les documents, vérifier les sources",
         "client": "PFIZER · VIA EXTERN",
-        "summary": "Développer un assistant documentaire Python associant OCR, recherche sémantique et accès aux pages sources.",
-        "role": "Externat en analyse documentaire par IA. J’ai développé et évalué une chaîne de traitement documentaire et une interface Gradio.",
-        "problem": "La revue documentaire ne se limite pas à générer une réponse : il faut retrouver l’information pertinente et pouvoir examiner le passage dont elle provient.",
-        "approach": "J’ai travaillé sur l’extraction de texte PDF, l’OCR, la classification documentaire, le découpage du texte et la recherche sémantique. J’ai relié ces éléments à un modèle de langage local et à une interface affichant les passages et pages sources.\n\nJ’ai étudié les compromis entre taille du modèle, temps de réponse et qualité, en évaluant séparément la recherche et les réponses générées.",
-        "result": "J’ai acquis une expérience pratique de l’intégration de Python, de l’OCR, de la recherche vectorielle et d’une interface utilisable. Les tests m’ont appris qu’un passage pertinent peut malgré tout conduire à une réponse incorrecte et qu’une référence doit étayer précisément l’affirmation présentée.",
-        "limitation": "Il s’agit d’un prototype d’externat, sans usage décisionnel en production ou en conformité. La vérification humaine reste essentielle. Les pistes d’amélioration portent sur l’extraction structurée des tableaux, les citations et des tests sur des documents indépendants. Les exemples propres à l’entreprise et les résultats détaillés de l’évaluation sont omis de cette présentation.",
+        "summary": "Un prototype Python de recherche documentaire associant OCR, recherche sémantique et interface Gradio avec références aux pages sources.",
+        "role": "J’ai développé la chaîne de traitement et de recherche documentaire, relié les passages retrouvés à un modèle de langage local et créé l’interface Gradio pendant l’externat Pfizer via Extern.",
+        "problem": "Un assistant documentaire utile ne doit pas seulement produire une réponse fluide. Il doit extraire un texte exploitable, retrouver les passages pertinents et permettre au lecteur de vérifier la source. Le prototype explore cette démarche pour la consultation de PDF complexes.",
+        "approach": "- **Préparer les documents.** Association de l’extraction de texte PDF et de l’OCR pour traiter les contenus textuels et numérisés. Exploration de la classification et du routage, puis découpage du texte en segments.\n- **Retrouver les passages utiles.** Recherche sémantique avec FAISS et transmission du contexte à Qwen 2.5. Séparation de l’extraction, de la recherche et de la génération pour examiner les erreurs à chaque étape.\n- **Faciliter la vérification.** Création d’une interface Gradio pour interroger les documents, avec passages justificatifs et références aux pages sources.\n- **Évaluer les compromis.** Examen distinct de la qualité de recherche et des réponses, ainsi que des compromis entre taille du modèle et temps de réponse.",
+        "result": "Le livrable est un prototype fonctionnel de questions-réponses documentaires, décrit dans le notebook Python lié. Il réunit OCR, classification, recherche et interface dans une même démarche.\n\nUn enseignement central : retrouver un passage pertinent ne garantit pas une réponse correcte. La réponse et sa citation doivent étayer l’affirmation précise. Ce constat a guidé mon évaluation et la présentation des sources.",
+        "limitation": "Ce prototype d’externat n’est ni un système déployé par Pfizer ni un outil de décision clinique ou de conformité. La vérification humaine des sources reste nécessaire. L’extraction des tableaux, le contrôle des citations et l’évaluation sur des documents indépendants sont des pistes d’amélioration.\n\nLes exemples documentaires propres à l’entreprise et les détails sensibles de l’évaluation sont réservés. Le notebook technique reste accessible pour présenter l’implémentation.",
         "evaluationNote": "",
         "imageAlt": "Couverture originale de l’externat Pfizer en analyse documentaire, fournie par Extern.",
         "imageCredit": "Illustration du programme fournie par Extern."
@@ -657,21 +773,21 @@
         "title": "Listening to the customer",
         "client": "BEATS BY DRE · EXTERNSHIP",
         "summary": "Cleaning and exploring consumer reviews to understand sentiment and turn feedback into useful recommendations.",
-        "role": "Consumer insights data analytics extern · June–July 2024",
-        "problem": "Product reviews contain useful feedback, but unstructured text makes recurring concerns difficult to compare.",
-        "approach": "I cleaned review data, carried out exploratory and sentiment analysis, and used Gemini AI to help interpret consumer feedback. The capstone brings the analysis together in a notebook.",
-        "result": "I developed visualizations and recommendations intended to inform brand decisions. The repository includes the cleaning, EDA, AI analysis and capstone stages.",
-        "limitation": "Review samples and model-generated sentiment can be biased. Recommendations are analytical work, not evidence of a business outcome."
+        "role": "Consumer insights data analytics extern · June–July 2024. I cleaned and explored review data, analysed sentiment with Python and NLP, and brought the findings together in a capstone notebook.",
+        "problem": "Consumer reviews can reveal what people value and where they encounter problems, but free-form text is difficult to compare. The project aimed to turn that feedback into an understandable analysis for brand decision-making.",
+        "approach": "- **Prepare and explore.** Cleaned the review data with Python and Pandas, then used exploratory analysis and visualizations to understand the sample before interpreting the text.\n- **Examine sentiment.** Applied NLP and sentiment analysis, using Gemini to help interpret consumer feedback and recurring themes.\n- **Build a coherent recommendation.** Combined the cleaning, exploratory and AI-assisted analysis stages into a capstone notebook, linking recommendations to the review evidence.",
+        "result": "I produced visualizations and evidence-based recommendations, with the cleaning, EDA, AI analysis and capstone stages available in the repository. The preview shows the composition of the review sample, helping readers understand the basis of the comparison.\n\nThe project developed my ability to move from unstructured customer feedback to a documented analytical argument, while separating what the sample suggests from what it can establish.",
+        "limitation": "The review sample is not a representative survey of all customers. Unequal sample sizes and model-generated sentiment can affect comparisons. The recommendations are analytical proposals; I did not measure their adoption or a subsequent business outcome."
       },
       "fr": {
         "title": "À l’écoute des consommateurs",
         "client": "BEATS BY DRE · EXTERNAT",
         "summary": "Nettoyer et explorer les avis clients pour comprendre les sentiments exprimés et formuler des recommandations utiles.",
-        "role": "Externat en analyse des avis consommateurs · Juin–juillet 2024",
-        "problem": "Les avis contiennent des retours utiles, mais leur format libre rend les préoccupations récurrentes difficiles à comparer.",
-        "approach": "J’ai nettoyé les avis, mené une analyse exploratoire et une analyse des sentiments, puis utilisé Gemini AI pour faciliter leur interprétation. Le notebook final rassemble ces étapes.",
-        "result": "J’ai produit des visualisations et des recommandations destinées à éclairer les décisions de marque. Le dépôt contient les étapes de nettoyage, d’exploration, d’analyse par IA et de synthèse.",
-        "limitation": "Les échantillons et les sentiments générés par modèle peuvent être biaisés. Les recommandations ne constituent pas la preuve d’un résultat commercial."
+        "role": "Externat en analyse des avis consommateurs · Juin–juillet 2024. J’ai nettoyé et exploré les avis, analysé les sentiments avec Python et le NLP, puis réuni le travail dans un notebook final.",
+        "problem": "Les avis clients révèlent les attentes et les difficultés rencontrées, mais leur format libre rend les comparaisons difficiles. Le projet visait à transformer ces retours en une analyse compréhensible pour éclairer les décisions de marque.",
+        "approach": "- **Préparer et explorer.** Nettoyage avec Python et Pandas, puis analyse exploratoire et visualisations pour comprendre la composition de l’échantillon avant d’interpréter les textes.\n- **Examiner les sentiments.** Analyse des sentiments et NLP, avec Gemini pour faciliter l’interprétation des retours et des thèmes récurrents.\n- **Construire une recommandation argumentée.** Regroupement du nettoyage, de l’exploration et de l’analyse assistée par IA dans un notebook final, en reliant les recommandations aux avis étudiés.",
+        "result": "J’ai produit des visualisations et des recommandations argumentées. Le dépôt présente les étapes de nettoyage, d’exploration, d’analyse par IA et de synthèse. L’aperçu montre la composition de l’échantillon pour situer la comparaison.\n\nCe projet m’a appris à transformer des retours non structurés en un raisonnement analytique documenté, en distinguant ce que l’échantillon suggère de ce qu’il permet d’établir.",
+        "limitation": "L’échantillon d’avis n’est pas un sondage représentatif de tous les clients. Les écarts de taille entre échantillons et les sentiments attribués par modèle peuvent affecter les comparaisons. Les recommandations sont des propositions analytiques ; je n’ai mesuré ni leur adoption ni un résultat commercial ultérieur."
       },
       "order": 1,
       "visible": true,
@@ -697,11 +813,11 @@
         "title": "From data modeling to clear reporting",
         "client": "BREAKING GAMES · VIA EXTERN",
         "summary": "A SQL analytics project focused on relational modeling, data validation and communicating findings through a dashboard.",
-        "role": "SQL and database architecture extern. I designed an analytics database, wrote SQL queries and developed an HTML/Chart.js reporting interface.",
-        "problem": "Useful analytics depends on a consistent data model, well-defined measures and clear reporting. I worked on connecting these stages into an understandable workflow.",
-        "approach": "I used SQLite to organize data into relational tables and practiced joins, window functions and validation queries. I checked table relationships, record granularity and time-period consistency before interpreting measures.\n\nI then built a reporting layer and a dashboard to make the analysis easier to explore and explain.",
-        "result": "The project strengthened my ability to move from database design to analysis and presentation. I learned to question how an indicator is calculated, document assumptions and distinguish analytical recommendations from measured outcomes.",
-        "limitation": "This overview describes my skills and contribution. Source data, exact figures, internal findings, business recommendations and submitted reports or dashboards are not shared here. No company performance or business impact is claimed.",
+        "role": "I designed the SQLite analytics model, wrote investigation and validation queries, and built an HTML/Chart.js reporting dashboard during the SQL & Database Architecture externship via Extern.",
+        "problem": "Sales, cart, traffic and advertising records describe different events and reporting periods. Combining them without checking their grain and relationships can duplicate measures, hide unmatched records or produce a misleading indicator. My work connected database design, validation and reporting into a more explainable workflow.",
+        "approach": "- **Model the sources.** Organized six commercial and marketing sources into relational SQLite tables. Kept sales records distinct from traffic and advertising measures, rather than assuming they could be joined at the same level.\n- **Investigate with SQL.** Used joins, window functions and validation queries to examine table relationships, missing matches and the difference between individual records and unique sessions.\n- **Check the indicator.** Examined whether numerator and denominator used compatible reporting windows and whether the data-quality exclusions were explicit. Treated an unmatched record as a question to investigate, not proof of no activity.\n- **Communicate the analysis.** Built a reporting layer and an HTML/Chart.js dashboard to make the queries and their interpretation easier to follow.",
+        "result": "I produced an analytics database, SQL investigations and a reporting dashboard. The work demonstrates the full path from source modelling to an interpretable visual interface.\n\nMy main technical takeaway was to validate the structure of a query before trusting its output. Correcting a measure is an improvement in analytical reliability; it is not, by itself, evidence that the business performed better.",
+        "limitation": "The analysis depends on source coverage, matching quality and consistent metric definitions. It does not establish a causal business impact.\n\nSource records, exact business figures, identifiable internal findings and commercial recommendations are withheld. The submitted report and dashboard are not linked because they contain those details; the modelling and validation approach is described here.",
         "evaluationNote": "",
         "imageAlt": "Original Breaking Games SQL and database architecture externship cover from Extern.",
         "imageCredit": "Illustrative program artwork provided by Extern."
@@ -710,11 +826,11 @@
         "title": "De la modélisation des données au reporting",
         "client": "BREAKING GAMES · VIA EXTERN",
         "summary": "Un projet analytique SQL centré sur la modélisation relationnelle, la validation des données et la présentation des analyses dans un tableau de bord.",
-        "role": "Externat SQL et architecture de bases de données. J’ai conçu une base analytique, rédigé des requêtes SQL et développé une interface de reporting HTML/Chart.js.",
-        "problem": "Une analyse utile repose sur un modèle cohérent, des indicateurs bien définis et une présentation claire. J’ai travaillé à relier ces étapes dans une démarche compréhensible.",
-        "approach": "J’ai utilisé SQLite pour organiser les données en tables relationnelles et pratiquer les jointures, les fonctions de fenêtrage et les requêtes de validation. J’ai vérifié les relations entre tables, la granularité des enregistrements et la cohérence des périodes avant d’interpréter les indicateurs.\n\nJ’ai ensuite créé une couche de reporting et un tableau de bord pour faciliter l’exploration et l’explication des analyses.",
-        "result": "Le projet a renforcé ma capacité à passer de la conception d’une base à l’analyse et à la présentation. J’ai appris à examiner le calcul d’un indicateur, expliciter mes hypothèses et distinguer les recommandations des résultats mesurés.",
-        "limitation": "Cette présentation décrit mes compétences et ma contribution. Les données sources, chiffres précis, constats internes, recommandations commerciales, rapports et tableaux de bord soumis ne sont pas diffusés ici. Aucun résultat de l’entreprise ni impact commercial n’est revendiqué.",
+        "role": "J’ai conçu le modèle analytique SQLite, rédigé les requêtes d’investigation et de validation, puis développé un tableau de bord HTML/Chart.js pendant l’externat SQL & Database Architecture via Extern.",
+        "problem": "Les ventes, paniers, données de trafic et publicités décrivent des événements et des périodes différents. Les réunir sans vérifier leur granularité et leurs relations peut dupliquer les mesures, masquer des enregistrements sans correspondance ou produire un indicateur trompeur. Mon travail reliait modélisation, validation et reporting dans une démarche explicable.",
+        "approach": "- **Modéliser les sources.** Organisation de six sources commerciales et marketing en tables relationnelles SQLite. Séparation des ventes et des mesures de trafic et de publicité, sans supposer une granularité commune.\n- **Investiguer avec SQL.** Utilisation de jointures, de fonctions de fenêtrage et de requêtes de validation pour examiner les relations, les correspondances manquantes et la différence entre enregistrements et sessions uniques.\n- **Vérifier les indicateurs.** Contrôle de la cohérence des périodes utilisées au numérateur et au dénominateur, avec exclusions de qualité explicites. Une absence de correspondance était traitée comme un point à examiner, pas comme une preuve d’absence d’activité.\n- **Présenter l’analyse.** Création d’une couche de reporting et d’un tableau de bord HTML/Chart.js pour rendre les requêtes et leur interprétation plus accessibles.",
+        "result": "J’ai produit une base analytique, des investigations SQL et un tableau de bord. Le travail montre le passage de la modélisation des sources à une interface visuelle interprétable.\n\nMon principal enseignement technique : vérifier la structure d’une requête avant de faire confiance à son résultat. Corriger une mesure améliore la fiabilité de l’analyse ; cela ne prouve pas à lui seul une amélioration commerciale.",
+        "limitation": "L’analyse dépend de la couverture des sources, de la qualité des correspondances et de définitions cohérentes. Elle n’établit pas d’impact commercial causal.\n\nLes enregistrements sources, chiffres commerciaux précis, constats internes identifiables et recommandations commerciales restent réservés. Le rapport et le tableau de bord soumis ne sont pas liés car ils contiennent ces éléments ; la démarche de modélisation et de validation est présentée ici.",
         "evaluationNote": "",
         "imageAlt": "Couverture originale de l’externat Breaking Games en SQL et bases de données, fournie par Extern.",
         "imageCredit": "Illustration du programme fournie par Extern."
@@ -747,10 +863,10 @@
         "client": "RESEARCH · COLLABORATION",
         "summary": "Contributing Zarma examples to a multilingual benchmark of commonsense reasoning across languages and cultures.",
         "role": "Contributing author · Zarma dataset contribution",
-        "problem": "Commonsense evaluation needs to reflect languages and cultural contexts beyond high-resource benchmarks.",
-        "approach": "Working with M. K. Keita, I helped prepare prompts, filter and format generated examples, and review French seed examples for cultural relevance.",
-        "result": "I contributed to the Zarma dataset within a large international collaboration. My name appears in the public author list; the paper and benchmark provide the wider research context.",
-        "limitation": "My contribution concerns the Zarma dataset, not ownership of the whole benchmark. NeurIPS 2026 acceptance is reported in my CV; the linked preprint is the public evidence supplied here.",
+        "problem": "Commonsense benchmarks need examples that make sense across languages and cultural settings. My contribution focused on Zarma, a low-resource West African language, within the wider Global PIQA collaboration.",
+        "approach": "- **Prepare the examples.** Worked with M. K. Keita on prompts for generating candidate examples.\n- **Review and curate.** Helped filter and format generated examples, and reviewed French seed examples for cultural relevance.\n- **Contribute within a shared benchmark.** Focused on the Zarma dataset rather than claiming responsibility for the full multilingual benchmark or its evaluation pipeline.",
+        "result": "I contributed to the Zarma dataset and am listed as a contributing author on the public paper. The paper provides the research questions, overall benchmark design and collaboration-wide results.\n\nThis work connects my interests in language and AI with practical dataset preparation: an example needs to be understandable and culturally relevant, not simply well formatted.",
+        "limitation": "My individual contribution concerns Zarma data preparation and review. Overall benchmark results belong to the full research team. The linked preprint and its author list provide public evidence; the NeurIPS 2026 acceptance is reported in my CV.",
         "imageAlt": "First page of Global PIQA: Evaluating Commonsense Reasoning Across 100+ Languages and Cultures.",
         "imageCredit": "First-page preview of the Global PIQA preprint, arXiv:2510.24081. Full authorship is listed in the paper."
       },
@@ -759,10 +875,10 @@
         "client": "RECHERCHE · COLLABORATION",
         "summary": "Contribuer aux exemples en zarma d’un benchmark multilingue du raisonnement de bon sens à travers les langues et les cultures.",
         "role": "Coauteur contributeur · Contribution au jeu de données zarma",
-        "problem": "L’évaluation du bon sens doit refléter des langues et des contextes culturels au-delà des benchmarks à fortes ressources.",
-        "approach": "Avec M. K. Keita, j’ai contribué à préparer les prompts, filtrer et formater les exemples générés, et examiner la pertinence culturelle des exemples sources en français.",
-        "result": "J’ai participé au jeu de données zarma dans une vaste collaboration internationale. Mon nom figure dans la liste publique des auteurs ; l’article présente le contexte scientifique global.",
-        "limitation": "Ma contribution porte sur le jeu zarma, et non sur l’ensemble du benchmark. L’acceptation à NeurIPS 2026 est indiquée dans mon CV ; le préprint lié constitue ici la preuve publique.",
+        "problem": "Les benchmarks de bon sens doivent proposer des exemples pertinents dans différentes langues et cultures. Ma contribution portait sur le zarma, une langue ouest-africaine à faibles ressources, au sein de la collaboration Global PIQA.",
+        "approach": "- **Préparer les exemples.** Travail avec M. K. Keita sur les prompts servant à générer des exemples candidats.\n- **Relire et sélectionner.** Contribution au filtrage et au formatage des exemples générés, avec examen de la pertinence culturelle des exemples sources en français.\n- **Contribuer à un benchmark commun.** Intervention centrée sur les données en zarma, sans revendiquer la conception du benchmark multilingue ni de l’ensemble de son évaluation.",
+        "result": "J’ai contribué au jeu de données en zarma et figure parmi les auteurs contributeurs de l’article public. L’article présente les questions scientifiques, la conception du benchmark et les résultats de la collaboration.\n\nCe travail relie mon intérêt pour les langues et l’IA à la préparation concrète de données : un exemple doit être compréhensible et culturellement pertinent, pas seulement bien formaté.",
+        "limitation": "Ma contribution individuelle porte sur la préparation et la relecture des données en zarma. Les résultats globaux du benchmark sont ceux de l’équipe scientifique. Le préprint et sa liste d’auteurs sont publics ; l’acceptation à NeurIPS 2026 est indiquée dans mon CV.",
         "imageAlt": "Première page de l’article Global PIQA: Evaluating Commonsense Reasoning Across 100+ Languages and Cultures.",
         "imageCredit": "Aperçu de la première page du préprint Global PIQA, arXiv:2510.24081. La liste complète des auteurs figure dans l’article."
       },
@@ -791,21 +907,21 @@
         "title": "Driving theory, one question at a time",
         "client": "SOFTWARE · PERSONAL PROJECT",
         "summary": "A focused practice quiz with instant grading, answer review and a keyboard-friendly question navigator.",
-        "role": "Personal project · Frontend development",
-        "problem": "Learners need a simple way to practise theory questions and understand their mistakes.",
-        "approach": "I built a dependency-free HTML, CSS and JavaScript quiz with local attempt storage, a correction page and print support.",
-        "result": "The repository provides a ten-question practice flow with progress tracking, validation and explanations. Its screenshot is reproduced here.",
-        "limitation": "A practice tool, not an official licensing resource. The question bank is small and requires review against local rules."
+        "role": "Personal frontend project. I built the quiz flow, question navigation, answer review and local attempt storage using HTML, CSS and JavaScript.",
+        "problem": "A learner needs to practise questions, see progress and understand mistakes without navigating a complicated interface. I designed a small browser-based practice tool around that sequence.",
+        "approach": "- **Keep the flow focused.** Built a dependency-free interface with a question navigator, progress tracking and answer validation.\n- **Close the feedback loop.** Added instant grading and a correction page with explanations so users can review their answers.\n- **Support practical use.** Stored attempts locally in the browser and added print support. Made the question navigator usable by keyboard.",
+        "result": "The repository contains a complete ten-question practice flow, from answering and validation to grading and review. The screenshot is from the implemented interface.\n\nThe project demonstrates frontend state handling and interaction design in plain JavaScript, without a framework dependency.",
+        "limitation": "This is a practice tool, not an official licensing resource. Its question bank is small and must be checked against the relevant local rules. Attempts are saved in the current browser; they are not a synchronized account history."
       },
       "fr": {
         "title": "Le code de la route, question par question",
         "client": "LOGICIEL · PROJET PERSONNEL",
         "summary": "Un quiz ciblé avec correction immédiate, explications et navigation utilisable au clavier.",
-        "role": "Projet personnel · Développement frontend",
-        "problem": "Les apprenants ont besoin d’un moyen simple de s’entraîner et de comprendre leurs erreurs.",
-        "approach": "J’ai créé un quiz sans dépendances en HTML, CSS et JavaScript, avec sauvegarde locale, page de correction et impression.",
-        "result": "Le dépôt propose dix questions, un suivi de progression, une validation et des explications. Sa capture d’écran est présentée ici.",
-        "limitation": "Un outil d’entraînement, pas une ressource officielle. La banque de questions est limitée et doit être vérifiée selon les règles locales."
+        "role": "Projet personnel de développement frontend. J’ai créé le parcours de quiz, la navigation, la correction et la sauvegarde locale des tentatives en HTML, CSS et JavaScript.",
+        "problem": "Un apprenant doit pouvoir s’entraîner, suivre sa progression et comprendre ses erreurs sans interface compliquée. J’ai organisé ce petit outil dans le navigateur autour de cette séquence.",
+        "approach": "- **Centrer le parcours.** Interface sans dépendances avec navigation entre questions, suivi de progression et validation des réponses.\n- **Expliquer les erreurs.** Ajout d’une notation immédiate et d’une page de correction avec explications.\n- **Faciliter l’utilisation.** Sauvegarde locale des tentatives, prise en charge de l’impression et navigation utilisable au clavier.",
+        "result": "Le dépôt propose un parcours complet de dix questions : réponses, validation, notation et correction. La capture provient de l’interface réalisée.\n\nLe projet illustre la gestion de l’état et des interactions en JavaScript natif, sans dépendance à un framework.",
+        "limitation": "Il s’agit d’un outil d’entraînement, pas d’une ressource officielle. La banque de questions est limitée et doit être vérifiée selon les règles locales. Les tentatives sont enregistrées dans le navigateur utilisé, sans historique de compte synchronisé."
       },
       "order": 5,
       "visible": true,
@@ -837,7 +953,7 @@
         "summary": "A public ArcGIS StoryMap connecting plastic pollution, invasive water hyacinths and fishing livelihoods in Ouagadougou, Burkina Faso.",
         "role": "Conservation extern · September–November 2025. I researched the issue, organized three research records and built the StoryMap.",
         "problem": "Tanghin Dam is a freshwater reservoir within my home city. I wanted to explain how pressures on the water also affect the people who rely on it, and make existing reporting easier for a wider audience to navigate.",
-        "approach": "I reviewed published reporting on plastic pollution and aquaculture, alongside existing footage of community action against water hyacinths. For each research record, I assessed relevance, summarized the issue and community implications, and considered possible responses.\n\nI then organized the final StoryMap around place, environmental pressures, livelihoods, existing community action and proposed next steps. ArcGIS maps, attributed photographs and video support the written narrative.",
+        "approach": "- **Research the issue.** Reviewed published reporting on plastic pollution and aquaculture, alongside existing footage of community action against water hyacinths. Assessed relevance and summarized environmental and community implications in three research records.\n- **Structure the story.** Organized the final StoryMap around place, environmental pressures, livelihoods, community action and proposed next steps.\n- **Make the sources navigable.** Combined ArcGIS maps, attributed photographs, video and written explanations into a public narrative. Retained the original media credits and references.",
         "result": "The completed work includes three research records and a published StoryMap. The final narrative links environmental pressures with fishing access and livelihoods, then explains practical responses such as continued cleanups, waste collection, awareness and coordination.\n\nMy contribution was to bring sources together into a clear, place-based account. The cleanup activities described belong to the community organizations featured in those sources. I did not lead those activities or measure an environmental improvement.",
         "limitation": "This is a research and communication project based on existing sources, not a field survey or a water-quality monitoring study. Interviews in the source reports were conducted by their original creators. Mapped zones are qualitative illustrations, not measured pollution concentrations or a validated change analysis.\n\nThe written explanations on this page and in the StoryMap convey the argument without requiring map interaction. ArcGIS maps need a compatible WebGL browser.",
         "evaluationNote": "These figures describe completed deliverables, not changes in biodiversity, water quality or community income. The public StoryMap is in English and includes its original media credits and references.",
@@ -850,7 +966,7 @@
         "summary": "Un ArcGIS StoryMap public reliant pollution plastique, jacinthes d’eau envahissantes et activités de pêche à Ouagadougou, au Burkina Faso.",
         "role": "Externat en conservation · Septembre–novembre 2025. J’ai étudié le sujet, organisé trois fiches de recherche et créé le StoryMap.",
         "problem": "Le barrage de Tanghin est un réservoir d’eau douce situé dans ma ville d’origine. Je voulais expliquer les liens entre les pressions sur ce milieu et la vie des personnes qui en dépendent, en rendant les informations disponibles plus accessibles à un large public.",
-        "approach": "J’ai examiné des publications sur la pollution plastique et l’aquaculture, ainsi que des vidéos existantes d’actions communautaires contre les jacinthes d’eau. Pour chaque fiche, j’ai évalué la pertinence de la source, résumé le problème et ses implications locales, puis envisagé des réponses possibles.\n\nJ’ai structuré le StoryMap autour du lieu, des pressions environnementales, des moyens de subsistance, des initiatives communautaires et des pistes d’action. Cartes ArcGIS, photographies créditées et vidéos accompagnent le récit.",
+        "approach": "- **Étudier le sujet.** Examen de publications sur la pollution plastique et l’aquaculture, ainsi que de vidéos d’actions communautaires contre les jacinthes d’eau. Évaluation des sources et synthèse des enjeux environnementaux et locaux dans trois fiches de recherche.\n- **Structurer le récit.** Organisation du StoryMap autour du lieu, des pressions environnementales, des moyens de subsistance, des initiatives communautaires et des pistes d’action.\n- **Rendre les sources accessibles.** Association de cartes ArcGIS, photographies attribuées, vidéos et explications écrites dans un récit public, en conservant les crédits et références.",
         "result": "Le travail final comprend trois fiches de recherche et un StoryMap publié. Le récit relie les pressions environnementales à l’accès à la pêche et aux moyens de subsistance, puis présente des pistes : poursuite des nettoyages, collecte des déchets, sensibilisation et coordination.\n\nMa contribution consiste à synthétiser les sources dans un récit clair ancré dans un lieu. Les actions de nettoyage décrites sont celles des organisations communautaires citées. Je ne les ai pas dirigées et je n’ai pas mesuré d’amélioration environnementale.",
         "limitation": "Il s’agit d’un travail de recherche documentaire et de communication, et non d’une enquête de terrain ou d’un suivi de la qualité de l’eau. Les entretiens présents dans les reportages ont été réalisés par leurs auteurs. Les zones cartographiées sont des illustrations qualitatives, sans mesure de concentration des polluants ni analyse validée de leur évolution.\n\nLes textes de cette page et du StoryMap permettent de comprendre le raisonnement sans manipuler les cartes. Les cartes ArcGIS nécessitent un navigateur compatible WebGL.",
         "evaluationNote": "Ces chiffres décrivent les livrables terminés, pas une évolution de la biodiversité, de la qualité de l’eau ou des revenus. Le StoryMap public est en anglais et conserve ses crédits et références.",

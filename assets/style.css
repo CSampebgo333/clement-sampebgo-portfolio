@@ -41,3 +41,98 @@
 #experience .academic-toolkit{flex:1;min-height:168px}
 /* Shared grid rows keep the academic card aligned with the experience list. */
 #experience .experience-grid{grid-template-columns:minmax(300px,.85fr) minmax(0,1.35fr);column-gap:40px;row-gap:24px;align-items:stretch}#experience .experience-intro{grid-column:1/-1;grid-row:1;display:block;align-self:start;margin-bottom:8px}#experience .experience-story{display:grid;grid-template-columns:.85fr 1.35fr;gap:38px;align-items:center}#experience .experience-story h2{margin:0}#experience .timeline{display:contents}#experience .timeline>article{grid-column:2;grid-row:var(--experience-row);margin:0}#experience .academic-journey{--academic-inset:26px;grid-column:1;grid-row:2/span var(--academic-count);display:grid;grid-template-rows:subgrid;row-gap:inherit;height:auto;margin:0;min-width:0}#experience .academic-stops{display:contents}#experience .academic-label{position:absolute;left:var(--academic-inset);top:25px;margin:0}#experience .academic-journey::after{content:'';position:absolute;left:var(--academic-inset);top:70px;bottom:28px;width:1px;background:var(--line);z-index:0}#experience .academic-stop{margin-left:18px;z-index:1;align-self:stretch}#experience .academic-degree{padding-top:40px}#experience .academic-degree::before{top:45px}#experience .academic-exchange,#experience .academic-course{margin-top:0;padding-top:24px}#experience .academic-toolkit{grid-column:1;grid-row:var(--toolkit-row)/span var(--toolkit-span);position:sticky;top:110px;align-self:start;flex:none;margin:0;min-height:168px}@media(max-width:1000px){#experience .experience-grid{column-gap:30px;grid-template-columns:minmax(300px,.95fr) minmax(0,1.1fr)}#experience .academic-journey{--academic-inset:21px}#experience .experience-story{gap:25px}}@media(max-width:780px){#experience .experience-grid{display:flex;flex-direction:column;gap:24px}#experience .experience-intro{width:100%;margin:0}#experience .experience-story{display:block}#experience .experience-story h2{margin-bottom:18px}#experience .academic-journey{display:block;width:100%;height:auto}#experience .academic-label{position:static;margin-bottom:25px}#experience .academic-stops{display:block;padding-left:18px;border-left:1px solid var(--line)}#experience .academic-stop{margin-left:0}#experience .academic-degree{padding-top:0}#experience .academic-degree::before{top:5px}#experience .academic-exchange,#experience .academic-course{margin-top:27px}#experience .academic-journey::after{display:none}#experience .academic-toolkit{position:static;width:100%}#experience .timeline{display:grid;grid-template-columns:1fr;width:100%;margin:0;gap:18px}#experience .timeline>article{grid-column:auto;grid-row:auto}}
+/* Subtle, one-time motion and useful reading/navigation feedback. */
+#navlinks a[aria-current="location"]{color:var(--accent);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}.reading-progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;pointer-events:none;overflow:hidden}.reading-progress>span{display:block;width:100%;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left}.project a.project-media,.experience-projects a.project-media{transition:box-shadow 180ms ease;box-shadow:0 0 0 1px transparent}.project a.project-media .cover-art,.experience-projects a.project-media .cover-art{transition:transform 220ms ease}.project a.project-media:is(:hover,:focus-visible),.experience-projects a.project-media:is(:hover,:focus-visible){box-shadow:0 0 0 2px var(--accent)}.project a.project-media:is(:hover,:focus-visible) .cover-art,.experience-projects a.project-media:is(:hover,:focus-visible) .cover-art{transform:scale(1.025)}.project a.project-media:is(:hover,:focus-visible) .paper-preview>.cover-art,.experience-projects a.project-media:is(:hover,:focus-visible) .paper-preview>.cover-art{transform:rotate(-5deg) scale(1.025)}#experience .academic-journey.academic-path-drawn::after{transform-origin:top;animation:academic-path-draw 900ms cubic-bezier(.22,.61,.36,1) both}@keyframes academic-path-draw{from{transform:scaleY(0)}to{transform:scaleY(1)}}@media(max-width:780px){#experience .academic-journey::after{display:block}#experience .academic-stops{border-left-color:transparent}}@media(prefers-reduced-motion:reduce){.project a.project-media,.experience-projects a.project-media,.project a.project-media .cover-art,.experience-projects a.project-media .cover-art{transition:none!important}.project a.project-media:is(:hover,:focus-visible) .cover-art,.experience-projects a.project-media:is(:hover,:focus-visible) .cover-art{transform:none}.project a.project-media:is(:hover,:focus-visible) .paper-preview>.cover-art,.experience-projects a.project-media:is(:hover,:focus-visible) .paper-preview>.cover-art{transform:rotate(-5deg)}#experience .academic-journey.academic-path-drawn::after{animation:none;transform:none}}
+
+/* A quiet continuous thread connects the experience cards without changing the education grid. */
+#experience .timeline>article{position:relative;overflow:visible}
+#experience .timeline>article::before{content:'';position:absolute;left:-16px;top:-25px;bottom:-1px;width:1px;background:var(--line);pointer-events:none}
+#experience .timeline>article::after{content:'';position:absolute;left:-20px;top:30px;width:9px;height:9px;border-radius:50%;border:2px solid var(--accent);background:var(--surface);box-shadow:0 0 0 4px var(--surface);pointer-events:none}
+#experience .timeline>article:first-child::before{top:34px}
+#experience .timeline>article:last-child::before{bottom:calc(100% - 34px)}
+#experience .timeline>article:first-child::after{background:var(--accent)}
+@media(max-width:780px){#experience .timeline{padding-left:25px;gap:24px}#experience .timeline>article::before{left:-20px}#experience .timeline>article::after{left:-24px}}
+
+/* Research and community: two complementary editorial cards. */
+#about .about-grid{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;border:0;padding:0;margin:0;align-items:stretch}
+.about-research,.about-community{min-width:0;border:1px solid var(--line);border-radius:14px;padding:32px;background:var(--card)}
+.about-research{border-top:3px solid var(--accent)}
+.about-kicker{display:flex;align-items:center;gap:12px;font:10px/1.6 ui-monospace,monospace;letter-spacing:1px;color:var(--muted);margin-bottom:30px}
+.about-symbol{display:grid;place-items:center;width:32px;height:32px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;color:var(--accent);font:20px/1 system-ui}
+#about .about-research h2{font-size:clamp(2rem,3.1vw,3.1rem);line-height:1.08;max-width:17ch;margin-bottom:24px;text-wrap:balance}
+.about-research-copy p,.about-community p{font-size:15px;line-height:1.85;margin:0 0 20px;text-wrap:pretty}
+.about-paper{display:grid;grid-template-columns:100px minmax(0,1fr) 24px;gap:20px;align-items:center;text-decoration:none;margin-top:30px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.about-paper-image{height:112px;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:var(--bg)}
+.about-paper-image .paper-preview{height:100%;width:100%;padding:0;background:var(--soft)}
+.about-paper-image .paper-preview .cover-art{height:100%;width:100%;object-fit:cover;object-position:top;transform:none;padding:0}
+.about-paper-image .paper-preview-label{display:none}
+.about-paper-copy{display:flex;flex-direction:column;gap:7px;min-width:0}
+.about-paper-copy small{font-size:9px;letter-spacing:.7px;color:var(--muted)}
+.about-paper-copy strong{font-size:20px;letter-spacing:-.025em;color:var(--ink)}
+.about-paper-copy>span{font-size:12px;line-height:1.6;color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.about-paper-arrow{font-size:23px;color:var(--accent)}
+.about-paper:hover{border-color:var(--accent)}
+.about-community{display:flex;flex-direction:column;background:var(--soft);border-radius:14px 40px 14px 14px}
+.about-community-body{margin:auto 0}
+#about .about-community h3{font-size:clamp(1.7rem,2.4vw,2.25rem);line-height:1.15;max-width:14ch;text-wrap:balance;margin-bottom:24px}
+.about-places{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font:11px/1.6 ui-monospace,monospace;color:var(--muted)}
+.about-places>span:nth-child(2){color:var(--accent)}
+@media(max-width:860px){#about .about-grid{grid-template-columns:1fr}.about-community-body{margin:0}.about-community h3{max-width:none}}
+@media(max-width:480px){.about-research,.about-community{padding:24px}.about-kicker{font-size:9px;margin-bottom:24px}.about-paper{grid-template-columns:70px minmax(0,1fr);gap:14px;padding:12px}.about-paper-image{height:90px}.about-paper-arrow{display:none}.about-paper-copy strong{font-size:18px}}
+
+/* Contact: a clear invitation and compact, accessible social marks. */
+#contact .contact-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:0;border:1px solid var(--line);border-radius:14px 40px 14px 14px;overflow:hidden;background:var(--card)}
+.contact-invitation{padding:38px;background:var(--soft);position:relative}
+.contact-mark{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;font-size:26px;color:var(--accent);margin-bottom:27px}
+#contact h2{font-size:clamp(2.2rem,3.7vw,3.5rem);line-height:1.07;max-width:16ch;margin-bottom:34px;text-wrap:balance}
+.contact-email{display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;padding-top:22px;border-top:1px solid var(--line)}
+.contact-email small{display:block;font:9px/1.6 ui-monospace,monospace;letter-spacing:1px;color:var(--muted);margin-bottom:8px}
+.contact-email strong{font-size:clamp(1rem,1.6vw,1.3rem);letter-spacing:-.025em;font-weight:550;overflow-wrap:anywhere}
+.contact-email>span:last-child{font-size:25px;color:var(--accent)}
+#contact .contact-right{padding:38px;display:flex;flex-direction:column;justify-content:space-between;gap:30px;min-width:0}
+.contact-message p{font-size:15px;line-height:1.85;text-wrap:pretty;margin:0 0 16px}.contact-message p:last-child{font-size:13px;margin:0}
+.contact-actions{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:25px}
+#contact .social{gap:10px;margin:0;flex-wrap:wrap}
+#contact .social-icon{display:grid;place-items:center;min-width:46px;min-height:46px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink);text-decoration:none}
+.social-icon svg{width:21px;height:21px;fill:currentColor}
+#contact .social-icon:hover{color:var(--accent);border-color:var(--accent)}
+.social-icon>span{padding:8px;font-size:12px}
+.contact-cv{max-width:190px}.contact-cv .button{font-size:12px;gap:12px;padding:10px 14px}.contact-cv p{line-height:1.5;margin:10px 0 0}.contact-cv small{font-size:10px}
+@media(max-width:860px){#contact .contact-grid{grid-template-columns:1fr}.contact-invitation,#contact .contact-right{padding:30px}.contact-actions{justify-content:flex-start;gap:30px}#contact h2{max-width:20ch}.contact-invitation{border-bottom:1px solid var(--line)}}
+@media(max-width:420px){.contact-invitation,#contact .contact-right{padding:24px}.contact-email{gap:12px}}
+
+/* Case studies: a calm reading column, chapter landmarks and a compact index. */
+.detail.case-study{max-width:1184px;padding-top:42px;padding-bottom:70px}
+.case-back{font-size:13px;color:var(--muted)}
+.case-head{max-width:900px;margin:42px 0 32px}.case-head .eyebrow{margin-bottom:20px}
+.detail .case-head h1{font-size:clamp(2.5rem,5vw,4.3rem);line-height:1.05;margin:0 0 24px;max-width:21ch;text-wrap:balance}
+.case-deck{max-width:740px}.case-deck p{font-size:clamp(1rem,1.6vw,1.15rem);line-height:1.8;margin:0 0 24px;text-wrap:pretty}
+.case-program{display:inline-block;font:11px/1.7 ui-monospace,monospace;color:var(--muted);margin-top:4px;text-decoration:none}.case-program:hover{color:var(--accent)}
+.case-cover{margin:0 0 54px}.detail .case-cover .project-media{height:clamp(240px,35vw,420px);aspect-ratio:auto;margin:0;background:var(--surface)}
+.case-cover .image-credit{font-size:11px;color:var(--muted);margin-top:12px;max-width:850px}
+.case-layout{display:grid;grid-template-columns:220px minmax(0,720px);gap:64px;justify-content:space-between;align-items:start}
+.case-index{position:sticky;top:118px;border-top:2px solid var(--accent);padding-top:20px;min-width:0}
+.case-index nav>p{font:10px/1.6 ui-monospace,monospace;letter-spacing:1px;margin:0 0 18px}.case-index ol{list-style:none;padding:0;margin:0}
+.case-index li+li{margin-top:15px}.case-index li a{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;text-decoration:none;font-size:12px;line-height:1.5;color:var(--muted)}
+.case-index li a>span{font:10px/1.8 ui-monospace,monospace;color:var(--accent)}.case-index li a:hover{color:var(--accent)}
+.case-index-back{display:block;border-top:1px solid var(--line);margin-top:28px;padding-top:18px;font-size:12px;text-decoration:none}
+.case-reading{min-width:0}.case-chapter{position:relative;padding:32px 0;border-top:1px solid var(--line);scroll-margin-top:110px}
+.case-section-number{font:10px/1.6 ui-monospace,monospace;letter-spacing:1px;color:var(--accent);margin-bottom:12px}
+.detail .case-chapter h2{font-size:clamp(1.5rem,2.5vw,1.85rem);letter-spacing:-.03em;margin:0 0 20px;line-height:1.2}
+.case-reading p,.case-reading li{font-size:15px;line-height:1.9;text-wrap:pretty}.case-reading p{margin:0 0 18px}.case-reading p:last-child{margin-bottom:0}
+.case-reading ul{padding-left:20px;margin:0}.case-reading ul>li{padding-left:5px;margin-bottom:20px}.case-reading li:last-child{margin-bottom:0}.case-reading strong{color:var(--ink);font-weight:600}
+.case-contribution{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:28px;margin-bottom:30px}
+.case-evidence{scroll-margin-top:110px;border-top:1px solid var(--line);padding-top:10px}.case-evidence .evidence-list{margin-bottom:24px}
+.detail .case-evidence h2{font-size:1.65rem;margin:24px 0}.case-chart-text{padding:18px;border:1px solid var(--line);border-radius:6px;margin:0 0 32px}.case-chart-text summary{cursor:pointer;font-size:13px;color:var(--accent)}.case-chart-text p{margin-top:16px}
+.case-end{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:40px;padding-top:24px}.case-end>span{font-size:12px;color:var(--muted)}
+@media(max-width:900px){.case-layout{grid-template-columns:175px minmax(0,1fr);gap:35px}}
+@media(max-width:700px){.case-layout{grid-template-columns:1fr;gap:28px}.case-index{position:static;padding:18px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}.case-index ol{display:flex;flex-wrap:wrap;gap:12px 20px}.case-index li+li{margin:0}.case-index li a{display:flex;gap:7px}.case-index-back{display:none}.case-head{margin-top:30px}.case-cover{margin-bottom:28px}.case-contribution{padding:22px}.case-reading p,.case-reading li{font-size:14px;line-height:1.85}}
+
+/* Three explicit, language-matched CV choices. */
+.cv-tools{display:flex;flex-direction:column;gap:7px;max-width:100%;min-width:0}.cv-label{font:9px/1.5 ui-monospace,monospace;letter-spacing:1px;color:var(--muted)}
+.cv-actions{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);background:var(--card);border-radius:6px;overflow:hidden}
+.cv-actions a,.cv-actions button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;border:0;border-radius:0;background:transparent;font-size:12px;line-height:1.6;font-weight:550;text-decoration:none;color:var(--ink)}
+.cv-actions a+a,.cv-actions button{border-left:1px solid var(--line)}.cv-actions a:hover,.cv-actions button:hover{background:var(--soft);color:var(--accent)}
+.cv-actions a:focus-visible,.cv-actions button:focus-visible{outline-offset:-3px}.cv-copy-fallback{width:100%;padding:10px;border:1px solid var(--accent);background:var(--bg);font-size:12px;border-radius:4px;color:var(--ink)}.cv-copy-fallback[hidden]{display:none}
+#contact .contact-cv{max-width:100%}#contact .contact-actions{gap:24px}#contact .contact-cv p{max-width:280px}
+.cv-copy-status{font-size:11px;line-height:1.5;color:var(--accent)}.cv-copy-status:empty{display:none}

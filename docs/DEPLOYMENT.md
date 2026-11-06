@@ -6,7 +6,7 @@ The public portfolio is pre-rendered HTML with small browser scripts. Cloudflare
 
 1. Create or use your Cloudflare account and install the project dependencies with `npm install`. Authenticate Wrangler using `npx wrangler login`.
 2. Create the database with `npx wrangler d1 create portfolio-review`. Put the returned database ID into `wrangler.jsonc`. The placeholder is intentionally not deployable.
-3. Create the media bucket with `npx wrangler r2 bucket create portfolio-media` and retain its `BUCKET` binding in `wrangler.jsonc`. Apply both schema migrations: `npx wrangler d1 migrations apply portfolio-review --remote`.
+3. Create the media bucket with `npx wrangler r2 bucket create portfolio-media` and retain its `BUCKET` binding in `wrangler.jsonc`. Apply all schema migrations: `npx wrangler d1 migrations apply portfolio-review --remote`.
 4. Choose the final HTTPS origin. Set `SITE_ORIGIN` in `wrangler.jsonc`, and run the build with the same value in the environment. For example: `SITE_ORIGIN=https://your-domain.example npm run build`. This changes canonical URLs, hreflang links, sitemap URLs and social image URLs.
 5. Create a Cloudflare Access self-hosted application covering both `/admin*` and `/api/admin/*` on the final domain. Restrict the allow policy to your own email, `cl.sampebgo@gmail.com`. If the dashboard requires separate applications, use one application with both host/path destinations so the API and page share the same audience.
 6. Copy the Access team domain and application AUD into `ACCESS_TEAM_DOMAIN` and `ACCESS_AUD`. Match `ADMIN_EMAIL` to the allowed identity. Do not add a bypass policy. Worker-side signature verification remains mandatory even if the Access edge configuration is wrong.
@@ -50,3 +50,14 @@ Official references: [Static Assets](https://developers.cloudflare.com/workers/s
 ## Content management activation
 
 The expanded dashboard requires `0002_content.sql` as well as the original review migration. It stores a versioned public-content document in D1 and media in R2. See [Dashboard](DASHBOARD.md). Public pages and the sitemap reflect current published entries. A static-only deployment remains a read-only preview and cannot substitute for this service.
+
+
+## Private CV history
+
+Apply `0003_cv_history.sql` with the other migrations before deploying the updated Worker. D1 stores version metadata and R2 retains immutable PDF bytes. The existing `ASSETS` binding is required to archive the original bundled CV before its first replacement. A replacement fails rather than losing the original if that PDF cannot be read. External HTTPS CV links must be uploaded as PDFs to use version retention.
+
+In **Profile & CVs**, uploaded CVs are archived immediately, including drafts that are never published. Saving the form selects the public CV. The private history separates French and English, supports pagination, preview, download and restore. Restoring publishes that version using revision checks, retaining all others. History endpoints inherit the existing owner JWT checks; restore also requires the same-origin CSRF header. Superseded uploaded files and original bundled CV URLs are blocked from public access. There is no automatic history deletion or retention expiry.
+
+Only uploads and replacements made through this dashboard after activation are guaranteed to be retained. Changes made by overwriting source PDFs outside the dashboard bypass history. Earlier overwritten PDFs cannot be recovered unless a separate backup exists. Back up both D1 and R2; the metadata database alone does not contain the PDF bytes. Storage usage grows with retained uploads. Do not expose the R2 bucket publicly or add a lifecycle rule that deletes archived CVs.
+
+The Sites static preview displays the history interface and its setup message; it cannot provide durable private CV storage. Activate and test the configured Cloudflare Worker before relying on version recovery.

@@ -31,6 +31,7 @@ export function usesURL(site,url){return site.experiences.some(p=>p.visible!==fa
 export const references=(site,key)=>usesURL(site,'/media/'+key);
 export async function saveContent(env,body,actor){const site=validateSite(body.site);if(!Number.isInteger(body.revision)||body.revision<0)fail(400,'Invalid revision');
  const previous=await getContent(env);if(previous.revision!==body.revision)fail(409,'Content changed in another session. Reload before saving.');
+ for(const language of ['en','fr'])if(previous.site.profile.cv[language]!==site.profile.cv[language]){await archiveCV(env,previous.site.profile.cv[language],language,actor);await archiveCV(env,site.profile.cv[language],language,actor)}
  const next=body.revision+1;let result;
  if(body.revision===0)result=await env.DB.prepare('INSERT INTO site_content(id,revision,content) VALUES(1,?,?) ON CONFLICT(id) DO UPDATE SET revision=excluded.revision,content=excluded.content,updated_at=CURRENT_TIMESTAMP WHERE site_content.revision=0').bind(next,JSON.stringify(site)).run();
  else result=await env.DB.prepare('UPDATE site_content SET revision=?,content=?,updated_at=CURRENT_TIMESTAMP WHERE id=1 AND revision=?').bind(next,JSON.stringify(site),body.revision).run();
@@ -41,7 +42,53 @@ export async function uploadMedia(request,env,actor){if(!env.BUCKET)fail(503,'Fi
  const ascii=new TextDecoder('ascii').decode(bytes.slice(0,12));
  if(ascii.startsWith('%PDF-')){mime='application/pdf';ext='pdf'}else if(bytes[0]===255&&bytes[1]===216&&bytes[2]===255){mime='image/jpeg';ext='jpg'}else if(bytes.length>=8&&[137,80,78,71,13,10,26,10].every((x,i)=>bytes[i]===x)){mime='image/png';ext='png'}else if(ascii.startsWith('RIFF')&&ascii.slice(8)==='WEBP'){mime='image/webp';ext='webp'}else fail(415,'Upload a PDF, JPEG, PNG or WebP file');
  const purpose=new URL(request.url).searchParams.get('purpose');if(!['portrait','cv-en','cv-fr','document','project-image','experience-logo','certificate'].includes(purpose))fail(400,'Choose an upload purpose');if((purpose==='portrait'||purpose==='project-image'||purpose==='experience-logo')&&mime==='application/pdf')fail(415,'Choose an image');if((purpose.startsWith('cv-')||purpose==='document'||purpose==='certificate')&&mime!=='application/pdf')fail(415,'Choose a PDF');
- const key=crypto.randomUUID()+'.'+ext;await env.BUCKET.put(key,bytes,{httpMetadata:{contentType:mime}});try{await env.DB.batch([env.DB.prepare('INSERT INTO media(id,mime,size) VALUES(?,?,?)').bind(key,mime,size),env.DB.prepare('INSERT INTO audit(project_id,action,actor) VALUES(?,?,?)').bind(key,'upload-'+purpose,actor)])}catch(err){await env.BUCKET.delete(key);throw err}return {url:'/media/'+key,mime,size};
+ if(purpose.startsWith('cv-')){const language=purpose.slice(3);await archiveCV(env,(await getContent(env)).site.profile.cv[language],language,actor)}
+ const key=crypto.randomUUID()+'.'+ext;await env.BUCKET.put(key,bytes,{httpMetadata:{contentType:mime}});try{await env.DB.batch([env.DB.prepare('INSERT INTO media(id,mime,size) VALUES(?,?,?)').bind(key,mime,size),...(purpose.startsWith('cv-')?[env.DB.prepare('INSERT INTO cv_versions(language,media_id,source_url) VALUES(?,?,?)').bind(purpose.slice(3),key,'/media/'+key)]:[]),env.DB.prepare('INSERT INTO audit(project_id,action,actor) VALUES(?,?,?)').bind(key,'upload-'+purpose,actor)])}catch(err){await env.BUCKET.delete(key);throw err}return {url:'/media/'+key,mime,size};
 }
 export async function publicMedia(request,env){const key=new URL(request.url).pathname.slice(7);if(!/^[a-z0-9-]+\.(pdf|jpg|png|webp)$/.test(key)||!env.BUCKET)return new Response('Not found',{status:404});const {site}=await getContent(env);if(!references(site,key))return new Response('Not found',{status:404});const object=await env.BUCKET.get(key);if(!object)return new Response('Not found',{status:404});return new Response(object.body,{headers:{'Content-Type':object.httpMetadata?.contentType||'application/octet-stream','X-Content-Type-Options':'nosniff','Cache-Control':'no-store','Content-Security-Policy':"default-src 'none'; frame-ancestors 'self'"}})}
 export async function renderLive(request,env,response,providedSite){const url=new URL(request.url),match=url.pathname.match(/^\/(en|fr)\/(.*)$/);if(!match||!response.headers.get('content-type')?.includes('text/html'))return response;const site=providedSite||(await getContent(env)).site;const l=match[1],path=match[2];const origin=(env.SITE_ORIGIN||url.origin).replace(/\/$/,'');const info=pageInfo(site,l,path,origin);if(/^(projects|experiences)\//.test(path)&&!info.item)return new Response(renderMain(site,l,path),{status:404,headers:{'Content-Type':'text/html;charset=utf-8','X-Robots-Tag':'noindex'}});const structured=JSON.stringify(structuredData(site,info)).replaceAll('<','\\u003c');return new HTMLRewriter().on('script[type="application/ld+json"]',{element(el){el.remove()}}).on('head',{element(el){el.append('<script type="application/ld+json">'+structured+'</script>',{html:true})}}).on('#main',{element(el){el.setInnerContent(renderMain(site,l,path),{html:true})}}).on('#language',{element(el){el.setAttribute('href','/'+(l==='en'?'fr':'en')+'/'+path)}}).on('title',{element(el){el.setInnerContent(info.title)}}).on('meta[name="description"],meta[property="og:description"]',{element(el){el.setAttribute('content',info.description)}}).on('meta[name="author"],meta[property="og:site_name"]',{element(el){el.setAttribute('content',site.profile.name)}}).on('meta[property="og:title"]',{element(el){el.setAttribute('content',info.title)}}).on('link[rel="canonical"]',{element(el){el.setAttribute('href',info.canonical)}}).on('meta[property="og:url"]',{element(el){el.setAttribute('content',info.canonical)}}).on('meta[property="og:image"]',{element(el){el.setAttribute('content',info.image)}}).on('link[rel="alternate"]',{element(el){el.setAttribute('href',info.alternates[el.getAttribute('hreflang')]||info.alternates.en)}}).transform(response)}
+
+// Historical PDFs are immutable R2 objects. Only the current CV reference is public.
+export async function archiveCV(env,url,language,actor){
+ if(!['en','fr'].includes(language))fail(400,'Invalid CV language');
+ if(!env.BUCKET)fail(503,'CV history requires file storage');
+ const mediaID=/^\/media\/([a-z0-9-]+\.pdf)$/.exec(url)?.[1];
+ const existing=await env.DB.prepare('SELECT id FROM cv_versions WHERE language=? AND (source_url=? OR media_id=?)').bind(language,url,mediaID||'').first();if(existing)return existing;
+ if(mediaID){
+  const media=await env.DB.prepare('SELECT * FROM media WHERE id=?').bind(mediaID).first();
+  if(!media||media.mime!=='application/pdf'||!await env.BUCKET.get(mediaID))fail(400,'CV PDF is unavailable');
+  await env.DB.prepare('INSERT OR IGNORE INTO cv_versions(language,media_id,source_url) VALUES(?,?,?)').bind(language,mediaID,url).run();return;
+ }
+ if(!/^\/documents\/[A-Za-z0-9._/-]+\.pdf$/.test(url)||url.includes('..'))fail(400,'Upload a PDF to retain its versions');
+ if(!env.ASSETS)fail(503,'CV history needs access to the current PDF before replacing it');
+ const response=await env.ASSETS.fetch(new Request('https://portfolio-assets.invalid'+url));
+ if(!response.ok)fail(503,'The current CV could not be archived');
+ // Stream through the same size limit as uploads; never follow an external CV URL.
+ const reader=response.body?.getReader();if(!reader)fail(503,'The current CV is empty');
+ const chunks=[];let size=0;while(true){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>8*1024*1024){await reader.cancel();fail(413,'Current CV exceeds 8 MB')}chunks.push(value)}
+ const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length}
+ if(new TextDecoder().decode(bytes.slice(0,5))!=='%PDF-')fail(503,'The current CV is not a PDF');
+ const key=crypto.randomUUID()+'.pdf';await env.BUCKET.put(key,bytes,{httpMetadata:{contentType:'application/pdf'}});
+ try{await env.DB.batch([env.DB.prepare('INSERT INTO media(id,mime,size) VALUES(?,?,?)').bind(key,'application/pdf',size),env.DB.prepare('INSERT OR IGNORE INTO cv_versions(language,media_id,source_url) VALUES(?,?,?)').bind(language,key,url),env.DB.prepare('INSERT INTO audit(project_id,action,actor) VALUES(?,?,?)').bind(key,'archive-cv-'+language,actor)])}catch(error){await env.BUCKET.delete(key);throw error}
+}
+export async function listCVVersions(env,url){
+ const language=url.searchParams.get('language');if(!['en','fr'].includes(language))fail(400,'Invalid CV language');
+ const before=Number(url.searchParams.get('before')||Number.MAX_SAFE_INTEGER);if(!Number.isSafeInteger(before)||before<1)fail(400,'Invalid history cursor');
+ const {site}=await getContent(env);
+ const rows=(await env.DB.prepare('SELECT v.id,v.language,v.media_id,v.source_url,v.created_at,m.size FROM cv_versions v JOIN media m ON m.id=v.media_id WHERE v.language=? AND v.id<? ORDER BY v.id DESC LIMIT 26').bind(language,before).all()).results;
+ const versions=rows.slice(0,25).map(row=>({id:row.id,language:row.language,createdAt:row.created_at,size:row.size,current:site.profile.cv[language]===row.source_url||site.profile.cv[language]==='/media/'+row.media_id}));
+ return {versions,next:rows.length>25?versions.at(-1).id:null};
+}
+export async function privateCVFile(request,env,id){
+ if(!/^\d+$/.test(id))fail(404,'CV version not found');const row=await env.DB.prepare('SELECT * FROM cv_versions WHERE id=?').bind(Number(id)).first();if(!row)fail(404,'CV version not found');
+ const object=await env.BUCKET?.get(row.media_id);if(!object)fail(404,'CV PDF not found');
+ const attachment=new URL(request.url).searchParams.get('download')==='1';
+ return new Response(object.body,{headers:{'Content-Type':'application/pdf','Content-Disposition':`${attachment?'attachment':'inline'}; filename="cv-${row.language}-v${row.id}.pdf"`,'Cache-Control':'private, no-store','X-Robots-Tag':'noindex, nofollow','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'none'; frame-ancestors 'self'"}});
+}
+export async function restoreCV(env,body,actor){
+ if(!Number.isSafeInteger(body.id)||body.id<1)fail(400,'Invalid CV version');
+ const row=await env.DB.prepare('SELECT * FROM cv_versions WHERE id=?').bind(body.id).first();if(!row)fail(404,'CV version not found');
+ if(!await env.BUCKET?.get(row.media_id))fail(404,'CV PDF not found');
+ const {site}=await getContent(env);site.profile.cv[row.language]='/media/'+row.media_id;
+ return saveContent(env,{site,revision:body.revision},actor);
+}

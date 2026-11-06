@@ -1,6 +1,6 @@
 import {publicContent} from '../assets/public-content.js';
 import {sitemap} from '../assets/seo.js';
-import {getContent,saveContent,uploadMedia,publicMedia,renderLive,usesURL} from './cms.mjs';
+import {getContent,saveContent,uploadMedia,publicMedia,renderLive,usesURL,listCVVersions,privateCVFile,restoreCV} from './cms.mjs';
 const API='https://api.github.com';
 const JSON_HEADERS={'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'};
 export const json=(body,status=200)=>new Response(JSON.stringify(body),{status,headers:JSON_HEADERS});
@@ -79,10 +79,13 @@ async function admin(request,env,url,actor){
  if(!env.DB)fail(503,'D1 is not configured');
  if(request.method==='GET'&&url.pathname==='/api/admin/content'){const content=await getContent(env);return json({...content,uploadsConfigured:!!env.BUCKET,notificationsConfigured:!!(env.RESEND_API_KEY&&env.NOTIFY_FROM)})}
  if(request.method==='GET'&&url.pathname==='/api/admin/projects'){return json((await env.DB.prepare('SELECT * FROM projects ORDER BY discovered_at DESC LIMIT 500').all()).results)}
+ if(request.method==='GET'&&url.pathname==='/api/admin/cv-versions')return json(await listCVVersions(env,url));
+ const cvFile=url.pathname.match(/^\/api\/admin\/cv-versions\/(\d+)\/file$/);if(request.method==='GET'&&cvFile)return privateCVFile(request,env,cvFile[1]);
  if(request.method!=='POST')fail(405,'Method not allowed');
  if(request.headers.get('origin')!==url.origin||request.headers.get('x-portfolio-request')!=='review')fail(403,'Same-origin review request required');
  if(url.pathname==='/api/admin/upload')return json(await uploadMedia(request,env,actor));
  const b=await readBody(request);
+ if(url.pathname==='/api/admin/cv-restore')return json(await restoreCV(env,b,actor));
  if(url.pathname==='/api/admin/content')return json(await saveContent(env,b,actor));
  if(url.pathname==='/api/admin/sync')return json(await discover(env));
  if(url.pathname==='/api/admin/exclusions'){
@@ -120,6 +123,7 @@ export default {
  async fetch(request,env){try{
   const url=new URL(request.url);let response;
   if(url.pathname==='/sitemap.xml'){return new Response(sitemap(await publishedSite(env),env.SITE_ORIGIN||url.origin),{headers:{'Content-Type':'application/xml','Cache-Control':'no-store'}})}
+  if(env.DB&&/^\/documents\/.*\.pdf$/.test(url.pathname)){const archived=await env.DB.prepare('SELECT id FROM cv_versions WHERE source_url=?').bind(url.pathname).first();if(archived&&!Object.values((await getContent(env)).site.profile.cv).includes(url.pathname))return new Response('Not found',{status:404,headers:{'Cache-Control':'no-store'}})}
   if(url.pathname==='/assets/site-content.json')return json(await publishedSite(env));
   if(url.pathname.startsWith('/documents/')){const {site}=await getContent(env);if(!usesURL(site,url.pathname))return new Response('Not found',{status:404})}
   if(url.pathname==='/api/content'){if(request.method!=='GET')return json({error:'Method not allowed'},405);return json(await publishedSite(env))}

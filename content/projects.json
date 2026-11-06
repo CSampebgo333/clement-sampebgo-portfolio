@@ -189,44 +189,6 @@
     "imageEnabled": true
   },
   {
-    "id": "driving-theory",
-    "category": "software",
-    "featured": false,
-    "source": "Public repository README and source",
-    "url": "https://github.com/CSampebgo333/driving-test-platform",
-    "repo": "CSampebgo333/driving-test-platform",
-    "image": "/assets/driving.png",
-    "tags": [
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Accessibility"
-    ],
-    "en": {
-      "title": "Driving theory, one question at a time",
-      "client": "SOFTWARE · PERSONAL PROJECT",
-      "summary": "A focused practice quiz with instant grading, answer review and a keyboard-friendly question navigator.",
-      "role": "Personal project · Frontend development",
-      "problem": "Learners need a simple way to practise theory questions and understand their mistakes.",
-      "approach": "I built a dependency-free HTML, CSS and JavaScript quiz with local attempt storage, a correction page and print support.",
-      "result": "The repository provides a ten-question practice flow with progress tracking, validation and explanations. Its screenshot is reproduced here.",
-      "limitation": "A practice tool, not an official licensing resource. The question bank is small and requires review against local rules."
-    },
-    "fr": {
-      "title": "Le code de la route, question par question",
-      "client": "LOGICIEL · PROJET PERSONNEL",
-      "summary": "Un quiz ciblé avec correction immédiate, explications et navigation utilisable au clavier.",
-      "role": "Projet personnel · Développement frontend",
-      "problem": "Les apprenants ont besoin d’un moyen simple de s’entraîner et de comprendre leurs erreurs.",
-      "approach": "J’ai créé un quiz sans dépendances en HTML, CSS et JavaScript, avec sauvegarde locale, page de correction et impression.",
-      "result": "Le dépôt propose dix questions, un suivi de progression, une validation et des explications. Sa capture d’écran est présentée ici.",
-      "limitation": "Un outil d’entraînement, pas une ressource officielle. La banque de questions est limitée et doit être vérifiée selon les règles locales."
-    },
-    "order": 5,
-    "visible": true,
-    "imageEnabled": true
-  },
-  {
     "id": "tanghin-dam",
     "category": "research",
     "featured": true,
